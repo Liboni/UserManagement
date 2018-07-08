@@ -1,5 +1,5 @@
 ﻿
-namespace UserManagement.Models
+namespace UserManagement.Models.AccountModels
 {
     using System.ComponentModel.DataAnnotations;
 

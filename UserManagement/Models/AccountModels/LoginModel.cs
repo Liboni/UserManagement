@@ -1,9 +1,9 @@
 ﻿
-namespace UserManagement.Models
+namespace UserManagement.Models.AccountModels
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class RegisterModel
+    public class LoginModel
     {
         [EmailAddress]
         [Required(ErrorMessage = "Email is required.")]

@@ -21,6 +21,9 @@ namespace UserManagement
 
     using Serilog;
     using Serilog.Sinks.MSSqlServer;
+
+    using UserManagement.Data;
+
     public class Startup
     {
         public Startup(IConfiguration configuration)
