@@ -1,13 +1,18 @@
 ﻿
-namespace UserManagement.Models
+namespace UserManagement.Models.UserProfileModels
 {
     using System;
     using System.ComponentModel.DataAnnotations;
 
     using UserManagement.Enums;
 
-    public class UserDetailsModel
+    public class UserProfileModel
     {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "User Id is required.")]
+        public string UserId { get; set; }
+
         [Required(ErrorMessage = "First name is required."), MinLength(2, ErrorMessage = "Enter a valid first name")]
         public string FirstName { get; set; }
 

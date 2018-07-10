@@ -43,7 +43,7 @@ namespace UserManagement.Controllers
             ApplicationUser user = await userManager.FindByNameAsync(loginModel.Email);
             if (user != null && await userManager.CheckPasswordAsync(user, loginModel.Password) && await userManager.IsEmailConfirmedAsync(user))
             {
-                return Ok(new { access_token = new ApplicationJwtProvider().JwtTokenBuilder(user) });
+                return Ok(new { access_token = new ApplicationJwtProvider(Configuration).JwtTokenBuilder(user) });
             }
             return Unauthorized();
         }
@@ -62,10 +62,10 @@ namespace UserManagement.Controllers
             Task<IdentityResult> task = userManager?.CreateAsync(user, registerModel.Password);
             if (task == null) return BadRequest();
             await task;
-            if (!task.Result.Succeeded) return Ok(new { task.Result });
+            if (!task.Result.Succeeded) return Ok(new { success=task.Result.Succeeded, message=task.Result.Errors });
             await userManager.AddToRoleAsync(user, registerModel.RegisterType.ToString());
             new EmailNotification(context, Configuration).SendRegistrationEmail(userManager,user);
-            return Ok(task.Result);
+            return Ok(new { success= task.Result.Succeeded, message = task.Result.Errors, userId = user.Id});
         }
        
         [HttpGet]
@@ -75,7 +75,7 @@ namespace UserManagement.Controllers
             if (String.IsNullOrEmpty(token)) return BadRequest();
             Token tokenDetails =new TokenManager(context).GetTokenById(token);
             IdentityResult result = await userManager.ConfirmEmailAsync(tokenDetails.User, tokenDetails.UserToken);
-            return Ok(result);
+            return Ok(new { success = result.Succeeded, message = result.Errors });
         }
         
         [HttpGet]
@@ -86,7 +86,7 @@ namespace UserManagement.Controllers
             ApplicationUser user = await userManager.FindByNameAsync(email);
             if (user == null) return BadRequest("User name not registered");
             new EmailNotification(context, Configuration).SendForgotPasswordEmail(userManager, user);
-            return Ok();
+            return Ok(new { success = true, message = "Check your email to reset your password." });
         }
 
         [HttpPost]
@@ -99,7 +99,7 @@ namespace UserManagement.Controllers
                         tokenDetails.User,
                         tokenDetails.UserToken,
                         resetPasswordModel.NewPassword);
-            return Ok(result);
+            return Ok(new { success = result.Succeeded, message = result.Errors });
         }
 
         [Authorize]
@@ -113,7 +113,7 @@ namespace UserManagement.Controllers
                                         user,
                                         changePasswordModel.OldPassword,
                                         changePasswordModel.NewPassword);
-            return Ok(result);
+            return Ok(new { success = result.Succeeded, message = result.Errors });
         }
     }
 }

@@ -70,30 +70,30 @@ namespace UserManagement.Controllers
 
         [HttpPost]
         [Route("addOrganisationTalents")]
-        public IActionResult AddCredits([FromBody]CreditsModel creditsModel)
+        public IActionResult AddCredits([FromBody]UserCreditModel creditsModel)
         {
             return Accepted();
         }
 
         [HttpPost]
         [Route("getOrganisationTalents")]   
-        public CreditsModel GetOrganisationTalents()
+        public UserCreditModel GetOrganisationTalents()
         {
-            return new CreditsModel();
+            return new UserCreditModel();
         }
 
         [HttpPost]
         [Route("getOrganisationTalents/{userId}")]
-        public CreditsModel GetOrganisationTalents(string userId)
+        public UserCreditModel GetOrganisationTalents(string userId)
         {
-            return new CreditsModel();
+            return new UserCreditModel();
         }
 
         [HttpPost]
         [Route("getAllOrganisationTalents")]
-        public List<CreditsModel> GetAllOrganisationTalents()
+        public List<UserCreditModel> GetAllOrganisationTalents()
         {
-            return new List<CreditsModel>();
+            return new List<UserCreditModel>();
         }
     }
 }
