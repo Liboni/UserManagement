@@ -33,7 +33,8 @@ namespace UserManagement.Data
                                        {
                                            Email = "admin@admin.com",
                                            SecurityStamp = Guid.NewGuid().ToString(),
-                                           UserName = "admin@admin.com"
+                                           UserName = "admin@admin.com",
+                                           EmailConfirmed = true
             };
             await userManager.CreateAsync(user, "Password@123");
             await userManager.AddToRoleAsync(user, "Admin");

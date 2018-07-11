@@ -29,6 +29,7 @@ namespace UserManagement
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
         }
 
         public IConfiguration Configuration { get; }
@@ -59,18 +60,19 @@ namespace UserManagement
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
             loggerFactory.AddSerilog();
             ColumnOptions columnOptions = new ColumnOptions();
             columnOptions.Store.Add(StandardColumn.LogEvent);
             Log.Logger = new LoggerConfiguration()
-                .WriteTo.MSSqlServer(Configuration["ConnectionStrings:DefaultConnection"], "Logs", columnOptions: columnOptions)
+                .WriteTo.MSSqlServer(connectionString:Configuration.GetConnectionString("DefaultConnection"),tableName: "Logs", columnOptions: columnOptions)
                 .WriteTo.RollingFile(Path.Combine(env.ContentRootPath + @"\wwwroot\Logs", "log-{Date}.txt"))
                 .CreateLogger();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
+            app.UseAuthentication();
             app.UseMvc();
             app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings());
         }

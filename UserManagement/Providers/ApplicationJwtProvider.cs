@@ -2,10 +2,14 @@
 namespace UserManagement.Providers
 {
     using System;
+    using System.Collections.Generic;
     using System.IdentityModel.Tokens.Jwt;
+    using System.Linq;
     using System.Security.Claims;
     using System.Text;
+    using System.Threading.Tasks;
 
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Configuration;
     using Microsoft.IdentityModel.Tokens;
 
@@ -14,22 +18,26 @@ namespace UserManagement.Providers
     public class ApplicationJwtProvider
     {
         private readonly IConfiguration configuration;
-
-        public ApplicationJwtProvider(IConfiguration configuration)
+        private readonly UserManager<ApplicationUser> userManager;
+        public ApplicationJwtProvider(IConfiguration configuration, UserManager<ApplicationUser> userManager)
         {
             this.configuration = configuration;
+            this.userManager = userManager;
         }
 
-        public string JwtTokenBuilder(ApplicationUser user)
+        public async Task<string> JwtTokenBuilder(ApplicationUser user)
         {
+            IList<string> roles = await userManager.GetRolesAsync(user);
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
             Claim[] claims = {
-                                     new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
-                                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString()),
-                                 };
+                    new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+                    new Claim(ClaimTypes.Name, user.UserName), new Claim(ClaimTypes.Role, roles[0]),
+                    new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
+                };
+          
             JwtSecurityToken jwtToken = new JwtSecurityToken(
-                configuration["Jwt:Iss"],
-                configuration["Jwt:Aud"],
+                issuer: configuration["Jwt:Iss"],
+                audience: configuration["Jwt:Aud"],
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256),
                 expires: DateTime.UtcNow.AddHours(1),
                 claims: claims);

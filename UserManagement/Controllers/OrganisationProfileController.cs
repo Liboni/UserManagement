@@ -7,6 +7,7 @@ namespace UserManagement.Controllers
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.Models;
+    using UserManagement.Models.UserProfileModels;
 
     [Produces("application/json")]
     [Route("api/OrganisationProfile")]

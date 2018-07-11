@@ -43,7 +43,7 @@ namespace UserManagement.Controllers
             ApplicationUser user = await userManager.FindByNameAsync(loginModel.Email);
             if (user != null && await userManager.CheckPasswordAsync(user, loginModel.Password) && await userManager.IsEmailConfirmedAsync(user))
             {
-                return Ok(new { access_token = new ApplicationJwtProvider(Configuration).JwtTokenBuilder(user) });
+                return Ok(new { access_token = new ApplicationJwtProvider(Configuration, userManager).JwtTokenBuilder(user).Result });
             }
             return Unauthorized();
         }

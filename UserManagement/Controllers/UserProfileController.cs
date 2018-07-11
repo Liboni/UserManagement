@@ -33,7 +33,7 @@ namespace UserManagement.Controllers
 
         [HttpPost]
         [Route("addProfile")]
-        public IActionResult AddUserDetails([FromBody]UserProfileModel userDetailsModel)
+        public IActionResult AddUserProfileDetails([FromBody]UserProfileModel userDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             GenericActionResult<string> result = new UserProfileManager(context).SaveUserDetails(userDetailsModel);
@@ -42,7 +42,7 @@ namespace UserManagement.Controllers
 
         [HttpPost]
         [Route("updateProfile")]
-        public IActionResult UpdateUserDetails([FromBody]UserProfileModel userDetailsModel)
+        public IActionResult UpdateUserProfileDetails([FromBody]UserProfileModel userDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             GenericActionResult<string> result = new UserProfileManager(context).UpdateUserDetails(userDetailsModel);
@@ -52,15 +52,15 @@ namespace UserManagement.Controllers
         [Authorize]
         [HttpGet]
         [Route("getProfile")]
-        public IActionResult GetUserDetails()
+        public IActionResult GetUserProfileDetails()
         {
-            return GetUserDetails(ClaimsPrincipal.Current.Identity.GetUserId());
+            return GetUserProfileDetails(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("getAllProfile")]
-        public IActionResult GetAllUserDetails()
+        public IActionResult GetAllUserProfileDetails()
         {
             GenericActionResult<List<UserProfile>> result = new UserProfileManager(context).GetUserDetails();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
@@ -69,7 +69,7 @@ namespace UserManagement.Controllers
         [Authorize]
         [HttpGet]
         [Route("getProfile/{userId}")]
-        public IActionResult GetUserDetails(string userId)
+        public IActionResult GetUserProfileDetails(string userId)
         {
             if (string.IsNullOrEmpty(userId)) return BadRequest("User is required");
             GenericActionResult<UserProfile> result = new UserProfileManager(context).GetUserDetailsByUserId(userId);
@@ -79,7 +79,7 @@ namespace UserManagement.Controllers
         [Authorize]
         [HttpPost]
         [Route("addProfileImage")]
-        public async Task<IActionResult> AddProfileImage(IFormFile file)
+        public async Task<IActionResult> AddUserProfileImage(IFormFile file)
         {
             string uploadsRoot = hostingEnvironment.WebRootPath;
             if (file.Length <= 0) return BadRequest("Upload profile picture.");
@@ -105,7 +105,7 @@ namespace UserManagement.Controllers
         [Authorize]
         [HttpPost]
         [Route("updateProfileImage")]
-        public async Task<IActionResult> UpdateProfileImage(IFormFile file)
+        public async Task<IActionResult> UpdateUserProfileImage(IFormFile file)
         {
             string uploadsRoot = hostingEnvironment.WebRootPath;
             if (file.Length <= 0) return BadRequest("Upload profile picture.");
@@ -129,7 +129,7 @@ namespace UserManagement.Controllers
 
         [HttpGet]
         [Route("getProfileImage/{userId}")]
-        public IActionResult GetProfileImage(string userId)
+        public IActionResult GetUserProfileImage(string userId)
         {
             if (string.IsNullOrEmpty(userId)) return BadRequest("User ID is required");
             GenericActionResult<ProfileImage> result = new ProfileImagesManager(context).GetProfileImageByUserId(userId);
@@ -141,7 +141,7 @@ namespace UserManagement.Controllers
         [Authorize]
         [HttpDelete]
         [Route("deleteProfileImage/{imageId}")]
-        public IActionResult DeleteProfileImage(int imageId)
+        public IActionResult DeleteUserProfileImage(int imageId)
         {
             GenericActionResult<string> result = new ProfileImagesManager(context).DeleteProfileImage(imageId);
             return Ok(new { success = result.Success, message = result.Message });
@@ -151,12 +151,12 @@ namespace UserManagement.Controllers
         [Route("getProfileImage")]
         public IActionResult GetProfileImage()
         {
-            return GetProfileImage(ClaimsPrincipal.Current.Identity.GetUserId());
+            return GetUserProfileImage(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
         [HttpGet]
         [Route("getAllProfileImages")]
-        public IActionResult GetAllProfileImages()
+        public IActionResult GetAllUserProfileImages()
         {
             GenericActionResult<List<ProfileImage>> result= new ProfileImagesManager(context).GetProfileImages();
             List<ProfileImageModel> profileImageModels = result.Data.Select(profileImage => new ProfileImageModel { UserId = profileImage.UserId, Image = Convert.ToBase64String(System.IO.File.ReadAllBytes(profileImage.Location)), ImageName = profileImage.Name, Id = profileImage.Id }).ToList();
@@ -165,7 +165,7 @@ namespace UserManagement.Controllers
 
         [HttpPost]
         [Route("addCredits")]
-        public IActionResult AddCredits([FromBody]UserCreditModel creditsModel)
+        public IActionResult AddUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             GenericActionResult<string> result = new UserCreditsManager(context).SaveUserCredit(creditsModel);
@@ -174,7 +174,7 @@ namespace UserManagement.Controllers
 
         [HttpPost]
         [Route("updateCredits")]
-        public IActionResult UpdateCredits([FromBody]UserCreditModel creditsModel)
+        public IActionResult UpdateUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             GenericActionResult<string> result = new UserCreditsManager(context).UpdateUserCredit(creditsModel);
@@ -184,15 +184,15 @@ namespace UserManagement.Controllers
         [Authorize]
         [HttpGet]
         [Route("getCredits")]
-        public IActionResult GetCredits()
+        public IActionResult GetUserCredits()
         {
-           return GetCredits(ClaimsPrincipal.Current.Identity.GetUserId());
+           return GetUserCredits(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
         [Authorize]
         [HttpDelete]
         [Route("deleteCredits/{creditId}")]
-        public IActionResult DeleteCredits(int creditId)
+        public IActionResult DeleteUserCredits(int creditId)
         {
             GenericActionResult<string> result = new UserCreditsManager(context).DeleteUserCreditById(creditId);
             return Ok(new { success = result.Success, message = result.Message});
@@ -200,7 +200,7 @@ namespace UserManagement.Controllers
 
         [HttpGet]
         [Route("getCredits/{userId}")]
-        public IActionResult GetCredits(string userId)
+        public IActionResult GetUserCredits(string userId)
         {
             GenericActionResult<UserCreditModel> result = new UserCreditsManager(context).GetUserCreditByUserId(userId);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
@@ -208,7 +208,7 @@ namespace UserManagement.Controllers
 
         [HttpGet]
         [Route("getallCredits")]
-        public IActionResult GetAllCredits()
+        public IActionResult GetAllUserCredits()
         {
             GenericActionResult<List<UserCreditModel>> result = new UserCreditsManager(context).GetAllUserCredits();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
