@@ -30,7 +30,8 @@ namespace UserManagement.BusinessLogics
                             FirstName = userProfileModel.FirstName,
                             Gender = (byte)userProfileModel.Gender,
                             LastName = userProfileModel.LastName,
-                            UserId = userProfileModel.UserId
+                            UserId = userProfileModel.UserId,
+                            DateCreated = DateTime.Now
                         });
                 context.SaveChanges();
                 return new GenericActionResult<string>(true,"");

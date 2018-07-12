@@ -32,16 +32,16 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("addProfile")]
-        public IActionResult AddUserProfileDetails([FromBody]UserProfileModel userDetailsModel)
+        [Route("addUserProfile")]
+        public IActionResult AddUserProfileDetails([FromBody]UserProfileModel userProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            GenericActionResult<string> result = new UserProfileManager(context).SaveUserDetails(userDetailsModel);
+            GenericActionResult<string> result = new UserProfileManager(context).SaveUserDetails(userProfileModel);
             return Ok(new { success = result.Success, message = result.Message });
         }
 
         [HttpPost]
-        [Route("updateProfile")]
+        [Route("updateUserProfile")]
         public IActionResult UpdateUserProfileDetails([FromBody]UserProfileModel userDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -51,15 +51,14 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("getProfile")]
+        [Route("getUserProfile")]
         public IActionResult GetUserProfileDetails()
         {
             return GetUserProfileDetails(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpGet]
-        [Route("getAllProfile")]
+        [Route("getAllUserProfile")]
         public IActionResult GetAllUserProfileDetails()
         {
             GenericActionResult<List<UserProfile>> result = new UserProfileManager(context).GetUserDetails();
@@ -68,7 +67,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("getProfile/{userId}")]
+        [Route("getUserProfile/{userId}")]
         public IActionResult GetUserProfileDetails(string userId)
         {
             if (string.IsNullOrEmpty(userId)) return BadRequest("User is required");
@@ -78,7 +77,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpPost]
-        [Route("addProfileImage")]
+        [Route("addUserProfileImage")]
         public async Task<IActionResult> AddUserProfileImage(IFormFile file)
         {
             string uploadsRoot = hostingEnvironment.WebRootPath;
@@ -164,7 +163,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("addCredits")]
+        [Route("addUserCredits")]
         public IActionResult AddUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -173,7 +172,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("updateCredits")]
+        [Route("updateUserCredits")]
         public IActionResult UpdateUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -183,7 +182,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("getCredits")]
+        [Route("getUserCredits")]
         public IActionResult GetUserCredits()
         {
            return GetUserCredits(ClaimsPrincipal.Current.Identity.GetUserId());
@@ -191,7 +190,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpDelete]
-        [Route("deleteCredits/{creditId}")]
+        [Route("deleteUserCredits/{creditId}")]
         public IActionResult DeleteUserCredits(int creditId)
         {
             GenericActionResult<string> result = new UserCreditsManager(context).DeleteUserCreditById(creditId);
@@ -199,7 +198,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("getCredits/{userId}")]
+        [Route("getUserCredits/{userId}")]
         public IActionResult GetUserCredits(string userId)
         {
             GenericActionResult<UserCreditModel> result = new UserCreditsManager(context).GetUserCreditByUserId(userId);
@@ -207,7 +206,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("getallCredits")]
+        [Route("getallUserCredits")]
         public IActionResult GetAllUserCredits()
         {
             GenericActionResult<List<UserCreditModel>> result = new UserCreditsManager(context).GetAllUserCredits();

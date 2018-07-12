@@ -13,6 +13,7 @@ namespace UserManagement.Data
         public DbSet<Country> Countries { get; set; }
         public DbSet<ProfileImage> ProfileImages { get; set; }
         public DbSet<UserCredit> UserCredits { get; set; }
+        public DbSet<OrganisationProfile> OrganisationProfiles { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }

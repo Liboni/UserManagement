@@ -5,7 +5,7 @@ namespace UserManagement.Data
 
     using UserManagement.Models;
 
-    public partial class ProfileImage
+    public class ProfileImage
     {
         public int Id { get; set; }
         public string UserId { get; set; }

@@ -23,7 +23,8 @@ namespace UserManagement.BusinessLogics
                         ExpiryDate = token.ExpiryDate,
                         Id = id,
                         UserToken = token.UserToken,
-                        UserId = token.User.Id
+                        UserId = token.User.Id,
+                        DateCreated = DateTime.Now
                     });
             context.SaveChanges();
             return id;

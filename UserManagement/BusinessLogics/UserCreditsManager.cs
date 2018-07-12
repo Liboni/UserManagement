@@ -27,7 +27,8 @@ namespace UserManagement.BusinessLogics
                     Production = userCreditModel.Production,
                     RoleId = userCreditModel.RoleId,
                     UserId = userCreditModel.UserId,
-                    IsDeleted = false
+                    IsDeleted = false,
+                    DateCreated = DateTime.Now
                 });
                 context.SaveChanges();
                 return new GenericActionResult<string>(true, "");
