@@ -7,7 +7,7 @@ namespace UserManagement.BusinessLogics
 
     using UserManagement.Data;
     using UserManagement.LocalObjects;
-    using UserManagement.Models.UserProfileModels;
+    using UserManagement.Models.UserCreditModels;
 
     public class UserCreditsManager
     {
@@ -25,7 +25,7 @@ namespace UserManagement.BusinessLogics
                 context.UserCredits.Add(new UserCredit
                 {
                     Production = userCreditModel.Production,
-                    RoleId = userCreditModel.RoleId,
+                    TalentId = userCreditModel.TalentId,
                     UserId = userCreditModel.UserId,
                     IsDeleted = false,
                     DateCreated = DateTime.Now
@@ -42,7 +42,7 @@ namespace UserManagement.BusinessLogics
             {
                 UserCredit  credit = context.UserCredits.Find(userCreditModel.Id);
                 credit.Production = userCreditModel.Production;
-                credit.RoleId = userCreditModel.RoleId;
+                credit.TalentId = userCreditModel.TalentId;
                 context.SaveChanges();
                 return new GenericActionResult<string>(true, "");
             }
@@ -66,7 +66,7 @@ namespace UserManagement.BusinessLogics
         {
             try
             {
-               return GenericActionResult<UserCreditModel>.FromObject(context.UserCredits.Where(a => a.UserId.Equals(userId)&& !a.IsDeleted).Select(a => new UserCreditModel { UserId = userId, Production = a.Production, RoleId = a.RoleId ,Id = a.Id}).FirstOrDefault());
+               return GenericActionResult<UserCreditModel>.FromObject(context.UserCredits.Where(a => a.UserId.Equals(userId)&& !a.IsDeleted).Select(a => new UserCreditModel { UserId = userId, Production = a.Production, TalentId = a.TalentId ,Id = a.Id}).FirstOrDefault());
             }
             catch (Exception exception) { return new GenericActionResult<UserCreditModel>(exception.Message); }
         }
@@ -75,7 +75,7 @@ namespace UserManagement.BusinessLogics
         {
             try
             {
-                return GenericActionResult<List<UserCreditModel>>.FromObject(context.UserCredits.Where(a=> !a.IsDeleted).Select(a => new UserCreditModel { UserId = a.UserId, Production = a.Production, RoleId = a.RoleId, Id = a.Id}).ToList());
+                return GenericActionResult<List<UserCreditModel>>.FromObject(context.UserCredits.Where(a=> !a.IsDeleted).Select(a => new UserCreditModel { UserId = a.UserId, Production = a.Production, TalentId = a.TalentId, Id = a.Id}).ToList());
             }
             catch (Exception exception) { return new GenericActionResult<List<UserCreditModel>>(exception.Message); }
         }

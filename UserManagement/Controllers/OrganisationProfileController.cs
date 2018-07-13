@@ -20,12 +20,10 @@ namespace UserManagement.Controllers
     public class OrganisationProfileController : Controller
     {
         private readonly ApplicationDbContext context;
-        private readonly IHostingEnvironment hostingEnvironment;
 
-        public OrganisationProfileController(ApplicationDbContext context, IHostingEnvironment hostingEnvironment)
+        public OrganisationProfileController(ApplicationDbContext context)
         {
             this.context = context;
-            this.hostingEnvironment = hostingEnvironment;
         }
 
         [HttpPost]
@@ -69,33 +67,6 @@ namespace UserManagement.Controllers
             return Ok(new { success = organisationProfileById.Success, message = organisationProfileById.Message, data = organisationProfileById.Data });
 
         }
-
-        [HttpPost]
-        [Route("addOrganisationTalents")]
-        public IActionResult AddCredits([FromBody]UserCreditModel creditsModel)
-        {
-            return Accepted();
-        }
-
-        [HttpPost]
-        [Route("getOrganisationTalents")]   
-        public UserCreditModel GetOrganisationTalents()
-        {
-            return new UserCreditModel();
-        }
-
-        [HttpPost]
-        [Route("getOrganisationTalents/{userId}")]
-        public UserCreditModel GetOrganisationTalents(string userId)
-        {
-            return new UserCreditModel();
-        }
-
-        [HttpPost]
-        [Route("getAllOrganisationTalents")]
-        public List<UserCreditModel> GetAllOrganisationTalents()
-        {
-            return new List<UserCreditModel>();
-        }
+        
     }
 }

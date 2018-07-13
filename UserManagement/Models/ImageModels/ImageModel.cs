@@ -1,7 +1,7 @@
 ﻿
-namespace UserManagement.Models.UserProfileModels
+namespace UserManagement.Models.ImageModels
 {
-    public class ProfileImageModel
+    public class ImageModel
     {
         public int Id { get; set; }
         public string UserId { get; set; }

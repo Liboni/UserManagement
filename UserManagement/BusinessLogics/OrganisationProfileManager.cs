@@ -80,7 +80,7 @@ namespace UserManagement.BusinessLogics
         {
             try
             {
-                return new GenericActionResult<List<OrganisationProfile>>(true, "", context.OrganisationProfiles.ToList()));
+                return new GenericActionResult<List<OrganisationProfile>>(true, "", context.OrganisationProfiles.ToList());
             }
             catch (Exception exception)
             {

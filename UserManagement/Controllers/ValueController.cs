@@ -29,7 +29,7 @@ namespace UserManagement.Controllers
         {
            return Ok(new {success = true,Data= new CountriesManager(context).GetCountries() });
         }
-
+        
         [HttpGet]
         [Route("gender/all")]
         public IActionResult Gender()
