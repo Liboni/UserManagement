@@ -14,7 +14,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models.UserProfileModels;
 
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/user-details")]
     public class UserProfileController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -24,7 +24,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("addUserProfileDetails")]
+        [Route("add")]
         public IActionResult AddUserProfileDetails([FromBody]UserProfileModel userProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -33,7 +33,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("updateUserProfileDetails")]
+        [Route("update")]
         public IActionResult UpdateUserProfileDetails([FromBody]UserProfileModel userDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -43,14 +43,14 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("getUserProfileDetails")]
+        [Route("get")]
         public IActionResult GetUserProfileDetails()
         {
             return GetUserProfileDetails(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
         [HttpGet]
-        [Route("getAllUserProfileDetails")]
+        [Route("get/all")]
         public IActionResult GetAllUserProfileDetails()
         {
             GenericActionResult<List<UserProfile>> result = new UserProfileManager(context).GetUserDetails();
@@ -59,7 +59,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("getUserProfileDetails/{userId}")]
+        [Route("get/{userId}")]
         public IActionResult GetUserProfileDetails(string userId)
         {
             if (string.IsNullOrEmpty(userId)) return BadRequest("User is required");

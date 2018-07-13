@@ -5,38 +5,69 @@ namespace UserManagement.Controllers
 
     using Microsoft.AspNetCore.Mvc;
 
+    using UserManagement.BusinessLogics;
+    using UserManagement.Data;
+    using UserManagement.LocalObjects;
+    using UserManagement.Models.JobModels;
     using UserManagement.Models.UserCreditModels;
 
     [Produces("application/json")]
-    [Route("api/Job")]
+    [Route("api/job")]
     public class JobController : Controller
     {
-        [HttpPost]
-        [Route("addOrganisationTalents")]
-        public IActionResult AddCredits([FromBody]UserCreditModel creditsModel)
+        private readonly ApplicationDbContext context;
+
+        public JobController(ApplicationDbContext context)
         {
-            return Accepted();
+            this.context = context;
         }
 
         [HttpPost]
-        [Route("getOrganisationTalents")]
-        public UserCreditModel GetOrganisationTalents()
+        [Route("add")]
+        public IActionResult AddJob([FromBody]JobModel jobModel)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            GenericActionResult<string> result = new JobManager(context).SaveJob(jobModel);
+            return Ok(new { success = result.Success, message = result.Message });
+        }
+
+        [HttpPost]
+        [Route("update")]
+        public IActionResult UpdateJob([FromBody]JobModel jobModel)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            GenericActionResult<string> result = new JobManager(context).UpdateJob(jobModel);
+            return Ok(new { success = result.Success, message = result.Message });
+        }
+
+        [HttpDelete]
+        [Route("delete/{jobId}")]
+        public UserCreditModel DeleteJob()
         {
             return new UserCreditModel();
         }
 
-        [HttpPost]
-        [Route("getOrganisationTalents/{userId}")]
-        public UserCreditModel GetOrganisationTalents(string userId)
+        [HttpGet]
+        [Route("get/{userId}")]
+        public UserCreditModel GetOrganisationTalentsByOrganisation()
         {
             return new UserCreditModel();
         }
 
-        [HttpPost]
-        [Route("getAllOrganisationTalents")]
-        public List<UserCreditModel> GetAllOrganisationTalents()
+        [HttpGet]
+        [Route("get/most-popular")]
+        public UserCreditModel GetMostPopularJob()
         {
-            return new List<UserCreditModel>();
+            return new UserCreditModel();
         }
+
+        [HttpGet]
+        [Route("search/{countryId}/{genderId}/{talentId}")]
+        public UserCreditModel SearchJob(int countryId, int genderId,int talentId )
+        {
+            return new UserCreditModel();
+        }
+
+
     }
 }

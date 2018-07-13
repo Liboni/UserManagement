@@ -14,7 +14,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models.UserCreditModels;
 
     [Produces("application/json")]
-    [Route("api/UserCredit")]
+    [Route("api/credit")]
     public class UserCreditController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -25,7 +25,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("addUserCredits")]
+        [Route("add")]
         public IActionResult AddUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -34,7 +34,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("updateUserCredits")]
+        [Route("update")]
         public IActionResult UpdateUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -44,7 +44,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("getUserCredits")]
+        [Route("get")]
         public IActionResult GetUserCredits()
         {
             return GetUserCredits(ClaimsPrincipal.Current.Identity.GetUserId());
@@ -52,7 +52,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpDelete]
-        [Route("deleteUserCredits/{creditId}")]
+        [Route("delete/{creditId}")]
         public IActionResult DeleteUserCredits(int creditId)
         {
             GenericActionResult<string> result = new UserCreditsManager(context).DeleteUserCreditById(creditId);
@@ -60,7 +60,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("getUserCredits/{userId}")]
+        [Route("get/{userId}")]
         public IActionResult GetUserCredits(string userId)
         {
             GenericActionResult<UserCreditModel> result = new UserCreditsManager(context).GetUserCreditByUserId(userId);
@@ -68,7 +68,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("getallUserCredits")]
+        [Route("get/all")]
         public IActionResult GetAllUserCredits()
         {
             GenericActionResult<List<UserCreditModel>> result = new UserCreditsManager(context).GetAllUserCredits();

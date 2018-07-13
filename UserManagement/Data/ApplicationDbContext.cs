@@ -16,6 +16,7 @@ namespace UserManagement.Data
         public DbSet<Talent> Talents  { get; set; }
         public DbSet<OrganisationProfile> OrganisationProfiles { get; set; }
         public DbSet<Job> Jobs { get; set; }
+        public DbSet<JobApplication> JobApplications { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }

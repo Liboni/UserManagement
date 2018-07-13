@@ -2,7 +2,6 @@
 namespace UserManagement.Controllers
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
 
     using Microsoft.AspNetCore.Mvc;
@@ -13,7 +12,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models.ValuesModels;
 
     [Produces("application/json")]
-    [Route("api/Value")]
+    [Route("api/value")]
     public class ValueController : Controller
     {
         private readonly ApplicationDbContext context;

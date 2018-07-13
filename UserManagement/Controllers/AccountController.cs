@@ -19,7 +19,7 @@ namespace UserManagement.Controllers
     using IdentityResult = Microsoft.AspNetCore.Identity.IdentityResult;
 
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/account")]
     public class AccountController : Controller
     {
         private readonly Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager;
@@ -103,7 +103,7 @@ namespace UserManagement.Controllers
         }
 
         [Authorize]
-        [HttpGet]
+        [HttpPost]
         [Route("changePassword")]
         public async Task<IActionResult> ChangePassword([FromBody]ChangePasswordModel changePasswordModel)
         {

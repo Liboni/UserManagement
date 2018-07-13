@@ -16,7 +16,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models.UserProfileModels;
 
     [Produces("application/json")]
-    [Route("api/OrganisationProfile")]
+    [Route("api/organisation-details")]
     public class OrganisationProfileController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -27,7 +27,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("addOrganisationDetails")]
+        [Route("add")]
         public IActionResult AddOrganisationDetails([FromBody]OrganisationProfileModel organisationDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -36,7 +36,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("updateOrganisationDetails")]
+        [Route("update")]
         public IActionResult UpdateOrganisationDetails([FromBody]OrganisationProfileModel organisationProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -44,23 +44,23 @@ namespace UserManagement.Controllers
             return Ok(new { success = result.Success, message = result.Message });
         }
 
-        [HttpPost]
-        [Route("getOrganisationDetails")]
+        [HttpGet]
+        [Route("get")]
         public IActionResult GetOrganisationDetails()
         {
             return GetOrganisationDetails(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
-        [HttpPost]
-        [Route("getAllOrganisationDetails")]
+        [HttpGet]
+        [Route("get/all")]
         public IActionResult GetAllOrganisationDetails()
         {
             GenericActionResult<List<OrganisationProfile>> result = new OrganisationProfileManager(context).GetOrganisationProfiles();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [HttpPost]
-        [Route("getOrganisationDetails/{userId}")]
+        [HttpGet]
+        [Route("get/{userId}")]
         public IActionResult GetOrganisationDetails(string userId)
         {
             GenericActionResult<OrganisationProfile> organisationProfileById = new OrganisationProfileManager(context).GetOrganisationProfileById(userId);

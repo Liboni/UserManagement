@@ -3,7 +3,9 @@ namespace UserManagement.Enums
 {
     public enum Gender
     {
-        Male =1,
-        Female
+        Any,
+        Male,
+        Female,
+        Other
     }
 }

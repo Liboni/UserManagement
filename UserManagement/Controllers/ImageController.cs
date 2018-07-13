@@ -18,11 +18,10 @@ namespace UserManagement.Controllers
     using UserManagement.Data;
     using UserManagement.LocalObjects;
     using UserManagement.Models.ImageModels;
-    using UserManagement.Models.UserProfileModels;
 
     [Authorize]
     [Produces("application/json")]
-    [Route("api/Image")]
+    [Route("api/image")]
     public class ImageController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -35,7 +34,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        [Route("addProfileImage")]
+        [Route("add-profile")]
         public async Task<IActionResult> AddProfileImage(IFormFile file)
         {
             string uploadsRoot = hostingEnvironment.WebRootPath;
@@ -61,7 +60,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpPost]
-        [Route("updateProfileImage")]
+        [Route("update-profile")]
         public async Task<IActionResult> UpdateProfileImage(IFormFile file)
         {
             string uploadsRoot = hostingEnvironment.WebRootPath;
@@ -85,7 +84,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("getProfileImage/{userId}")]
+        [Route("get-profile/{userId}")]
         public IActionResult GetProfileImage(string userId)
         {
             if (string.IsNullOrEmpty(userId)) return BadRequest("User ID is required");
@@ -97,7 +96,7 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpDelete]
-        [Route("deleteProfileImage/{imageId}")]
+        [Route("delete-profile/{imageId}")]
         public IActionResult DeleteProfileImage(int imageId)
         {
             GenericActionResult<string> result = new ProfileImagesManager(context).DeleteProfileImage(imageId);
@@ -105,14 +104,14 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("getProfileImage")]
+        [Route("get-profile")]
         public IActionResult GetProfileImage()
         {
             return GetProfileImage(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
         [HttpGet]
-        [Route("getAllProfileImages")]
+        [Route("get-profile/all")]
         public IActionResult GetAllProfileImages()
         {
             GenericActionResult<List<ProfileImage>> result = new ProfileImagesManager(context).GetProfileImages();
