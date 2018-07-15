@@ -3,7 +3,9 @@ namespace UserManagement.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
 
+    using UserManagement.BusinessLogics;
     using UserManagement.Data;
+    using UserManagement.LocalObjects;
     using UserManagement.Models.JobApplicationModels;
 
     [Produces("application/json")]
@@ -19,9 +21,11 @@ namespace UserManagement.Controllers
 
         [HttpPost]
         [Route("apply")]
-        public IActionResult ApplyJob([FromBody]JobApplicationModel jobModel)
+        public IActionResult ApplyJob([FromBody]JobApplicationModel jobApplicationModel)
         {
-          return Ok();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            GenericActionResult<string> result = new JobApplicationManager(context).SaveJobApplication(jobApplicationModel);
+            return Ok(new { success = result.Success, message = result.Message });
         }
 
         [HttpPost]

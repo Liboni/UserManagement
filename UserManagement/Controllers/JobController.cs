@@ -42,9 +42,11 @@ namespace UserManagement.Controllers
 
         [HttpDelete]
         [Route("delete/{jobId}")]
-        public UserCreditModel DeleteJob()
+        public IActionResult DeleteJob(int jobId)
         {
-            return new UserCreditModel();
+            if(jobId<=0)return BadRequest("Invalid job");
+            GenericActionResult<string> result = new JobManager(context).DeleteJob(jobId);
+            return Ok(new { success = result.Success, message = result.Message });
         }
 
         [HttpGet]

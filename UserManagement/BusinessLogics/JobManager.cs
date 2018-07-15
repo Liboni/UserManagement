@@ -65,5 +65,19 @@ namespace UserManagement.BusinessLogics
                 return new GenericActionResult<string>("Failed to update job, please try again or contact the administrator.");
             }
         }
+
+        public GenericActionResult<string> DeleteJob(int jobId)
+        {
+            try
+            {
+                context.JobApplications.Remove(context.JobApplications.Find(jobId));
+                context.SaveChanges();
+                return new GenericActionResult<string>(true,"Job deleted successfully");
+            }
+            catch (Exception)
+            {
+                return new GenericActionResult<string>("Failed to delete job, please try again or contact the administrator.");
+            }
+        }
     }
 }
