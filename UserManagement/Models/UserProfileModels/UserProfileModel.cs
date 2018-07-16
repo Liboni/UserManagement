@@ -4,11 +4,15 @@ namespace UserManagement.Models.UserProfileModels
     using System;
     using System.ComponentModel.DataAnnotations;
 
+    using Microsoft.AspNetCore.Http;
+
     using UserManagement.Enums;
 
     public class UserProfileModel
     {
         public int Id { get; set; }
+
+        public IFormFile ProfileImage { get; set; }
 
         [Required(ErrorMessage = "User Id is required.")]
         public string UserId { get; set; }
@@ -27,6 +31,5 @@ namespace UserManagement.Models.UserProfileModels
 
         [Required(ErrorMessage = "Country is required."),Range(1,Int32.MaxValue,ErrorMessage = "Enter a valid country")]
         public int CountryId { get; set; }
-
     }
 }

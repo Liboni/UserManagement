@@ -1,8 +1,6 @@
 ﻿
 namespace UserManagement.Controllers
 {
-    using System.Collections.Generic;
-
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.BusinessLogics;
