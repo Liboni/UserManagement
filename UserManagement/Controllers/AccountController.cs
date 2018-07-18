@@ -57,8 +57,9 @@ namespace UserManagement.Controllers
                                        {
                                            Email = registerModel.Email,
                                            SecurityStamp = Guid.NewGuid().ToString(),
-                                           UserName = registerModel.Email
-              };
+                                           UserName = registerModel.Email,
+                                           PhoneNumber = registerModel.PhoneNumber
+                };
             Task<IdentityResult> task = userManager?.CreateAsync(user, registerModel.Password);
             if (task == null) return BadRequest();
             await task;
@@ -68,8 +69,7 @@ namespace UserManagement.Controllers
             return Ok(new { success= task.Result.Succeeded, message = task.Result.Errors, userId = user.Id});
         }
        
-        [HttpGet]
-        [Route("verify/{token}")]
+        [HttpGet("verify/{token}")]
         public async Task<IActionResult> VerifyAccount(string token)
         {
             if (String.IsNullOrEmpty(token)) return BadRequest();
@@ -78,8 +78,7 @@ namespace UserManagement.Controllers
             return Ok(new { success = result.Succeeded, message = result.Errors });
         }
         
-        [HttpGet]
-        [Route("forgotPassword/{email}")]
+        [HttpGet("forgotPassword/{email}")]
         public async Task<IActionResult> ForgotPassword(string email)
         {
             if (String.IsNullOrEmpty(email)) return BadRequest("Email address is required");
@@ -89,8 +88,7 @@ namespace UserManagement.Controllers
             return Ok(new { success = true, message = "Check your email to reset your password." });
         }
 
-        [HttpPost]
-        [Route("resetPassword")]
+        [HttpPost("resetPassword")]
         public async Task<IActionResult> ResetPassword([FromBody]ResetPasswordModel resetPasswordModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -103,8 +101,7 @@ namespace UserManagement.Controllers
         }
 
         [Authorize]
-        [HttpPost]
-        [Route("changePassword")]
+        [HttpPost("changePassword")]
         public async Task<IActionResult> ChangePassword([FromBody]ChangePasswordModel changePasswordModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);

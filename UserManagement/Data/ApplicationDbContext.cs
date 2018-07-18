@@ -1,4 +1,6 @@
-﻿
+﻿using Microsoft.EntityFrameworkCore;
+using UserManagement.Models.BusinessTypeModels;
+
 namespace UserManagement.Data
 {
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -17,6 +19,7 @@ namespace UserManagement.Data
         public DbSet<OrganisationProfile> OrganisationProfiles { get; set; }
         public DbSet<Job> Jobs { get; set; }
         public DbSet<JobApplication> JobApplications { get; set; }
+        public DbSet<BusinessType> BusinessTypes { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }

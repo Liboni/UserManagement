@@ -1,73 +1,86 @@
 ﻿
 namespace UserManagement.Controllers
 {
+    using System.Collections.Generic;
+
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
     using UserManagement.LocalObjects;
+    using UserManagement.Models;
     using UserManagement.Models.JobModels;
-    using UserManagement.Models.UserCreditModels;
 
+    [Authorize]
     [Produces("application/json")]
     [Route("api/job")]
     public class JobController : Controller
     {
         private readonly ApplicationDbContext context;
-
-        public JobController(ApplicationDbContext context)
+        private readonly IHostingEnvironment hostingEnvironment;
+        private readonly UserManager<ApplicationUser> userManager;
+        public JobController(ApplicationDbContext context, IHostingEnvironment hostingEnvironment, UserManager<ApplicationUser> userManager)
         {
             this.context = context;
+            this.hostingEnvironment = hostingEnvironment;
+            this.userManager = userManager;
         }
 
         [HttpPost]
-        [Route("add")]
-        public IActionResult AddJob([FromBody]JobModel jobModel)
+        public IActionResult AddJob(JobModel jobModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            GenericActionResult<string> result = new JobManager(context).SaveJob(jobModel);
+            GenericActionResult<string> result = new JobManager(context, userManager).SaveJob(jobModel, hostingEnvironment.WebRootPath).Result;
             return Ok(new { success = result.Success, message = result.Message });
         }
 
-        [HttpPost]
-        [Route("update")]
-        public IActionResult UpdateJob([FromBody]JobModel jobModel)
+        [HttpPut("{id}")]
+        public IActionResult UpdateJob([FromRoute]int id,JobModel jobModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            GenericActionResult<string> result = new JobManager(context).UpdateJob(jobModel);
+            GenericActionResult<string> result = new JobManager(context, userManager).UpdateJob(jobModel, hostingEnvironment.WebRootPath).Result;
             return Ok(new { success = result.Success, message = result.Message });
         }
 
-        [HttpDelete]
-        [Route("delete/{jobId}")]
-        public IActionResult DeleteJob(int jobId)
+        [HttpDelete("{id}")]
+        public IActionResult DeleteJob(int id)
         {
-            if(jobId<=0)return BadRequest("Invalid job");
-            GenericActionResult<string> result = new JobManager(context).DeleteJob(jobId);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            GenericActionResult<string> result = new JobManager(context, userManager).DeleteJob(id);
             return Ok(new { success = result.Success, message = result.Message });
         }
 
-        [HttpGet]
-        [Route("get/{userId}")]
-        public UserCreditModel GetOrganisationTalentsByOrganisation()
+        [HttpGet("{id}")]
+        public IActionResult GetOrganisationTalents(int id)
         {
-            return new UserCreditModel();
+            GenericActionResult<JobResponseModel> result = new JobManager(context, userManager).GetJob(hostingEnvironment.WebRootPath, id);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [HttpGet]
-        [Route("get/most-popular")]
-        public UserCreditModel GetMostPopularJob()
+        [HttpGet("{from}/{count}")]
+        public IActionResult GetOrganisationTalents(int from, int count)
         {
-            return new UserCreditModel();
+            GenericActionResult<List<JobResponseModel>> result = new JobManager(context,userManager).GetJobs(hostingEnvironment.WebRootPath,from, count);
+            return Ok(new { success = result.Success, message = result.Message, data= result.Data });
         }
 
-        [HttpGet]
-        [Route("search/{countryId}/{genderId}/{talentId}")]
-        public UserCreditModel SearchJob(int countryId, int genderId,int talentId )
+        [HttpGet("{userId}/{from}/{count}")]
+        public IActionResult GetOrganisationTalents(string userId,int from, int count)
         {
-            return new UserCreditModel();
+            GenericActionResult<List<JobResponseModel>> result = new JobManager(context, userManager).GetJobs(hostingEnvironment.WebRootPath, userId, from, count);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
+        [HttpGet("{countryId}/{genderId}/{talentId}/{from}/{count}")]
+        public IActionResult SearchJob(int countryId, int genderId,int talentId, int from,int count )
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            GenericActionResult<List<JobResponseModel>> result = new JobManager(context, userManager).GetJobs(hostingEnvironment.WebRootPath,countryId,genderId,talentId, from, count);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
+        }
 
     }
 }

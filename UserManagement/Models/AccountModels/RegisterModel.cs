@@ -14,6 +14,9 @@ namespace UserManagement.Models.AccountModels
         [Required(ErrorMessage = "Password is required."), MinLength(6, ErrorMessage = "Required password minimun length is 6 characters")]
         public string Password { get; set; }
 
+        [Required(ErrorMessage = "Phonenumber is required.")]
+        public string PhoneNumber { get; set; }
+
         [Required(ErrorMessage = "Register type is required.")]
         public RegisterType RegisterType { get; set; }
     }

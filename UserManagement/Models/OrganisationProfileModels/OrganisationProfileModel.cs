@@ -4,9 +4,12 @@ namespace UserManagement.Models.OrganisationProfileModels
     using System;
     using System.ComponentModel.DataAnnotations;
 
-    public class OrganisationProfileModel
+    using Microsoft.AspNetCore.Http;
+
+     public class OrganisationProfileModel
     {
         public int Id { get; set; }
+        public IFormFile ProfileImage { get; set; }
 
         [Required(ErrorMessage = "User ID is required.")]
         public string UserId { get; set; }

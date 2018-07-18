@@ -83,15 +83,16 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<UserProfile>> GetUserDetails()
+        public GenericActionResult<List<UserProfileResponseModel>> GetAllUserDetails(string webRootPath, int from, int count)
         {
             try
             {
-                return new GenericActionResult<List<UserProfile>>(true, "", context.UserProfiles.ToList());
+               List<UserProfile> profiles = context.UserProfiles.Skip(from).Take(count).ToList();
+               return new GenericActionResult<List<UserProfileResponseModel>>(true, "", profiles.Select(userProfile => new ObjectConverter(context, userManager).ToUserProfileResponseModel(userProfile, webRootPath).Result).ToList());
             }
             catch (Exception exception)
             {
-                return new GenericActionResult<List<UserProfile>>(exception.Message);
+                return new GenericActionResult<List<UserProfileResponseModel>>(exception.Message);
             }
         }
     }

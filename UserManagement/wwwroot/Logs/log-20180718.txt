@@ -1,0 +1,265 @@
+2018-07-18 10:38:44.439 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-18 10:38:45.395 +02:00 [Information] Request finished in 972.1978ms 302 
+2018-07-18 10:38:45.432 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 10:38:45.608 +02:00 [Information] Request finished in 174.3614ms 200 
+2018-07-18 10:38:46.312 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 10:38:53.168 +02:00 [Information] Request finished in 6856.847ms 200 
+2018-07-18 10:43:20.738 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/register application/json 89
+2018-07-18 10:43:21.271 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Register (UserManagement)" with arguments (["UserManagement.Models.AccountModels.RegisterModel"]) - ModelState is Valid
+2018-07-18 10:43:26.782 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:43:26.845 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Register (UserManagement)" in 5860.6477ms
+2018-07-18 10:43:26.850 +02:00 [Information] Request finished in 6113.3118ms 200 application/json; charset=utf-8
+2018-07-18 10:43:50.664 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details/add multipart/form-data; boundary=--------------------------399202085621029350151192 102966
+2018-07-18 10:43:50.920 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:43:50'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-18 10:43:50.923 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:43:50'."
+2018-07-18 10:43:51.113 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-18 10:43:51.580 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:43:51.587 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" in 640.4643ms
+2018-07-18 10:43:51.591 +02:00 [Information] Request finished in 927.9819ms 200 application/json; charset=utf-8
+2018-07-18 10:44:02.404 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/register application/json 89
+2018-07-18 10:44:02.422 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Register (UserManagement)" with arguments (["UserManagement.Models.AccountModels.RegisterModel"]) - ModelState is Valid
+2018-07-18 10:44:06.098 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:44:06.100 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Register (UserManagement)" in 3693.4836ms
+2018-07-18 10:44:06.103 +02:00 [Information] Request finished in 3699.6559ms 200 application/json; charset=utf-8
+2018-07-18 10:44:25.026 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details/add multipart/form-data; boundary=--------------------------858161534444243089870915 62301
+2018-07-18 10:44:25.058 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:44:25'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-18 10:44:25.061 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:44:25'."
+2018-07-18 10:44:25.079 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-18 10:44:25.152 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:44:25.154 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" in 90.1729ms
+2018-07-18 10:44:25.157 +02:00 [Information] Request finished in 132.47ms 200 application/json; charset=utf-8
+2018-07-18 10:44:36.743 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/register application/json 89
+2018-07-18 10:44:36.759 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Register (UserManagement)" with arguments (["UserManagement.Models.AccountModels.RegisterModel"]) - ModelState is Valid
+2018-07-18 10:44:40.188 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:44:40.190 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Register (UserManagement)" in 3444.8821ms
+2018-07-18 10:44:40.193 +02:00 [Information] Request finished in 3450.5992ms 200 application/json; charset=utf-8
+2018-07-18 10:44:56.627 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details/add multipart/form-data; boundary=--------------------------980530955888859765625440 252350
+2018-07-18 10:44:56.662 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:44:56'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-18 10:44:56.666 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:44:56'."
+2018-07-18 10:44:56.694 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-18 10:44:56.760 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:44:56.763 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" in 94.3942ms
+2018-07-18 10:44:56.765 +02:00 [Information] Request finished in 138.9992ms 200 application/json; charset=utf-8
+2018-07-18 10:45:02.752 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/register application/json 89
+2018-07-18 10:45:02.769 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Register (UserManagement)" with arguments (["UserManagement.Models.AccountModels.RegisterModel"]) - ModelState is Valid
+2018-07-18 10:45:06.285 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:45:06.289 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Register (UserManagement)" in 3533.5735ms
+2018-07-18 10:45:06.292 +02:00 [Information] Request finished in 3540.7956ms 200 application/json; charset=utf-8
+2018-07-18 10:45:22.077 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details/add multipart/form-data; boundary=--------------------------168607255735026070369481 51745
+2018-07-18 10:45:22.107 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:45:22'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-18 10:45:22.111 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:45:22'."
+2018-07-18 10:45:22.130 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-18 10:45:22.193 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:45:22.196 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" in 82.108ms
+2018-07-18 10:45:22.199 +02:00 [Information] Request finished in 121.9887ms 200 application/json; charset=utf-8
+2018-07-18 10:45:29.079 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/register application/json 89
+2018-07-18 10:45:29.096 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Register (UserManagement)" with arguments (["UserManagement.Models.AccountModels.RegisterModel"]) - ModelState is Valid
+2018-07-18 10:45:32.398 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:45:32.401 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Register (UserManagement)" in 3319.4611ms
+2018-07-18 10:45:32.404 +02:00 [Information] Request finished in 3325.8458ms 200 application/json; charset=utf-8
+2018-07-18 10:45:44.887 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details/add multipart/form-data; boundary=--------------------------054305070615053520187868 3470
+2018-07-18 10:45:44.921 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:45:44'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-18 10:45:44.924 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/18/2018 08:45:44'."
+2018-07-18 10:45:44.943 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-18 10:45:45.019 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:45:45.022 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" in 94.6887ms
+2018-07-18 10:45:45.025 +02:00 [Information] Request finished in 138.0996ms 200 application/json; charset=utf-8
+2018-07-18 10:46:00.993 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 10:46:00.997 +02:00 [Information] Request finished in 3.7062ms 200 
+2018-07-18 10:46:01.820 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 10:46:01.823 +02:00 [Information] Request finished in 3.8718ms 200 
+2018-07-18 10:46:12.674 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:46:12.693 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:46:17.555 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:46:17.584 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 4903.3392ms
+2018-07-18 10:46:17.588 +02:00 [Information] Request finished in 4913.4795ms 200 application/json; charset=utf-8
+2018-07-18 10:46:44.359 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:46:44.377 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:47:26.268 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:47:26.270 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 41909.0148ms
+2018-07-18 10:47:26.273 +02:00 [Information] Request finished in 41914.5368ms 200 application/json; charset=utf-8
+2018-07-18 10:47:28.460 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:47:28.476 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:49:11.687 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-18 10:49:12.025 +02:00 [Information] Request finished in 370.0953ms 302 
+2018-07-18 10:49:12.043 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 10:49:12.090 +02:00 [Information] Request finished in 47.9404ms 200 
+2018-07-18 10:49:12.252 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 10:49:18.573 +02:00 [Information] Request finished in 6320.852ms 200 
+2018-07-18 10:49:19.084 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:49:19.232 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:49:22.919 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:49:22.945 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 3786.5699ms
+2018-07-18 10:49:22.950 +02:00 [Information] Request finished in 3865.4783ms 200 application/json; charset=utf-8
+2018-07-18 10:52:51.147 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-18 10:52:51.465 +02:00 [Information] Request finished in 346.8982ms 302 
+2018-07-18 10:52:51.479 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 10:52:51.529 +02:00 [Information] Request finished in 48.9689ms 200 
+2018-07-18 10:52:51.711 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 10:52:55.680 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:52:57.501 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:58:30.595 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:58:30.595 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-18 10:58:30.964 +02:00 [Information] Request finished in 422.1378ms 302 
+2018-07-18 10:58:30.985 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 10:58:31.056 +02:00 [Information] Request finished in 69.4123ms 200 
+2018-07-18 10:58:31.143 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:58:31.266 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 10:58:52.596 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:58:52.725 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 21683.1565ms
+2018-07-18 10:58:52.760 +02:00 [Information] Request finished in 22189.4252ms 200 application/json; charset=utf-8
+2018-07-18 10:58:58.842 +02:00 [Information] Request finished in 27575.2753ms 200 
+2018-07-18 10:59:26.311 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 10:59:26.723 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 10:59:27.205 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 10:59:27.331 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 687.0352ms
+2018-07-18 10:59:27.339 +02:00 [Information] Request finished in 1051.2576ms 200 application/json; charset=utf-8
+2018-07-18 11:00:21.850 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-18 11:00:22.165 +02:00 [Information] Request finished in 344.1293ms 302 
+2018-07-18 11:00:22.190 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 11:00:22.241 +02:00 [Information] Request finished in 50.3818ms 200 
+2018-07-18 11:00:22.442 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 11:00:24.008 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/2  
+2018-07-18 11:00:25.891 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "2"]) - ModelState is Valid
+2018-07-18 11:00:29.096 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 11:00:29.182 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 4369.5133ms
+2018-07-18 11:00:29.188 +02:00 [Information] Request finished in 5178.1389ms 200 application/json; charset=utf-8
+2018-07-18 11:00:29.404 +02:00 [Information] Request finished in 6961.0666ms 200 
+2018-07-18 11:00:40.021 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/0/5  
+2018-07-18 11:00:40.040 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "5"]) - ModelState is Valid
+2018-07-18 11:00:40.268 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 11:00:40.293 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 267.8867ms
+2018-07-18 11:00:40.296 +02:00 [Information] Request finished in 275.7029ms 200 application/json; charset=utf-8
+2018-07-18 11:00:55.486 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/user-details/get/all/5/5  
+2018-07-18 11:00:55.503 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["5", "5"]) - ModelState is Valid
+2018-07-18 11:00:55.589 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-18 11:00:55.591 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 102.2545ms
+2018-07-18 11:00:55.594 +02:00 [Information] Request finished in 108.5157ms 200 application/json; charset=utf-8
+2018-07-18 17:26:19.389 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-18 17:26:19.754 +02:00 [Information] Request finished in 391.7777ms 302 
+2018-07-18 17:26:19.772 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-18 17:26:19.819 +02:00 [Information] Request finished in 46.1935ms 200 
+2018-07-18 17:26:19.834 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/typography.css  
+2018-07-18 17:26:19.872 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/screen.css  
+2018-07-18 17:26:19.872 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/reset.css  
+2018-07-18 17:26:19.911 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/object-assign-pollyfill.js  
+2018-07-18 17:26:19.917 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jquery.slideto.min.js  
+2018-07-18 17:26:19.961 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jquery-1.8.0.min.js  
+2018-07-18 17:26:19.992 +02:00 [Information] Sending file. Request path: '"/lib/jquery-1.8.0.min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.016 +02:00 [Information] Sending file. Request path: '"/lib/object-assign-pollyfill.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.017 +02:00 [Information] Sending file. Request path: '"/css/screen.css"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.020 +02:00 [Information] Sending file. Request path: '"/css/typography.css"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.022 +02:00 [Information] Sending file. Request path: '"/css/reset.css"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.038 +02:00 [Information] Request finished in 180.6845ms 200 application/javascript
+2018-07-18 17:26:20.061 +02:00 [Information] Sending file. Request path: '"/lib/jquery.slideto.min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.062 +02:00 [Information] Request finished in 181.6276ms 200 text/css
+2018-07-18 17:26:20.128 +02:00 [Information] Request finished in 161.4797ms 200 application/javascript
+2018-07-18 17:26:20.158 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jquery.ba-bbq.min.js  
+2018-07-18 17:26:20.205 +02:00 [Information] Request finished in 180.6791ms 200 text/css
+2018-07-18 17:26:20.228 +02:00 [Information] Sending file. Request path: '"/lib/jquery.ba-bbq.min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.235 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/backbone-min.js  
+2018-07-18 17:26:20.291 +02:00 [Information] Request finished in 139.872ms 200 application/javascript
+2018-07-18 17:26:20.294 +02:00 [Information] Sending file. Request path: '"/lib/backbone-min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.338 +02:00 [Information] Request finished in 194.436ms 200 text/css
+2018-07-18 17:26:20.364 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/highlight.9.1.0.pack.js  
+2018-07-18 17:26:20.366 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/handlebars-4.0.5.js  
+2018-07-18 17:26:20.368 +02:00 [Information] Sending file. Request path: '"/lib/highlight.9.1.0.pack.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.393 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jquery.wiggle.min.js  
+2018-07-18 17:26:20.396 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/lodash.min.js  
+2018-07-18 17:26:20.400 +02:00 [Information] Sending file. Request path: '"/lib/handlebars-4.0.5.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.424 +02:00 [Information] Sending file. Request path: '"/lib/jquery.wiggle.min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.426 +02:00 [Information] Request finished in 131.6449ms 200 application/javascript
+2018-07-18 17:26:20.452 +02:00 [Information] Request finished in 55.7785ms 200 application/javascript
+2018-07-18 17:26:20.476 +02:00 [Information] Request finished in 87.4927ms 200 application/javascript
+2018-07-18 17:26:20.501 +02:00 [Information] Sending file. Request path: '"/lib/lodash.min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.544 +02:00 [Information] Request finished in 138.8814ms 200 application/javascript
+2018-07-18 17:26:20.546 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jsoneditor.min.js  
+2018-07-18 17:26:20.596 +02:00 [Information] Request finished in 344.7701ms 200 application/javascript
+2018-07-18 17:26:20.621 +02:00 [Information] Sending file. Request path: '"/lib/jsoneditor.min.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.623 +02:00 [Information] Request finished in 527.9672ms 200 application/javascript
+2018-07-18 17:26:20.646 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/swagger-oauth.js  
+2018-07-18 17:26:20.650 +02:00 [Information] Request finished in 129.0725ms 200 application/javascript
+2018-07-18 17:26:20.679 +02:00 [Information] Sending file. Request path: '"/lib/swagger-oauth.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.702 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui.js  
+2018-07-18 17:26:20.729 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/print.css  
+2018-07-18 17:26:20.751 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/images/logo_small.png  
+2018-07-18 17:26:20.774 +02:00 [Information] Sending file. Request path: '"/css/print.css"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.776 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/marked.js  
+2018-07-18 17:26:20.778 +02:00 [Information] Sending file. Request path: '"/lib/marked.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.780 +02:00 [Information] Request finished in 3.3021ms 200 application/javascript
+2018-07-18 17:26:20.781 +02:00 [Information] Sending file. Request path: '"/swagger-ui.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.791 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/highlight.9.1.0.pack_extended.js  
+2018-07-18 17:26:20.792 +02:00 [Information] Request finished in 106.787ms 200 application/javascript
+2018-07-18 17:26:20.816 +02:00 [Information] Sending file. Request path: '"/lib/highlight.9.1.0.pack_extended.js"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.846 +02:00 [Information] Request finished in 89.9031ms 200 text/css
+2018-07-18 17:26:20.849 +02:00 [Information] Sending file. Request path: '"/images/logo_small.png"'. Physical path: '"N/A"'
+2018-07-18 17:26:20.854 +02:00 [Information] Request finished in 123.6199ms 200 image/png
+2018-07-18 17:26:20.862 +02:00 [Information] Request finished in 88.7721ms 200 application/javascript
+2018-07-18 17:26:21.039 +02:00 [Information] Request finished in 357.3099ms 200 application/javascript
+2018-07-18 17:26:21.334 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/fonts/DroidSans-Bold.ttf  
+2018-07-18 17:26:21.343 +02:00 [Information] Sending file. Request path: '"/fonts/DroidSans-Bold.ttf"'. Physical path: '"N/A"'
+2018-07-18 17:26:21.351 +02:00 [Information] Request finished in 16.8163ms 200 application/x-font-ttf
+2018-07-18 17:26:21.381 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/fonts/DroidSans.ttf  
+2018-07-18 17:26:21.384 +02:00 [Information] Sending file. Request path: '"/fonts/DroidSans.ttf"'. Physical path: '"N/A"'
+2018-07-18 17:26:21.389 +02:00 [Information] Request finished in 7.3227ms 200 application/x-font-ttf
+2018-07-18 17:26:21.419 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-18 17:26:21.522 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/images/favicon-32x32.png  
+2018-07-18 17:26:21.525 +02:00 [Information] Sending file. Request path: '"/images/favicon-32x32.png"'. Physical path: '"N/A"'
+2018-07-18 17:26:21.528 +02:00 [Information] Request finished in 4.6425ms 200 image/png
+2018-07-18 17:26:21.951 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/images/favicon-16x16.png  
+2018-07-18 17:26:21.955 +02:00 [Information] Sending file. Request path: '"/images/favicon-16x16.png"'. Physical path: '"N/A"'
+2018-07-18 17:26:21.959 +02:00 [Information] Request finished in 7.4684ms 200 image/png
+2018-07-18 17:26:29.529 +02:00 [Information] Request finished in 8110.7349ms 200 
+2018-07-18 17:26:37.203 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/images/throbber.gif  
+2018-07-18 17:26:37.206 +02:00 [Information] Sending file. Request path: '"/images/throbber.gif"'. Physical path: '"N/A"'
+2018-07-18 17:26:37.209 +02:00 [Information] Request finished in 5.7275ms 200 image/gif

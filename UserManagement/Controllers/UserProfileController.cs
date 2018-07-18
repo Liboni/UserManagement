@@ -31,7 +31,6 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost, DisableRequestSizeLimit]
-        [Route("add")]
         public IActionResult AddUserProfileDetails(UserProfileModel userProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -40,33 +39,32 @@ namespace UserManagement.Controllers
         }
 
         [Authorize]
-        [HttpPost, DisableRequestSizeLimit]
-        [Route("update")]
-        public IActionResult UpdateUserProfileDetails(UserProfileModel userDetailsModel)
+        [HttpPut, DisableRequestSizeLimit]
+        public IActionResult UpdateUserProfileDetails([FromRoute]int id,UserProfileModel userDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id!=userDetailsModel.Id) return BadRequest(ModelState);
             Task<GenericActionResult<string>> result = new UserProfileManager(context, userManager).UpdateUserDetails(userDetailsModel, hostingEnvironment.WebRootPath);
             return Ok(new { success = result.Result.Success, message = result.Result.Message });
         }
 
         [Authorize]
         [HttpGet]
-        [Route("get")]
         public IActionResult GetUserProfileDetails()
         {
             return GetUserProfileDetails(ClaimsPrincipal.Current.Identity.GetUserId());
         }
 
-        [HttpGet]
-        [Route("get/all")]
-        public IActionResult GetAllUserProfileDetails()
+        [Authorize]
+        [HttpGet("{from}/{count}")]
+        public IActionResult GetAllUserProfileDetails(int from, int count)
         {
-            GenericActionResult<List<UserProfile>> result = new UserProfileManager(context, userManager).GetUserDetails();
+            GenericActionResult<List<UserProfileResponseModel>> result = new UserProfileManager(context, userManager).GetAllUserDetails(hostingEnvironment.WebRootPath, from, count);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [HttpGet]
-        [Route("get/{userId}")]
+        [Authorize]
+        [HttpGet("{userId}")]
         public IActionResult GetUserProfileDetails(string userId)
         {
             if (string.IsNullOrEmpty(userId)) return BadRequest("User is required");
@@ -75,5 +73,5 @@ namespace UserManagement.Controllers
         }
         
        
-    }
+    } 
 }

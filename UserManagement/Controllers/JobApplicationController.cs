@@ -1,45 +1,64 @@
 ﻿
 namespace UserManagement.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
     using UserManagement.LocalObjects;
+    using UserManagement.Models;
     using UserManagement.Models.JobApplicationModels;
 
+    [Authorize]
     [Produces("application/json")]
-    [Route("api/job-application")]
+    [Route("api/apply")]
     public class JobApplicationController : Controller
     {
         private readonly ApplicationDbContext context;
-
-        public JobApplicationController(ApplicationDbContext context)
+        private readonly IHostingEnvironment hostingEnvironment;
+        private readonly UserManager<ApplicationUser> userManager;
+        public JobApplicationController(ApplicationDbContext context, UserManager<ApplicationUser> userManager, IHostingEnvironment hostingEnvironment)
         {
             this.context = context;
+            this.userManager = userManager;
+            this.hostingEnvironment = hostingEnvironment;
         }
 
         [HttpPost]
-        [Route("apply")]
         public IActionResult ApplyJob([FromBody]JobApplicationModel jobApplicationModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            GenericActionResult<string> result = new JobApplicationManager(context).SaveJobApplication(jobApplicationModel);
+            GenericActionResult<string> result = new JobApplicationManager(context, userManager).SaveJobApplication(jobApplicationModel);
             return Ok(new { success = result.Success, message = result.Message });
         }
 
-        [HttpPost]
-        [Route("get/userId")]
-        public IActionResult GetApplicationByUserId([FromBody]JobApplicationModel jobModel)
+        [HttpPut("{id}")]
+        public IActionResult PutJob([FromRoute]int id, [FromBody]JobApplicationModel jobApplicationModel)
         {
-            return Ok();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id!=jobApplicationModel.Id) return BadRequest();
+            GenericActionResult<string> result = new JobApplicationManager(context, userManager).UpdateJobApplication(jobApplicationModel);
+            return Ok(new { success = result.Success, message = result.Message });
         }
 
-        [HttpPost]
-        [Route("remove/userId")]
-        public IActionResult DeleteApplicationByUserId([FromBody]JobApplicationModel jobModel)
+        [HttpDelete("{id}")]
+        public IActionResult DeleteJobApplication([FromRoute]int id)
         {
-            return Ok();
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            GenericActionResult<string> result = new JobApplicationManager(context, userManager).DeleteJobApplication(id);
+            return Ok(new { success = result.Success, message = result.Message });
         }
+
+        [HttpGet("{from}/{count}")]
+        public IActionResult GetAllJobApplication(int from, int count)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new JobApplicationManager(context, userManager).GetAllJobApplications(hostingEnvironment.WebRootPath, from, count);
+            return Ok(new { success = result.Success, message = result.Message, data=result.Data });
+        }
+       
     }
 }

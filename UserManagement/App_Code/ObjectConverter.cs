@@ -7,10 +7,16 @@ namespace UserManagement
 
     using Microsoft.AspNetCore.Identity;
 
+    using UserManagement.BusinessLogics;
     using UserManagement.Data;
     using UserManagement.Enums;
     using UserManagement.Models;
+    using UserManagement.Models.BusinessTypeModels;
+    using UserManagement.Models.JobApplicationModels;
+    using UserManagement.Models.JobModels;
+    using UserManagement.Models.OrganisationProfileModels;
     using UserManagement.Models.UserProfileModels;
+    using UserManagement.Models.ValuesModels;
 
     public class ObjectConverter
     {
@@ -25,28 +31,81 @@ namespace UserManagement
         public async Task<UserProfileResponseModel> ToUserProfileResponseModel(UserProfile userProfile, string webRootPath)
         {
             ApplicationUser user = await userManager.FindByIdAsync(userProfile.UserId);
-            return new UserProfileResponseModel
-            {
-                           UserId = userProfile.UserId,
+            return new UserProfileResponseModel{
                            Id = userProfile.Id,
-                           ProfileImageName = Convert.ToBase64String(File.ReadAllBytes(Path.Combine(webRootPath, userProfile.ProfileImageName))),
-                           Gender = ((Gender)userProfile.Gender).ToString(),
-                           GenderId = userProfile.Gender,
+                           ProfileImage = Convert.ToBase64String(File.ReadAllBytes(Path.Combine(webRootPath, userProfile.ProfileImageName))),
+                           Gender = new GenderModel { Id = Convert.ToByte(userProfile.Gender), Name = Enum.GetName(typeof(Gender), userProfile.Gender) },
                            DateOfBirth = userProfile.DateOfBirth,
                            FirstName = userProfile.FirstName,
                            CountryId = userProfile.CountryId,
                            LastName = userProfile.LastName,
                            Country = context.Countries.Find(userProfile.CountryId),
-                           User =new ApplicationUser
-                                     {
-                                         DateCreated = user.DateCreated,
-                                         Id = user.Id,
-                                         Email = user.Email,
-                                         UserName = user.UserName,
-                                         PhoneNumber = user.PhoneNumber
-                           } ,
-                           DateCreated = userProfile.DateCreated
+                           PhoneNumber = user.PhoneNumber,
+                           UserId = user.Id,
+                           UserName = user.UserName,
+                           Email = user.Email,
+                           DateCreated = user.DateCreated
             };
+        }
+
+        public async Task<OrganisationProfileResponseModel> ToOrganisationProfileModel(OrganisationProfile organisationProfile, string webRootPath)
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(organisationProfile.UserId);
+            return new OrganisationProfileResponseModel
+            {
+                           UserId = user.Id,
+                           Id = organisationProfile.Id,
+                           ProfileImage = Convert.ToBase64String(File.ReadAllBytes(Path.Combine(webRootPath, organisationProfile.ProfileImageName))),
+                           Email = user.Email,
+                           UserName = user.UserName,
+                           Phonenumber = user.PhoneNumber,
+                           DateCreated = organisationProfile.DateCreated,
+                           CompanyAddress = organisationProfile.CompanyAddress,
+                           Country = context.Countries.Find(organisationProfile.CountryId),
+                           CompanyPhoneNumber = organisationProfile.CompanyPhoneNumber,
+                           CompanyName = organisationProfile.CompanyName,
+                           BusinessType = context.BusinessTypes.Find(organisationProfile.BusinessTypeId),
+                           DateOfCompanyRegistration = organisationProfile.DateOfCompanyRegistration,
+                           CompanyRegistrationId = organisationProfile.CompanyRegistrationId
+                       };
+        }
+
+        public JobResponseModel ToJobResponseModel(Job job, string webRootPath)
+        {
+            return new JobResponseModel{
+                           ProfileImage = Convert.ToBase64String(File.ReadAllBytes(Path.Combine(webRootPath, job.ProfileImageName))),
+                           Organisation = new OrganisationProfileManager(context,userManager).GetOrganisationProfileById(job.UserId,webRootPath).Data,
+                           Talent = context.Talents.Find(job.TalentId),
+                           DueDate = job.DueDate,
+                           Compensation = job.Compensation,
+                           Description = job.Description,
+                           Disabled = job.Disabled,
+                           Name = job.Name,
+                           Address = job.Address,
+                           Id = job.Id,
+                           Gender = new GenderModel { Id = Convert.ToByte(job.Gender), Name = Enum.GetName(typeof(Gender), job.Gender) }
+                        };
+        }
+
+        public JobApplicationResponseModel ToJobApplicationResponseModel(JobApplication jobApplication, string webRootPath)
+        {
+            return new JobApplicationResponseModel
+                       {
+                           Applicant = new UserProfileManager(context,userManager).GetUserDetailsByUserId(jobApplication.UserId, webRootPath).Data,
+                           Job = new JobManager(context,userManager).GetJob(webRootPath,jobApplication.JobId).Data,
+                           Organisation = new OrganisationProfileManager(context,userManager).GetOrganisationProfileById(jobApplication.UserId,webRootPath).Data,
+                           Id = jobApplication.Id,
+                           IsDeleted = jobApplication.IsDeleted
+                       };
+        }
+
+        public static BusinessType ToBusinessType(BusinessTypeModel businessTypeModel)
+        {
+            return new BusinessType
+                       {
+                           Id = businessTypeModel.Id,
+                           Name = businessTypeModel.Name
+                       };
         }
     }
 }

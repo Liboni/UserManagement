@@ -1,11 +1,13 @@
 ﻿
 namespace UserManagement.Controllers
 {
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
 
+    [Authorize]
     [Produces("application/json")]
     [Route("api/Talent")]
     public class TalentController : Controller
@@ -18,28 +20,24 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        [Route("talent/all")]
         public IActionResult Talents()
         {
             return Ok(new { success = true, Data = new TalentsManager(context).GetAllTalents() });
         }
 
-        [HttpGet]
-        [Route("talent/{id}")]
+        [HttpGet("{id}")]
         public IActionResult Talents(int id)
         {
             return Ok(new { success = true, Data = new TalentsManager(context).GetTalentById(id) });
         }
 
-        [HttpGet]
-        [Route("talent/add/{name}")]
-        public IActionResult AddTalents(string name)
+        [HttpPost]
+        public IActionResult AddTalents([FromBody]string name)
         {
             return Ok(new { success = true, Data = new TalentsManager(context).AddTalent(name) });
         }
 
-        [HttpGet]
-        [Route("talent/remove/{id}")]
+        [HttpDelete("{id}")]
         public IActionResult DeleteTalents(int id)
         {
             return Ok(new { success = true, Data = new TalentsManager(context).DeleteTalent(id) });
