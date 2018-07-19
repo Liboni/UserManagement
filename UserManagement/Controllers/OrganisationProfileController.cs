@@ -37,7 +37,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateOrganisationDetails([FromRoute]int id,OrganisationProfileModel organisationProfileModel)
+        public IActionResult Put([FromRoute]int id,OrganisationProfileModel organisationProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new OrganisationProfileManager(context, userManager).UpdateOrganisationProfile(organisationProfileModel, hostingEnvironment.WebRootPath).Result;

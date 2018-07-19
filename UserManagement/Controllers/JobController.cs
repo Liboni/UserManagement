@@ -35,7 +35,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateJob([FromRoute]int id,JobModel jobModel)
+        public IActionResult Put([FromRoute]int id,JobModel jobModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobManager(context, userManager).UpdateJob(jobModel, hostingEnvironment.WebRootPath).Result;

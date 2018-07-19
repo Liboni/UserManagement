@@ -14,14 +14,17 @@ namespace UserManagement
         private readonly IEnumerable<string> actionsWithUpload = new[]
                                                                       {
                                                                           "Api"+NamingHelpers.GetOperationId<OrganisationProfileController>(nameof(OrganisationProfileController.Post)),
+                                                                          "Api"+NamingHelpers.GetOperationId<OrganisationProfileController>(nameof(OrganisationProfileController.Put)),
                                                                           "Api"+NamingHelpers.GetOperationId<JobController>(nameof(JobController.Post)),
-                                                                          "Api"+NamingHelpers.GetOperationId<UserProfileController>(nameof(UserProfileController.Post))
+                                                                          "Api"+NamingHelpers.GetOperationId<JobController>(nameof(JobController.Put)),
+                                                                          "Api"+NamingHelpers.GetOperationId<UserProfileController>(nameof(UserProfileController.Post)),
+                                                                          "Api"+NamingHelpers.GetOperationId<UserProfileController>(nameof(UserProfileController.Put))
                                                                       };
         public void Apply(Operation operation, OperationFilterContext context)
         {
             if (actionsWithUpload.Contains(operation.OperationId))
             {
-                operation.Parameters.Remove(new NonBodyParameter{Name = "ProfileImage" });
+                operation.Parameters.Remove(new BodyParameter{Name = "ProfileImage" });
                 operation.Parameters.Add(new NonBodyParameter
                                              {
                                                  Name = "ProfileImage",

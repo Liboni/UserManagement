@@ -37,7 +37,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPut, DisableRequestSizeLimit]
-        public IActionResult UpdateUserProfileDetails([FromRoute]int id,UserProfileModel userDetailsModel)
+        public IActionResult Put([FromRoute]int id,UserProfileModel userDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             if (id!=userDetailsModel.Id) return BadRequest(ModelState);
@@ -67,7 +67,5 @@ namespace UserManagement.Controllers
             var result = new UserProfileManager(context, userManager).GetUserDetailsByUserId(userId, hostingEnvironment.WebRootPath);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
-        
-       
     } 
 }

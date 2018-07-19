@@ -28,6 +28,8 @@ namespace UserManagement.BusinessLogics
         {
             try
             {
+                if (context.OrganisationProfiles.FirstOrDefault(a => a.UserId.Equals(organisationProfileModel.UserId)) != null)
+                    return await UpdateOrganisationProfile(organisationProfileModel, webRootPath);
                 var profile = new OrganisationProfile
                             {
                                 CompanyAddress = organisationProfileModel.CompanyAddress,

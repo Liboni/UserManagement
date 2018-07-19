@@ -55,7 +55,8 @@ namespace UserManagement.Controllers
                                            Email = registerModel.Email,
                                            SecurityStamp = Guid.NewGuid().ToString(),
                                            UserName = registerModel.Email,
-                                           PhoneNumber = registerModel.PhoneNumber
+                                           PhoneNumber = registerModel.PhoneNumber,
+                                           DateCreated = DateTime.Now
                 };
             var task = userManager?.CreateAsync(user, registerModel.Password);
             if (task == null) return BadRequest();
