@@ -40,7 +40,7 @@ namespace UserManagement.Controllers
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
         
-        [HttpGet]
+        [HttpGet("user")]
         public IActionResult GetUserCredits()
         {
             return GetUserCredits(ClaimsPrincipal.Current.Identity.GetUserId());

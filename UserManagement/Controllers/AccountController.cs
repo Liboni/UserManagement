@@ -39,11 +39,10 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var user = await userManager.FindByNameAsync(loginModel.Email);
-            if (user != null && await userManager.CheckPasswordAsync(user, loginModel.Password) && await userManager.IsEmailConfirmedAsync(user))
-            {
+            if (!(user != null && await userManager.CheckPasswordAsync(user, loginModel.Password)))
+                return Unauthorized();
+            if (!await userManager.IsEmailConfirmedAsync(user)) return Ok(new {success=false,message="Check your email to verify your account."});
                 return Ok(new { access_token = new ApplicationJwtProvider(Configuration, userManager).JwtTokenBuilder(user).Result });
-            }
-            return Unauthorized();
         }
 
         [HttpPost]
@@ -91,6 +90,7 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var tokenDetails = new TokenManager(context).GetTokenById(resetPasswordModel.ResetToken);
+            if (tokenDetails == null) return Unauthorized();
             var result = await userManager.ResetPasswordAsync(
                         tokenDetails.User,
                         tokenDetails.UserToken,
@@ -103,7 +103,7 @@ namespace UserManagement.Controllers
         public async Task<IActionResult> ChangePassword([FromBody]ChangePasswordModel changePasswordModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var user= await userManager.FindByIdAsync(ClaimsPrincipal.Current.Identity.GetUserId());
+            var user= await userManager.FindByIdAsync(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             var result = await userManager.ChangePasswordAsync(
                                         user,
                                         changePasswordModel.OldPassword,

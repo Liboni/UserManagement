@@ -4,6 +4,7 @@ namespace UserManagement.Controllers
     using System.Security.Claims;
 
     using Microsoft.AspNet.Identity;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models.OrganisationProfileModels;
 
     [Produces("application/json")]
-    [Route("api/organisation-details")]
+    [Route("api/OrganisationProfile")]
     public class OrganisationProfileController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -28,7 +29,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddOrganisationDetails(OrganisationProfileModel organisationDetailsModel)
+        public IActionResult Post(OrganisationProfileModel organisationDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new OrganisationProfileManager(context, userManager).SaveOrganisationProfile(organisationDetailsModel, hostingEnvironment.WebRootPath).Result;
@@ -43,10 +44,11 @@ namespace UserManagement.Controllers
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetOrganisationDetails()
         {
-            return GetOrganisationDetails(ClaimsPrincipal.Current.Identity.GetUserId());
+            return GetOrganisationDetails(User.FindFirst(ClaimTypes.NameIdentifier).Value);
         }
 
         [HttpGet("{from}/{count}")]

@@ -13,7 +13,7 @@ namespace UserManagement.Controllers
 
     [Authorize]
     [Produces("application/json")]
-    [Route("api/job")]
+    [Route("api/Job")]
     public class JobController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -27,7 +27,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddJob(JobModel jobModel)
+        public IActionResult Post(JobModel jobModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobManager(context, userManager).SaveJob(jobModel, hostingEnvironment.WebRootPath).Result;

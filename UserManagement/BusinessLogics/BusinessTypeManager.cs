@@ -42,7 +42,7 @@ namespace UserManagement.BusinessLogics
             try
             {
                 await context.SaveChangesAsync();
-                return new GenericActionResult<BusinessType>(true,"Business type saved successfully", businessType);
+                return new GenericActionResult<BusinessType>(true,"Business type updated successfully", businessType);
             }
             catch (DbUpdateConcurrencyException exception)
             {

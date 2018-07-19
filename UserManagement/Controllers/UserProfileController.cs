@@ -3,7 +3,6 @@ namespace UserManagement.Controllers
 {
     using System.Security.Claims;
 
-    using Microsoft.AspNet.Identity;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
@@ -13,8 +12,9 @@ namespace UserManagement.Controllers
     using UserManagement.Models;
     using UserManagement.Models.UserProfileModels;
 
+    [Authorize]
     [Produces("application/json")]
-    [Route("api/user-details")]
+    [Route("api/UserProfile")]
     public class UserProfileController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -27,15 +27,15 @@ namespace UserManagement.Controllers
             this.userManager = userManager;
         }
 
+        [AllowAnonymous]
         [HttpPost, DisableRequestSizeLimit]
-        public IActionResult AddUserProfileDetails(UserProfileModel userProfileModel)
+        public IActionResult Post(UserProfileModel userProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new UserProfileManager(context, userManager).SaveUserDetails(userProfileModel, hostingEnvironment.WebRootPath).Result;
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [Authorize]
         [HttpPut, DisableRequestSizeLimit]
         public IActionResult UpdateUserProfileDetails([FromRoute]int id,UserProfileModel userDetailsModel)
         {
@@ -44,15 +44,13 @@ namespace UserManagement.Controllers
             var result = new UserProfileManager(context, userManager).UpdateUserDetails(userDetailsModel, hostingEnvironment.WebRootPath).Result;
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
-
-        [Authorize]
+        
         [HttpGet]
         public IActionResult GetUserProfileDetails()
         {
-            return GetUserProfileDetails(ClaimsPrincipal.Current.Identity.GetUserId());
+            return GetUserProfileDetails(User.FindFirst(ClaimTypes.NameIdentifier).Value);
         }
 
-        [Authorize]
         [HttpGet("{from}/{count}")]
         public IActionResult GetAllUserProfileDetails([FromRoute]int from, [FromRoute]int count)
         {
@@ -60,8 +58,7 @@ namespace UserManagement.Controllers
             var result = new UserProfileManager(context, userManager).GetAllUserDetails(hostingEnvironment.WebRootPath, from, count);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
-
-        [Authorize]
+     
         [HttpGet("{userId}")]
         public IActionResult GetUserProfileDetails([FromRoute]string userId)
         {

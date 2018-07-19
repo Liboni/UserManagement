@@ -32,7 +32,7 @@ namespace UserManagement
                             .Result,
                         ExpiryDate = DateTime.Now.AddDays(1)
                     });
-            string requestUrl = Configuration["FrontEndUrl:BaseUrl"] + Configuration["FrontEndUrl:RegistrationUrlPreffix"] + tokenId;
+            string requestUrl = Configuration["FrontEndUrl:BaseUrl"] + Configuration["FrontEndUrl:VerifyAccountUrlPreffix"] + tokenId;
             IdentityMessage message = new IdentityMessage { Body = requestUrl, Destination = user.Email, Subject = "Registration Verification" };
             new EmailService().SendEmailAsync(message);
         }
@@ -45,7 +45,7 @@ namespace UserManagement
                         UserToken = userManager.GeneratePasswordResetTokenAsync(user).Result,
                         ExpiryDate = DateTime.Now.AddDays(1)
                     });
-            string requestUrl = Configuration["FrontEndUrl:BaseUrl"] + Configuration["FrontEndUrl:ForgotPasswordUrlPreffix"] + tokenId;
+            string requestUrl = Configuration["FrontEndUrl:BaseUrl"] + Configuration["FrontEndUrl:ResetPasswordUrlPreffix"] + tokenId;
             IdentityMessage message = new IdentityMessage { Body = requestUrl, Destination = user.Email, Subject = "Forgot Password" };
             new EmailService().SendEmailAsync(message);
         }

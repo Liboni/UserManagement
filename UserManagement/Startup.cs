@@ -1,6 +1,7 @@
 ﻿
 namespace UserManagement
 {
+    using System.Collections.Generic;
     using System.IO;
     using System.Reflection;
     using System.Text;
@@ -13,14 +14,15 @@ namespace UserManagement
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
+    using Microsoft.Extensions.PlatformAbstractions;
     using Microsoft.IdentityModel.Tokens;
-
-    using NSwag.AspNetCore;
-
+    
     using UserManagement.Models;
 
     using Serilog;
     using Serilog.Sinks.MSSqlServer;
+
+    using Swashbuckle.AspNetCore.Swagger;
 
     using UserManagement.Data;
 
@@ -34,7 +36,6 @@ namespace UserManagement
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -55,9 +56,32 @@ namespace UserManagement
                                                                 };
                     });
             services.AddMvc();
+            services.AddSwaggerGen(c =>
+                {
+                    var security = new Dictionary<string, IEnumerable<string>>
+                                       {
+                                           {"Bearer", new string[] { }},
+                                       };
+                    c.SwaggerDoc("v1.0", new Info { Title = "Job API", Version = "Entertainment job search API" });
+                    c.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                                                          {
+                                                              Description = "JWT Authorization header using the Bearer scheme.",
+                                                              Name = "Authorization",
+                                                              In = "header",
+                                                              Type = "apiKey"
+                                                          });
+                    c.AddSecurityRequirement(security);
+                    c.DescribeAllEnumsAsStrings();
+                    c.OperationFilter<FileUploadOperation>();
+                });
+            services.ConfigureSwaggerGen(
+                options =>
+                    {
+                        options.DescribeAllEnumsAsStrings();
+                        options.OperationFilter<FileUploadOperation>();
+                    });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             SeedDatabase.Initialize(app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope().ServiceProvider);
@@ -74,7 +98,12 @@ namespace UserManagement
             }
             app.UseAuthentication();
             app.UseMvc();
-            app.UseSwaggerUi(typeof(Startup).GetTypeInfo().Assembly, new SwaggerUiOwinSettings());
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Job API");
+                    c.DocExpansion(DocExpansion.None);
+                });
         }
     }
 }

@@ -39,7 +39,7 @@ namespace UserManagement.Providers
                 issuer: configuration["Jwt:Iss"],
                 audience: configuration["Jwt:Aud"],
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256),
-                expires: DateTime.UtcNow.AddHours(1),
+                expires: DateTime.UtcNow.AddHours(4),
                 claims: claims);
             return new JwtSecurityTokenHandler().WriteToken(jwtToken);
         }

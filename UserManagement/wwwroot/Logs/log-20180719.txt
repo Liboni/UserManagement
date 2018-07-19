@@ -1,0 +1,1025 @@
+2018-07-19 11:29:25.253 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 11:29:26.072 +02:00 [Information] Request finished in 870.48ms 302 
+2018-07-19 11:29:26.088 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:29:26.268 +02:00 [Information] Request finished in 179.4144ms 200 
+2018-07-19 11:29:26.290 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/typography.css  
+2018-07-19 11:29:26.382 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/screen.css  
+2018-07-19 11:29:26.415 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jquery.slideto.min.js  
+2018-07-19 11:29:26.418 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/jquery.wiggle.min.js  
+2018-07-19 11:29:26.427 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/lib/object-assign-pollyfill.js  
+2018-07-19 11:29:26.429 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/reset.css  
+2018-07-19 11:29:26.457 +02:00 [Information] Sending file. Request path: '"/lib/jquery.wiggle.min.js"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.458 +02:00 [Information] Sending file. Request path: '"/lib/jquery.slideto.min.js"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.460 +02:00 [Information] Sending file. Request path: '"/lib/object-assign-pollyfill.js"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.492 +02:00 [Information] Request finished in 81.1408ms 200 application/javascript
+2018-07-19 11:29:26.526 +02:00 [Information] Request finished in 81.1411ms 200 application/javascript
+2018-07-19 11:29:26.551 +02:00 [Information] Sending file. Request path: '"/css/typography.css"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.577 +02:00 [Information] Sending file. Request path: '"/css/screen.css"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.580 +02:00 [Information] Request finished in 82.9346ms 200 application/javascript
+2018-07-19 11:29:26.583 +02:00 [Information] Request finished in 271.3523ms 200 text/css
+2018-07-19 11:29:26.605 +02:00 [Information] Sending file. Request path: '"/css/reset.css"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.632 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/css/print.css  
+2018-07-19 11:29:26.634 +02:00 [Information] Request finished in 223.901ms 200 text/css
+2018-07-19 11:29:26.691 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/images/logo_small.png  
+2018-07-19 11:29:26.693 +02:00 [Information] Sending file. Request path: '"/css/print.css"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.701 +02:00 [Information] Sending file. Request path: '"/images/logo_small.png"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.715 +02:00 [Information] Request finished in 169.6672ms 200 text/css
+2018-07-19 11:29:26.730 +02:00 [Information] Request finished in 35.09ms 200 image/png
+2018-07-19 11:29:26.732 +02:00 [Information] Request finished in 258.1644ms 200 text/css
+2018-07-19 11:29:26.938 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/fonts/DroidSans-Bold.ttf  
+2018-07-19 11:29:26.941 +02:00 [Information] Sending file. Request path: '"/fonts/DroidSans-Bold.ttf"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.945 +02:00 [Information] Request finished in 5.129ms 200 application/x-font-ttf
+2018-07-19 11:29:26.974 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/fonts/DroidSans.ttf  
+2018-07-19 11:29:26.978 +02:00 [Information] Sending file. Request path: '"/fonts/DroidSans.ttf"'. Physical path: '"N/A"'
+2018-07-19 11:29:26.983 +02:00 [Information] Request finished in 7.2857ms 200 application/x-font-ttf
+2018-07-19 11:29:26.988 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:29:37.669 +02:00 [Information] Request finished in 10658.3477ms 200 
+2018-07-19 11:32:40.666 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:32:40.670 +02:00 [Information] Request finished in 3.5855ms 200 
+2018-07-19 11:32:40.859 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:32:40.863 +02:00 [Information] Request finished in 2.1116ms 200 
+2018-07-19 11:33:21.882 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:21.884 +02:00 [Information] Request finished in 2.8604ms 200 
+2018-07-19 11:33:35.955 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:33:35.958 +02:00 [Information] Request finished in 10.7495ms 200 
+2018-07-19 11:33:36.135 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:36.138 +02:00 [Information] Request finished in 2.2853ms 200 
+2018-07-19 11:33:41.471 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:41.475 +02:00 [Information] Request finished in 2.4289ms 200 
+2018-07-19 11:33:42.103 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:42.106 +02:00 [Information] Request finished in 2.9578ms 200 
+2018-07-19 11:33:42.374 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:42.377 +02:00 [Information] Request finished in 2.7117ms 200 
+2018-07-19 11:33:42.633 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:42.635 +02:00 [Information] Request finished in 2.9821ms 200 
+2018-07-19 11:33:43.247 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:43.249 +02:00 [Information] Request finished in 3.2144ms 200 
+2018-07-19 11:33:43.502 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:43.504 +02:00 [Information] Request finished in 2.0732ms 200 
+2018-07-19 11:33:43.734 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:43.736 +02:00 [Information] Request finished in 2.5137ms 200 
+2018-07-19 11:33:45.567 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:45.569 +02:00 [Information] Request finished in 2.8748ms 200 
+2018-07-19 11:33:45.677 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:33:45.680 +02:00 [Information] Request finished in 4.6215ms 200 
+2018-07-19 11:33:56.682 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 11:33:56.994 +02:00 [Information] Request finished in 336.9429ms 302 
+2018-07-19 11:33:57.011 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:33:57.059 +02:00 [Information] Request finished in 48.529ms 200 
+2018-07-19 11:33:57.235 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:34:03.084 +02:00 [Information] Request finished in 5849.0844ms 200 
+2018-07-19 11:36:37.193 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 11:36:37.483 +02:00 [Information] Request finished in 312.0355ms 302 
+2018-07-19 11:36:37.502 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:36:37.550 +02:00 [Information] Request finished in 48.5753ms 200 
+2018-07-19 11:36:37.715 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:36:43.721 +02:00 [Information] Request finished in 6004.6037ms 200 
+2018-07-19 11:46:27.044 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 11:46:27.330 +02:00 [Information] Request finished in 312.1416ms 302 
+2018-07-19 11:46:27.351 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:46:27.407 +02:00 [Information] Request finished in 54.7169ms 200 
+2018-07-19 11:46:27.589 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:46:34.778 +02:00 [Information] Request finished in 7189.6628ms 200 
+2018-07-19 11:48:59.584 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/images/throbber.gif  
+2018-07-19 11:48:59.602 +02:00 [Information] Sending file. Request path: '"/images/throbber.gif"'. Physical path: '"N/A"'
+2018-07-19 11:48:59.665 +02:00 [Information] Request finished in 80.6168ms 200 image/gif
+2018-07-19 11:49:24.050 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/register application/json 119
+2018-07-19 11:49:24.534 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Register (UserManagement)" with arguments (["UserManagement.Models.AccountModels.RegisterModel"]) - ModelState is Valid
+2018-07-19 11:49:31.155 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 11:49:31.182 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Register (UserManagement)" in 6896.04ms
+2018-07-19 11:49:31.187 +02:00 [Information] Request finished in 7138.098ms 200 application/json; charset=utf-8
+2018-07-19 11:50:16.057 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details/add multipart/form-data; boundary=--------------------------305588230922200050347964 831073
+2018-07-19 11:50:16.218 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/19/2018 09:50:16'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-19 11:50:16.221 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/19/2018 09:50:16'."
+2018-07-19 11:50:16.225 +02:00 [Information] Request finished in 169.7921ms 404 
+2018-07-19 11:50:28.476 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:50:28.481 +02:00 [Information] Request finished in 3.257ms 200 
+2018-07-19 11:50:29.150 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:50:29.154 +02:00 [Information] Request finished in 2.8637ms 200 
+2018-07-19 11:50:38.573 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/user-details multipart/form-data; boundary=--------------------------563890610750022060286713 831073
+2018-07-19 11:50:38.606 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjNDk3NDE3Zi0wNGRkLTQ2ZDItYTVmMC00NGIxYWFmNzk0NzgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW5AYWRtaW4uY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWRtaW4iLCJqdGkiOiIwYzY0NjA1ZC1lNDI0LTQ0ODQtYmQ3MC00OTQwMTk1YWViMDkiLCJleHAiOjE1MzEzMDQxNzMsImlzcyI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIiwiYXVkIjoiaHR0cDovL3VzZXJtYW5hZ2VybWVudC5jb20ifQ.omouFP2LiqOS_FnkmkNQcdwaSOKEjkD9hXPboocNywY".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/19/2018 09:50:38'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-19 11:50:38.611 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/11/2018 10:16:13'
+Current time: '07/19/2018 09:50:38'."
+2018-07-19 11:50:38.943 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-19 11:50:39.259 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 11:50:39.319 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.AddUserProfileDetails (UserManagement)" in 596.8492ms
+2018-07-19 11:50:39.323 +02:00 [Information] Request finished in 748.6862ms 200 application/json; charset=utf-8
+2018-07-19 11:51:10.461 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 11:51:10.472 +02:00 [Information] Request finished in 3.0143ms 200 
+2018-07-19 11:51:10.640 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 11:51:10.643 +02:00 [Information] Request finished in 2.8153ms 200 
+2018-07-19 11:51:32.154 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-19 11:51:32.181 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 11:51:32.245 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-19 11:51:32.247 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 84.9594ms
+2018-07-19 11:51:32.250 +02:00 [Information] Request finished in 96.5576ms 401 
+2018-07-19 11:52:01.167 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-19 11:52:01.183 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 11:52:14.008 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-19 11:52:14.010 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 12841.0865ms
+2018-07-19 11:52:14.014 +02:00 [Information] Request finished in 12846.8826ms 401 
+2018-07-19 12:01:44.310 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-19 12:01:44.818 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 12:01:49.259 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:01:49.288 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 4611.2107ms
+2018-07-19 12:01:49.294 +02:00 [Information] Request finished in 5007.2851ms 200 application/json; charset=utf-8
+2018-07-19 12:02:10.855 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/verify/f6986581-bcef-4d6e-b465-e26748ee830e  
+2018-07-19 12:02:10.918 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.VerifyAccount (UserManagement)" with arguments (["f6986581-bcef-4d6e-b465-e26748ee830e"]) - ModelState is Valid
+2018-07-19 12:02:11.344 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:02:11.352 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.VerifyAccount (UserManagement)" in 463.3092ms
+2018-07-19 12:02:11.356 +02:00 [Information] Request finished in 499.9818ms 200 application/json; charset=utf-8
+2018-07-19 12:02:11.451 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/favicon.ico  
+2018-07-19 12:02:11.468 +02:00 [Information] Request finished in 16.752ms 404 
+2018-07-19 12:02:16.582 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-19 12:02:16.600 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 12:02:16.786 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:02:16.790 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 205.255ms
+2018-07-19 12:02:16.793 +02:00 [Information] Request finished in 212.3365ms 200 application/json; charset=utf-8
+2018-07-19 12:03:35.693 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword/  
+2018-07-19 12:03:35.698 +02:00 [Information] Request finished in 3.7904ms 404 
+2018-07-19 12:03:53.631 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword  
+2018-07-19 12:03:53.633 +02:00 [Information] Request finished in 2.8256ms 404 
+2018-07-19 12:03:59.522 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword/  
+2018-07-19 12:03:59.524 +02:00 [Information] Request finished in 2.7916ms 404 
+2018-07-19 12:04:20.501 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword/sitholeliboni@gmail.com  
+2018-07-19 12:04:20.524 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" with arguments (["sitholeliboni@gmail.com"]) - ModelState is Valid
+2018-07-19 12:04:35.574 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:04:35.576 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" in 15068.8471ms
+2018-07-19 12:04:35.579 +02:00 [Information] Request finished in 15078.2319ms 200 application/json; charset=utf-8
+2018-07-19 12:07:23.113 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword/sitholeliboni@gmail.com  
+2018-07-19 12:07:23.564 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" with arguments (["sitholeliboni@gmail.com"]) - ModelState is Valid
+2018-07-19 12:07:27.152 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:07:27.269 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" in 3790.7799ms
+2018-07-19 12:07:27.276 +02:00 [Information] Request finished in 4191.8144ms 200 application/json; charset=utf-8
+2018-07-19 12:08:27.181 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/resetPassword application/json 92
+2018-07-19 12:08:27.247 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ResetPasswordModel"]) - ModelState is Valid
+2018-07-19 12:08:33.722 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" in 6522.7658ms
+2018-07-19 12:08:34.079 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at UserManagement.Controllers.AccountController.<ResetPassword>d__10.MoveNext() in C:\Users\Libonis\documents\visual studio 2017\Projects\UserManagement\UserManagement\Controllers\AccountController.cs:line 93
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-19 12:08:34.216 +02:00 [Information] Request finished in 7035.7351ms 500 text/html; charset=utf-8
+2018-07-19 12:08:39.522 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/resetPassword application/json 92
+2018-07-19 12:08:39.540 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ResetPasswordModel"]) - ModelState is Valid
+2018-07-19 12:08:39.764 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" in 239.1251ms
+2018-07-19 12:08:39.865 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at UserManagement.Controllers.AccountController.<ResetPassword>d__10.MoveNext() in C:\Users\Libonis\documents\visual studio 2017\Projects\UserManagement\UserManagement\Controllers\AccountController.cs:line 93
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-19 12:08:39.909 +02:00 [Information] Request finished in 387.6946ms 500 text/html; charset=utf-8
+2018-07-19 12:08:50.780 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/resetPassword application/json 92
+2018-07-19 12:08:50.798 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ResetPasswordModel"]) - ModelState is Valid
+2018-07-19 12:09:06.207 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" in 15423.8026ms
+2018-07-19 12:09:06.427 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at UserManagement.Controllers.AccountController.<ResetPassword>d__10.MoveNext() in C:\Users\Libonis\documents\visual studio 2017\Projects\UserManagement\UserManagement\Controllers\AccountController.cs:line 93
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-19 12:09:06.550 +02:00 [Information] Request finished in 15770.9988ms 500 text/html; charset=utf-8
+2018-07-19 12:09:53.848 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/resetPassword application/json 92
+2018-07-19 12:09:54.359 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ResetPasswordModel"]) - ModelState is Valid
+2018-07-19 12:09:58.067 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-19 12:09:58.088 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" in 3866.6769ms
+2018-07-19 12:09:58.097 +02:00 [Information] Request finished in 4273.5445ms 401 
+2018-07-19 12:10:04.300 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/resetPassword application/json 91
+2018-07-19 12:10:04.319 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ResetPasswordModel"]) - ModelState is Valid
+2018-07-19 12:10:04.583 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:10:04.613 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" in 308.9389ms
+2018-07-19 12:10:04.616 +02:00 [Information] Request finished in 317.3604ms 200 application/json; charset=utf-8
+2018-07-19 12:10:20.425 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-19 12:10:20.457 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 12:10:20.514 +02:00 [Warning] Invalid password for user "7694f58a-0cde-41e2-8964-6ef828792849".
+2018-07-19 12:10:20.516 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-19 12:10:20.517 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 85.3344ms
+2018-07-19 12:10:20.540 +02:00 [Information] Request finished in 95.743ms 401 
+2018-07-19 12:10:30.946 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 70
+2018-07-19 12:10:30.962 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 12:10:31.110 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:10:31.114 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 164.9973ms
+2018-07-19 12:10:31.117 +02:00 [Information] Request finished in 172.4525ms 200 application/json; charset=utf-8
+2018-07-19 12:10:50.712 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 12:10:50.753 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 12:10:50.758 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 12:10:50.760 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 12:10:50.765 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 12:10:50.767 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 47.2926ms
+2018-07-19 12:10:50.772 +02:00 [Information] Request finished in 58.6825ms 401 
+2018-07-19 12:34:39.644 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 12:34:39.967 +02:00 [Information] Request finished in 353.5526ms 302 
+2018-07-19 12:34:39.985 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 12:34:40.038 +02:00 [Information] Request finished in 53.1256ms 200 
+2018-07-19 12:34:40.208 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 12:34:47.586 +02:00 [Information] Request finished in 7377.1749ms 200 
+2018-07-19 12:35:58.997 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 12:35:58.997 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 12:35:59.325 +02:00 [Information] Request finished in 378.7938ms 302 
+2018-07-19 12:35:59.370 +02:00 [Information] Request finished in 423.6016ms 200 
+2018-07-19 12:35:59.376 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 12:35:59.379 +02:00 [Information] Request finished in 4.9817ms 200 
+2018-07-19 12:35:59.479 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 12:36:07.206 +02:00 [Information] Request finished in 7725.9951ms 200 
+2018-07-19 12:36:07.212 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 12:36:07.215 +02:00 [Information] Request finished in 2.5383ms 200 
+2018-07-19 12:38:05.679 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 12:38:06.019 +02:00 [Information] Request finished in 360.8266ms 302 
+2018-07-19 12:38:06.039 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 12:38:06.095 +02:00 [Information] Request finished in 56.8767ms 200 
+2018-07-19 12:38:06.270 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 12:38:13.939 +02:00 [Information] Request finished in 7669.7962ms 200 
+2018-07-19 12:40:47.594 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 12:40:47.896 +02:00 [Information] Request finished in 325.5296ms 302 
+2018-07-19 12:40:47.913 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html?url=/swagger/v1/swagger.json  
+2018-07-19 12:40:47.965 +02:00 [Information] Request finished in 51.8411ms 200 
+2018-07-19 12:40:48.145 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1/swagger.json  
+2018-07-19 12:40:55.637 +02:00 [Information] Request finished in 7490.8875ms 200 
+2018-07-19 12:48:02.784 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger  
+2018-07-19 12:48:03.082 +02:00 [Information] Request finished in 324.2048ms 301 
+2018-07-19 12:48:03.098 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 12:48:03.117 +02:00 [Information] Request finished in 18.4422ms 200 text/html
+2018-07-19 12:48:03.131 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui.css  
+2018-07-19 12:48:03.155 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui-standalone-preset.js  
+2018-07-19 12:48:03.156 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui-bundle.js  
+2018-07-19 12:48:03.194 +02:00 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2018-07-19 12:48:03.195 +02:00 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2018-07-19 12:48:03.197 +02:00 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2018-07-19 12:48:03.289 +02:00 [Information] Request finished in 133.3083ms 200 application/javascript
+2018-07-19 12:48:03.309 +02:00 [Information] Request finished in 136.3869ms 200 text/css
+2018-07-19 12:48:03.336 +02:00 [Information] Request finished in 202.9646ms 200 application/javascript
+2018-07-19 12:48:04.304 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 12:48:04.339 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/favicon-32x32.png  
+2018-07-19 12:48:04.342 +02:00 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2018-07-19 12:48:04.345 +02:00 [Information] Request finished in 6.287ms 200 image/png
+2018-07-19 12:48:04.357 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/favicon-16x16.png  
+2018-07-19 12:48:04.359 +02:00 [Information] Sending file. Request path: '"/favicon-16x16.png"'. Physical path: '"N/A"'
+2018-07-19 12:48:04.362 +02:00 [Information] Request finished in 5.4126ms 200 image/png
+2018-07-19 12:48:04.553 +02:00 [Information] Request finished in 248.5995ms 200 application/json;charset=utf-8
+2018-07-19 12:48:53.344 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 12:48:53.353 +02:00 [Information] Request finished in 9.2358ms 200 application/json;charset=utf-8
+2018-07-19 12:52:41.113 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/value/country/all  
+2018-07-19 12:52:41.238 +02:00 [Information] Executing action method "UserManagement.Controllers.ValueController.Country (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 12:52:41.318 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:52:41.336 +02:00 [Information] Executed action "UserManagement.Controllers.ValueController.Country (UserManagement)" in 103.5414ms
+2018-07-19 12:52:41.338 +02:00 [Information] Request finished in 237.2881ms 200 application/json; charset=utf-8
+2018-07-19 12:52:52.490 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 12:52:52.834 +02:00 [Information] Request finished in 368.6526ms 200 text/html
+2018-07-19 12:52:53.318 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 12:52:53.489 +02:00 [Information] Request finished in 170.5388ms 200 application/json;charset=utf-8
+2018-07-19 12:55:26.033 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/value/country/all  
+2018-07-19 12:55:26.122 +02:00 [Information] Executing action method "UserManagement.Controllers.ValueController.Country (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 12:55:26.274 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:55:26.299 +02:00 [Information] Executed action "UserManagement.Controllers.ValueController.Country (UserManagement)" in 215.8367ms
+2018-07-19 12:55:26.302 +02:00 [Information] Request finished in 269.6675ms 200 application/json; charset=utf-8
+2018-07-19 12:55:39.299 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/value/gender/all  
+2018-07-19 12:55:39.323 +02:00 [Information] Executing action method "UserManagement.Controllers.ValueController.Gender (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 12:55:39.329 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 12:55:39.335 +02:00 [Information] Executed action "UserManagement.Controllers.ValueController.Gender (UserManagement)" in 31.2016ms
+2018-07-19 12:55:39.338 +02:00 [Information] Request finished in 40.115ms 200 application/json; charset=utf-8
+2018-07-19 12:57:21.654 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/resetPassword application/json-patch+json 55
+2018-07-19 12:57:21.738 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ResetPasswordModel"]) - ModelState is Valid
+2018-07-19 12:57:21.861 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-19 12:57:21.864 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ResetPassword (UserManagement)" in 172.6703ms
+2018-07-19 12:57:21.868 +02:00 [Information] Request finished in 214.0164ms 401 
+2018-07-19 13:00:14.577 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 47
+2018-07-19 13:00:14.655 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Invalid
+2018-07-19 13:00:14.660 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 13:00:14.664 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 80.191ms
+2018-07-19 13:00:14.667 +02:00 [Information] Request finished in 89.8033ms 400 application/json; charset=utf-8
+2018-07-19 14:10:38.659 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 70
+2018-07-19 14:10:38.684 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 14:10:41.310 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 14:10:41.314 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 2651.848ms
+2018-07-19 14:10:41.317 +02:00 [Information] Request finished in 2659.3759ms 200 application/json; charset=utf-8
+2018-07-19 14:11:37.168 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 56
+2018-07-19 14:11:37.186 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:11:37.190 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:11:37.192 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:11:37.201 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:11:37.202 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 26.4728ms
+2018-07-19 14:11:37.204 +02:00 [Information] Request finished in 37.5667ms 401 
+2018-07-19 14:11:59.159 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 65
+2018-07-19 14:11:59.162 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:11:59.166 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:11:59.170 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:11:59.175 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:11:59.178 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 15.1103ms
+2018-07-19 14:11:59.181 +02:00 [Information] Request finished in 21.3777ms 401 
+2018-07-19 14:14:48.685 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 66
+2018-07-19 14:14:48.689 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:14:48.692 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:14:48.696 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:14:48.699 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:14:48.702 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 13.3318ms
+2018-07-19 14:14:48.705 +02:00 [Information] Request finished in 20.2651ms 401 
+2018-07-19 14:17:22.721 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 66
+2018-07-19 14:17:22.725 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:17:22.727 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:17:22.730 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:17:22.745 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:17:22.747 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 23.0048ms
+2018-07-19 14:17:22.750 +02:00 [Information] Request finished in 28.2522ms 401 
+2018-07-19 14:17:37.562 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 66
+2018-07-19 14:17:37.565 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:17:37.568 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:17:37.571 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:17:37.573 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:17:37.576 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 10.4455ms
+2018-07-19 14:17:37.580 +02:00 [Information] Request finished in 17.3722ms 401 
+2018-07-19 14:17:40.048 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 66
+2018-07-19 14:17:40.051 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:17:40.053 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:17:40.057 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:17:40.061 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:17:40.062 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 12.4577ms
+2018-07-19 14:17:40.064 +02:00 [Information] Request finished in 16.6435ms 401 
+2018-07-19 14:17:43.939 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 66
+2018-07-19 14:17:43.942 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:17:43.945 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:17:43.948 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:17:43.950 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:17:43.952 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 11.1825ms
+2018-07-19 14:17:43.955 +02:00 [Information] Request finished in 16.3326ms 401 
+2018-07-19 14:18:09.130 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 66
+2018-07-19 14:18:09.133 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:18:09.136 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:18:09.140 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:18:09.144 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:18:09.147 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 13.6638ms
+2018-07-19 14:18:09.149 +02:00 [Information] Request finished in 20.4992ms 401 
+2018-07-19 14:18:58.847 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 69
+2018-07-19 14:18:58.853 +02:00 [Information] Successfully validated the token.
+2018-07-19 14:18:58.857 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 14:18:58.861 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 14:18:58.883 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 14:19:02.743 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 3883.3142ms
+2018-07-19 14:19:02.917 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at UserManagement.Controllers.AccountController.<ChangePassword>d__11.MoveNext() in C:\Users\Libonis\documents\visual studio 2017\Projects\UserManagement\UserManagement\Controllers\AccountController.cs:line 106
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-19 14:19:02.980 +02:00 [Information] Request finished in 4133.4065ms 500 text/html; charset=utf-8
+2018-07-19 14:19:21.912 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 69
+2018-07-19 14:19:21.915 +02:00 [Information] Successfully validated the token.
+2018-07-19 14:19:21.918 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 14:19:21.921 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 14:19:21.938 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 14:19:25.923 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 4002.1606ms
+2018-07-19 14:19:26.128 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at UserManagement.Controllers.AccountController.<ChangePassword>d__11.MoveNext() in C:\Users\Libonis\documents\visual studio 2017\Projects\UserManagement\UserManagement\Controllers\AccountController.cs:line 106
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-19 14:19:26.254 +02:00 [Information] Request finished in 4342.3249ms 500 text/html; charset=utf-8
+2018-07-19 14:19:52.535 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 14:19:52.884 +02:00 [Information] Request finished in 376.9717ms 200 text/html
+2018-07-19 14:19:53.121 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 14:19:53.370 +02:00 [Information] Request finished in 248.699ms 200 application/json;charset=utf-8
+2018-07-19 14:20:40.710 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 69
+2018-07-19 14:20:40.722 +02:00 [Information] Successfully validated the token.
+2018-07-19 14:20:40.726 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 14:20:40.798 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 14:20:40.877 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 14:24:06.366 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 69
+2018-07-19 14:24:06.576 +02:00 [Information] Successfully validated the token.
+2018-07-19 14:24:06.579 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 14:24:06.794 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 14:24:06.914 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 14:24:11.800 +02:00 [Warning] Change password failed for user "7694f58a-0cde-41e2-8964-6ef828792849".
+2018-07-19 14:24:13.105 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 14:24:13.141 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 6354.6998ms
+2018-07-19 14:24:13.147 +02:00 [Information] Request finished in 6809.3251ms 200 application/json; charset=utf-8
+2018-07-19 14:39:25.210 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 56
+2018-07-19 14:39:25.241 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:39:25.245 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:39:25.247 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:39:25.253 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:39:25.256 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 14.823ms
+2018-07-19 14:39:25.259 +02:00 [Information] Request finished in 50.3388ms 401 
+2018-07-19 14:40:17.267 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 14:40:17.270 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:40:17.273 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:40:17.277 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:40:17.280 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:40:17.282 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 12.6948ms
+2018-07-19 14:40:17.286 +02:00 [Information] Request finished in 19.4133ms 401 
+2018-07-19 14:40:26.454 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 14:40:26.458 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:40:26.461 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:40:26.463 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:40:26.466 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:40:26.469 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 11.7732ms
+2018-07-19 14:40:26.474 +02:00 [Information] Request finished in 18.0215ms 401 
+2018-07-19 14:40:30.159 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword text/json 56
+2018-07-19 14:40:30.162 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:40:30.165 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:40:30.168 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:40:30.170 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:40:30.172 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 10.7742ms
+2018-07-19 14:40:30.174 +02:00 [Information] Request finished in 15.3675ms 401 
+2018-07-19 14:40:32.973 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/*+json 56
+2018-07-19 14:40:32.977 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:40:32.979 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:40:32.981 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:40:32.983 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:40:32.984 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 8.7935ms
+2018-07-19 14:40:32.986 +02:00 [Information] Request finished in 13.2056ms 401 
+2018-07-19 14:40:36.046 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 14:40:36.049 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:40:36.053 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:40:36.057 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:40:36.058 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:40:36.061 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 12.4012ms
+2018-07-19 14:40:36.064 +02:00 [Information] Request finished in 18.2459ms 401 
+2018-07-19 14:43:20.226 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 14:43:20.229 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:43:20.236 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:43:20.240 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:43:20.243 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:43:20.246 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 16.8295ms
+2018-07-19 14:43:20.248 +02:00 [Information] Request finished in 22.5493ms 401 
+2018-07-19 14:44:05.878 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 84
+2018-07-19 14:44:05.884 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:44:05.888 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:44:05.892 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:44:05.896 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:44:05.900 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 17.2751ms
+2018-07-19 14:44:05.903 +02:00 [Information] Request finished in 33.0302ms 401 
+2018-07-19 14:45:36.589 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 84
+2018-07-19 14:45:36.940 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:45:36.946 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:45:36.953 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:45:36.959 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:45:36.965 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 28.7687ms
+2018-07-19 14:45:36.981 +02:00 [Information] Request finished in 417.0531ms 401 
+2018-07-19 14:47:37.859 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 84
+2018-07-19 14:47:37.865 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 14:47:37.868 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 14:47:37.873 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 14:47:37.877 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 14:47:37.881 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 16.7075ms
+2018-07-19 14:47:37.884 +02:00 [Information] Request finished in 25.5807ms 401 
+2018-07-19 15:12:46.920 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:12:47.229 +02:00 [Information] Request finished in 336.3868ms 200 text/html
+2018-07-19 15:12:48.218 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:12:48.412 +02:00 [Information] Request finished in 193.8023ms 200 application/json;charset=utf-8
+2018-07-19 15:13:17.538 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json-patch+json 56
+2018-07-19 15:13:17.605 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 15:13:17.610 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 15:13:17.618 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 15:13:17.623 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 15:13:17.629 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 27.035ms
+2018-07-19 15:13:17.634 +02:00 [Information] Request finished in 96.4683ms 401 
+2018-07-19 15:13:22.570 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 15:13:22.573 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 15:13:22.576 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 15:13:22.579 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 15:13:22.583 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 15:13:22.587 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 12.6719ms
+2018-07-19 15:13:22.590 +02:00 [Information] Request finished in 19.9493ms 401 
+2018-07-19 15:13:28.756 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 69
+2018-07-19 15:13:28.765 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:13:28.768 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:13:28.772 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 15:13:28.850 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 15:13:32.030 +02:00 [Warning] Change password failed for user "7694f58a-0cde-41e2-8964-6ef828792849".
+2018-07-19 15:13:32.039 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:13:32.065 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 3294.0687ms
+2018-07-19 15:13:32.069 +02:00 [Information] Request finished in 3312.9613ms 200 application/json; charset=utf-8
+2018-07-19 15:13:54.117 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 56
+2018-07-19 15:13:54.121 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:13:54.123 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:13:54.127 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 15:13:54.183 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 15:14:13.885 +02:00 [Warning] Change password failed for user "7694f58a-0cde-41e2-8964-6ef828792849".
+2018-07-19 15:14:13.888 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:14:13.890 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 19764.5327ms
+2018-07-19 15:14:13.893 +02:00 [Information] Request finished in 19775.4821ms 200 application/json; charset=utf-8
+2018-07-19 15:14:44.636 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/changePassword application/json 65
+2018-07-19 15:14:44.639 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:14:44.642 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:14:44.646 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 15:14:44.666 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" with arguments (["UserManagement.Models.AccountModels.ChangePasswordModel"]) - ModelState is Valid
+2018-07-19 15:14:44.891 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:14:44.894 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ChangePassword (UserManagement)" in 248.7035ms
+2018-07-19 15:14:44.896 +02:00 [Information] Request finished in 259.9465ms 200 application/json; charset=utf-8
+2018-07-19 15:15:10.639 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType  
+2018-07-19 15:15:10.643 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:15:10.647 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:15:10.668 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 15:15:10.671 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:15:10.756 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 103.4678ms
+2018-07-19 15:15:10.759 +02:00 [Information] Request finished in 119.4768ms 200 application/json; charset=utf-8
+2018-07-19 15:17:09.509 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 33
+2018-07-19 15:17:09.512 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:17:09.516 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:17:09.542 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:17:09.636 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:17:09.642 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 120.6429ms
+2018-07-19 15:17:09.645 +02:00 [Information] Request finished in 136.6732ms 200 application/json; charset=utf-8
+2018-07-19 15:17:35.741 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 36
+2018-07-19 15:17:35.744 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:17:35.746 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:17:35.765 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:17:35.798 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:17:35.799 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 51.2095ms
+2018-07-19 15:17:35.802 +02:00 [Information] Request finished in 61.1644ms 200 application/json; charset=utf-8
+2018-07-19 15:17:48.132 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 23
+2018-07-19 15:17:48.136 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:17:48.139 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:17:48.158 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:17:48.190 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:17:48.192 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 50.0975ms
+2018-07-19 15:17:48.194 +02:00 [Information] Request finished in 63.3614ms 200 application/json; charset=utf-8
+2018-07-19 15:18:00.090 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 24
+2018-07-19 15:18:00.093 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:18:00.095 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:18:00.115 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:18:00.146 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:18:00.148 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 49.8039ms
+2018-07-19 15:18:00.151 +02:00 [Information] Request finished in 60.8387ms 200 application/json; charset=utf-8
+2018-07-19 15:18:10.061 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 23
+2018-07-19 15:18:10.064 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:18:10.067 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:18:10.090 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:18:10.125 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:18:10.127 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 58.1558ms
+2018-07-19 15:18:10.129 +02:00 [Information] Request finished in 68.2726ms 200 application/json; charset=utf-8
+2018-07-19 15:18:45.837 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 27
+2018-07-19 15:18:45.840 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:18:45.842 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:18:45.862 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:18:45.894 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:18:45.897 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 51.8778ms
+2018-07-19 15:18:45.900 +02:00 [Information] Request finished in 62.3828ms 200 application/json; charset=utf-8
+2018-07-19 15:18:53.434 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 24
+2018-07-19 15:18:53.437 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:18:53.439 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:18:53.459 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:18:53.493 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:18:53.495 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 53.4396ms
+2018-07-19 15:18:53.498 +02:00 [Information] Request finished in 63.2382ms 200 application/json; charset=utf-8
+2018-07-19 15:19:05.258 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 33
+2018-07-19 15:19:05.261 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:19:05.264 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:19:05.288 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:19:05.326 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:19:05.328 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 61.1307ms
+2018-07-19 15:19:05.330 +02:00 [Information] Request finished in 72.1063ms 200 application/json; charset=utf-8
+2018-07-19 15:19:15.730 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 27
+2018-07-19 15:19:15.734 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:19:15.737 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:19:15.755 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:19:15.785 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:19:15.788 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 48.2208ms
+2018-07-19 15:19:15.791 +02:00 [Information] Request finished in 67.7792ms 200 application/json; charset=utf-8
+2018-07-19 15:19:26.627 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/BusinessType application/json 28
+2018-07-19 15:19:26.630 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:19:26.632 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:19:26.659 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" with arguments (["UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:19:26.694 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:19:26.697 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PostBusinessTypeModel (UserManagement)" in 61.9567ms
+2018-07-19 15:19:26.699 +02:00 [Information] Request finished in 72.0967ms 200 application/json; charset=utf-8
+2018-07-19 15:19:42.611 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType/2  
+2018-07-19 15:19:42.615 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:19:42.618 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:19:42.642 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (["2"]) - ModelState is Valid
+2018-07-19 15:19:42.685 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:19:42.688 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 64.1658ms
+2018-07-19 15:19:42.691 +02:00 [Information] Request finished in 80.1664ms 200 application/json; charset=utf-8
+2018-07-19 15:20:18.801 +02:00 [Information] Request starting HTTP/1.1 PUT http://localhost:52260/api/BusinessType/2 application/json-patch+json 36
+2018-07-19 15:20:18.805 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:20:18.808 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:20:18.833 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PutBusinessTypeModel (UserManagement)" with arguments (["2", "UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:20:18.878 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:20:18.880 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PutBusinessTypeModel (UserManagement)" in 65.3166ms
+2018-07-19 15:20:18.882 +02:00 [Information] Request finished in 86.4672ms 200 application/json; charset=utf-8
+2018-07-19 15:20:52.229 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:20:52.569 +02:00 [Information] Request finished in 377.7521ms 200 text/html
+2018-07-19 15:20:56.795 +02:00 [Information] Request starting HTTP/1.1 PUT http://localhost:52260/api/BusinessType/2 application/json-patch+json 36
+2018-07-19 15:20:56.809 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:20:56.813 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:20:56.968 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PutBusinessTypeModel (UserManagement)" with arguments (["2", "UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:20:57.138 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:20:57.167 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PutBusinessTypeModel (UserManagement)" in 293.0588ms
+2018-07-19 15:20:57.173 +02:00 [Information] Request finished in 378.4092ms 200 application/json; charset=utf-8
+2018-07-19 15:21:08.450 +02:00 [Information] Request starting HTTP/1.1 PUT http://localhost:52260/api/BusinessType/9 application/json-patch+json 36
+2018-07-19 15:21:08.454 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:21:08.457 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:21:08.479 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.PutBusinessTypeModel (UserManagement)" with arguments (["9", "UserManagement.Models.BusinessTypeModels.BusinessTypeModel"]) - ModelState is Valid
+2018-07-19 15:21:08.487 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 400
+2018-07-19 15:21:08.489 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.PutBusinessTypeModel (UserManagement)" in 28.842ms
+2018-07-19 15:21:08.492 +02:00 [Information] Request finished in 42.4343ms 400 
+2018-07-19 15:21:26.641 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType/9  
+2018-07-19 15:21:26.644 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:21:26.647 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:21:26.668 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (["9"]) - ModelState is Valid
+2018-07-19 15:21:26.742 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:21:26.744 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 93.2903ms
+2018-07-19 15:21:26.748 +02:00 [Information] Request finished in 105.9403ms 200 application/json; charset=utf-8
+2018-07-19 15:21:32.048 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType/10  
+2018-07-19 15:21:32.051 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:21:32.054 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:21:32.072 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (["10"]) - ModelState is Valid
+2018-07-19 15:21:32.107 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:21:32.109 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 52.8798ms
+2018-07-19 15:21:32.112 +02:00 [Information] Request finished in 63.4969ms 200 application/json; charset=utf-8
+2018-07-19 15:21:36.823 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType/11  
+2018-07-19 15:21:36.826 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:21:36.829 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:21:36.848 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (["11"]) - ModelState is Valid
+2018-07-19 15:21:36.878 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 404
+2018-07-19 15:21:36.879 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 48.4783ms
+2018-07-19 15:21:36.882 +02:00 [Information] Request finished in 58.6768ms 404 
+2018-07-19 15:21:48.838 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType/5  
+2018-07-19 15:21:48.841 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:21:48.844 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:21:48.866 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (["5"]) - ModelState is Valid
+2018-07-19 15:21:48.896 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:21:48.899 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 51.3003ms
+2018-07-19 15:21:48.901 +02:00 [Information] Request finished in 63.5213ms 200 application/json; charset=utf-8
+2018-07-19 15:21:56.419 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType/4  
+2018-07-19 15:21:56.422 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:21:56.425 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:21:56.444 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (["4"]) - ModelState is Valid
+2018-07-19 15:21:56.473 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:21:56.475 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 48.176ms
+2018-07-19 15:21:56.477 +02:00 [Information] Request finished in 58.5686ms 200 application/json; charset=utf-8
+2018-07-19 15:22:06.759 +02:00 [Information] Request starting HTTP/1.1 DELETE http://localhost:52260/api/BusinessType/4  
+2018-07-19 15:22:06.762 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:22:06.765 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:22:06.787 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.DeleteBusinessTypeModel (UserManagement)" with arguments (["4"]) - ModelState is Valid
+2018-07-19 15:22:06.867 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:22:06.869 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.DeleteBusinessTypeModel (UserManagement)" in 96.877ms
+2018-07-19 15:22:06.872 +02:00 [Information] Request finished in 114.1801ms 200 application/json; charset=utf-8
+2018-07-19 15:22:21.730 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/BusinessType  
+2018-07-19 15:22:21.732 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:22:21.734 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:22:21.756 +02:00 [Information] Executing action method "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 15:22:21.759 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:22:21.800 +02:00 [Information] Executed action "UserManagement.Controllers.BusinessTypeController.GetBusinessTypeModel (UserManagement)" in 60.4469ms
+2018-07-19 15:22:21.802 +02:00 [Information] Request finished in 73.2715ms 200 application/json; charset=utf-8
+2018-07-19 15:22:41.368 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/organisation-details  
+2018-07-19 15:22:41.371 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:22:41.374 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:22:41.401 +02:00 [Information] Executing action method "UserManagement.Controllers.OrganisationProfileController.GetOrganisationDetails (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 15:22:41.591 +02:00 [Information] Executed action "UserManagement.Controllers.OrganisationProfileController.GetOrganisationDetails (UserManagement)" in 210.9171ms
+2018-07-19 15:22:41.741 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at UserManagement.Controllers.OrganisationProfileController.GetOrganisationDetails() in C:\Users\Libonis\documents\visual studio 2017\Projects\UserManagement\UserManagement\Controllers\OrganisationProfileController.cs:line 49
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-19 15:22:41.808 +02:00 [Information] Request finished in 440.3434ms 500 text/html; charset=utf-8
+2018-07-19 15:23:13.070 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/organisation-details  
+2018-07-19 15:23:13.074 +02:00 [Information] Successfully validated the token.
+2018-07-19 15:23:13.077 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 15:23:13.134 +02:00 [Information] Executing action method "UserManagement.Controllers.OrganisationProfileController.GetOrganisationDetails (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-19 15:26:40.030 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:26:40.331 +02:00 [Information] Request finished in 324.3412ms 200 text/html
+2018-07-19 15:26:41.240 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:26:41.455 +02:00 [Information] Request finished in 215.8664ms 200 application/json;charset=utf-8
+2018-07-19 15:26:46.146 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:26:46.150 +02:00 [Information] Request finished in 2.8529ms 200 text/html
+2018-07-19 15:26:46.324 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:26:46.339 +02:00 [Information] Request finished in 12.6395ms 200 application/json;charset=utf-8
+2018-07-19 15:27:37.648 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-19 15:27:37.806 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-19 15:27:38.136 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 15:27:38.166 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 442.4158ms
+2018-07-19 15:27:38.173 +02:00 [Information] Request finished in 526.3813ms 200 application/json; charset=utf-8
+2018-07-19 15:34:31.041 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:34:31.374 +02:00 [Information] Request finished in 366.0085ms 200 text/html
+2018-07-19 15:34:32.221 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:34:32.403 +02:00 [Information] Request finished in 182.7547ms 200 application/json;charset=utf-8
+2018-07-19 15:36:49.424 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:36:49.755 +02:00 [Information] Request finished in 354.566ms 200 text/html
+2018-07-19 15:36:50.217 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:36:50.413 +02:00 [Information] Request finished in 195.558ms 200 application/json;charset=utf-8
+2018-07-19 15:37:49.097 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:37:49.426 +02:00 [Information] Request finished in 354.4062ms 200 text/html
+2018-07-19 15:37:49.433 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:37:49.440 +02:00 [Information] Request finished in 6.9429ms 200 text/html
+2018-07-19 15:37:49.641 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:37:49.646 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/favicon-32x32.png  
+2018-07-19 15:37:49.675 +02:00 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2018-07-19 15:37:49.683 +02:00 [Information] Request finished in 34.27ms 200 image/png
+2018-07-19 15:37:49.691 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/favicon-16x16.png  
+2018-07-19 15:37:49.693 +02:00 [Information] Sending file. Request path: '"/favicon-16x16.png"'. Physical path: '"N/A"'
+2018-07-19 15:37:49.696 +02:00 [Information] Request finished in 5.7858ms 200 image/png
+2018-07-19 15:37:49.915 +02:00 [Information] Request finished in 273.7927ms 200 application/json;charset=utf-8
+2018-07-19 15:37:50.231 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:37:50.242 +02:00 [Information] Request finished in 10.2255ms 200 application/json;charset=utf-8
+2018-07-19 15:39:50.560 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:39:50.944 +02:00 [Information] Request finished in 410.313ms 200 text/html
+2018-07-19 15:39:51.505 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:39:51.736 +02:00 [Information] Request finished in 230.7958ms 200 application/json;charset=utf-8
+2018-07-19 15:45:33.164 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:45:33.532 +02:00 [Information] Request finished in 396.9325ms 200 text/html
+2018-07-19 15:45:34.232 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:45:34.475 +02:00 [Information] Request finished in 246.0798ms 200 application/json;charset=utf-8
+2018-07-19 15:53:31.149 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:53:31.460 +02:00 [Information] Request finished in 333.3214ms 200 text/html
+2018-07-19 15:53:32.236 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:53:32.430 +02:00 [Information] Request finished in 195.7686ms 200 application/json;charset=utf-8
+2018-07-19 15:53:58.720 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:53:59.027 +02:00 [Information] Request finished in 330.6565ms 200 text/html
+2018-07-19 15:53:59.247 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:59:06.587 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 15:59:06.911 +02:00 [Information] Request finished in 350.5082ms 200 text/html
+2018-07-19 15:59:07.136 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 15:59:07.353 +02:00 [Information] Request finished in 216.3787ms 200 application/json;charset=utf-8
+2018-07-19 16:00:02.708 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:00:03.023 +02:00 [Information] Request finished in 339.8641ms 200 text/html
+2018-07-19 16:00:03.226 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:04:12.051 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:04:12.363 +02:00 [Information] Request finished in 337.1004ms 200 text/html
+2018-07-19 16:04:12.613 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:04:20.013 +02:00 [Information] Request finished in 7399.9667ms 200 application/json;charset=utf-8
+2018-07-19 16:04:56.831 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:04:57.121 +02:00 [Information] Request finished in 314.3347ms 200 text/html
+2018-07-19 16:04:58.224 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:07:43.030 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:07:43.348 +02:00 [Information] Request finished in 346.1631ms 200 text/html
+2018-07-19 16:07:44.226 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:09:02.335 +02:00 [Information] Request finished in 78109.0992ms 200 application/json;charset=utf-8
+2018-07-19 16:10:38.204 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:10:38.509 +02:00 [Information] Request finished in 330.433ms 200 text/html
+2018-07-19 16:10:38.740 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:10:38.982 +02:00 [Information] Request finished in 241.4255ms 200 application/json;charset=utf-8
+2018-07-19 16:10:53.361 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:10:53.661 +02:00 [Information] Request finished in 324.8067ms 200 text/html
+2018-07-19 16:10:54.240 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:11:39.339 +02:00 [Information] Request finished in 45098.5662ms 200 application/json;charset=utf-8
+2018-07-19 16:13:40.251 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:13:40.588 +02:00 [Information] Request finished in 361.5475ms 200 text/html
+2018-07-19 16:13:40.871 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:13:41.075 +02:00 [Information] Request finished in 204.28ms 200 application/json;charset=utf-8
+2018-07-19 16:13:55.887 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:13:56.220 +02:00 [Information] Request finished in 357.4845ms 200 text/html
+2018-07-19 16:13:57.111 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:14:32.651 +02:00 [Information] Request finished in 35540.4971ms 200 application/json;charset=utf-8
+2018-07-19 16:16:20.389 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/Job?UserId=sdfsf&Name=sdfsf&Description=sdfsdf&TalentId=1&CountryId=2&Compensation=ewrerewr&Gender=1&ProfileImage=%7B%7D&Address=safasdfd&DueDate=1%2F1%2F2018%2012%3A00%3A00%20AM&Disabled=true multipart/form-data; boundary=----WebKitFormBoundary4lNPjbK1laR70b2R 122610
+2018-07-19 16:16:20.463 +02:00 [Information] Authorization failed for user: null.
+2018-07-19 16:16:20.469 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-19 16:16:20.479 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-19 16:16:20.485 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-19 16:16:20.491 +02:00 [Information] Executed action "UserManagement.Controllers.JobController.Post (UserManagement)" in 31.5733ms
+2018-07-19 16:16:20.497 +02:00 [Information] Request finished in 108.555ms 401 
+2018-07-19 16:17:05.927 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/Job?UserId=sdfsf&Name=sdfsf&Description=sdfsdf&TalentId=1&CountryId=2&Compensation=ewrerewr&Gender=1&ProfileImage=%7B%7D&Address=safasdfd&DueDate=1%2F1%2F2018%2012%3A00%3A00%20AM&Disabled=true multipart/form-data; boundary=----WebKitFormBoundaryHYHdN1xAUBt3TIhD 122610
+2018-07-19 16:17:05.938 +02:00 [Information] Successfully validated the token.
+2018-07-19 16:17:05.942 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-19 16:17:05.947 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-19 16:17:06.063 +02:00 [Information] Executing action method "UserManagement.Controllers.JobController.Post (UserManagement)" with arguments (["UserManagement.Models.JobModels.JobModel"]) - ModelState is Valid
+2018-07-19 16:17:38.163 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-19 16:17:38.189 +02:00 [Information] Executed action "UserManagement.Controllers.JobController.Post (UserManagement)" in 32243.4958ms
+2018-07-19 16:17:38.193 +02:00 [Information] Request finished in 32266.7046ms 200 application/json; charset=utf-8
+2018-07-19 16:20:47.279 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:20:47.613 +02:00 [Information] Request finished in 370.06ms 200 text/html
+2018-07-19 16:20:48.250 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:20:48.473 +02:00 [Information] Request finished in 223.261ms 200 application/json;charset=utf-8
+2018-07-19 16:21:18.834 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:21:19.187 +02:00 [Information] Request finished in 377.2268ms 200 text/html
+2018-07-19 16:21:19.415 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:22:27.577 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-19 16:22:27.911 +02:00 [Information] Request finished in 364.1775ms 200 text/html
+2018-07-19 16:22:28.124 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-19 16:22:28.321 +02:00 [Information] Request finished in 195.7933ms 200 application/json;charset=utf-8
