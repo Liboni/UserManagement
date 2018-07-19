@@ -15,9 +15,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models;
     using UserManagement.Models.AccountModels;
     using UserManagement.Providers;
-
-    using IdentityResult = Microsoft.AspNetCore.Identity.IdentityResult;
-
+    
     [Produces("application/json")]
     [Route("api/account")]
     public class AccountController : Controller
@@ -40,7 +38,7 @@ namespace UserManagement.Controllers
         public async Task<IActionResult> Login([FromBody]LoginModel loginModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            ApplicationUser user = await userManager.FindByNameAsync(loginModel.Email);
+            var user = await userManager.FindByNameAsync(loginModel.Email);
             if (user != null && await userManager.CheckPasswordAsync(user, loginModel.Password) && await userManager.IsEmailConfirmedAsync(user))
             {
                 return Ok(new { access_token = new ApplicationJwtProvider(Configuration, userManager).JwtTokenBuilder(user).Result });
@@ -53,14 +51,14 @@ namespace UserManagement.Controllers
         public async Task<IActionResult> Register([FromBody]RegisterModel registerModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState); 
-                ApplicationUser user = new ApplicationUser
+                var user = new ApplicationUser
                                        {
                                            Email = registerModel.Email,
                                            SecurityStamp = Guid.NewGuid().ToString(),
                                            UserName = registerModel.Email,
                                            PhoneNumber = registerModel.PhoneNumber
                 };
-            Task<IdentityResult> task = userManager?.CreateAsync(user, registerModel.Password);
+            var task = userManager?.CreateAsync(user, registerModel.Password);
             if (task == null) return BadRequest();
             await task;
             if (!task.Result.Succeeded) return Ok(new { success=task.Result.Succeeded, message=task.Result.Errors });
@@ -70,19 +68,19 @@ namespace UserManagement.Controllers
         }
        
         [HttpGet("verify/{token}")]
-        public async Task<IActionResult> VerifyAccount(string token)
+        public async Task<IActionResult> VerifyAccount([FromRoute]string token)
         {
-            if (String.IsNullOrEmpty(token)) return BadRequest();
-            Token tokenDetails =new TokenManager(context).GetTokenById(token);
-            IdentityResult result = await userManager.ConfirmEmailAsync(tokenDetails.User, tokenDetails.UserToken);
+            if (!ModelState.IsValid)return BadRequest(ModelState);
+            var tokenDetails =new TokenManager(context).GetTokenById(token);
+            var result = await userManager.ConfirmEmailAsync(tokenDetails.User, tokenDetails.UserToken);
             return Ok(new { success = result.Succeeded, message = result.Errors });
         }
         
         [HttpGet("forgotPassword/{email}")]
-        public async Task<IActionResult> ForgotPassword(string email)
+        public async Task<IActionResult> ForgotPassword([FromRoute]string email)
         {
-            if (String.IsNullOrEmpty(email)) return BadRequest("Email address is required");
-            ApplicationUser user = await userManager.FindByNameAsync(email);
+            if (!ModelState.IsValid)return BadRequest(ModelState);
+            var user = await userManager.FindByNameAsync(email);
             if (user == null) return BadRequest("User name not registered");
             new EmailNotification(context, Configuration).SendForgotPasswordEmail(userManager, user);
             return Ok(new { success = true, message = "Check your email to reset your password." });
@@ -92,8 +90,8 @@ namespace UserManagement.Controllers
         public async Task<IActionResult> ResetPassword([FromBody]ResetPasswordModel resetPasswordModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            Token tokenDetails = new TokenManager(context).GetTokenById(resetPasswordModel.ResetToken);
-            IdentityResult result = await userManager.ResetPasswordAsync(
+            var tokenDetails = new TokenManager(context).GetTokenById(resetPasswordModel.ResetToken);
+            var result = await userManager.ResetPasswordAsync(
                         tokenDetails.User,
                         tokenDetails.UserToken,
                         resetPasswordModel.NewPassword);
@@ -105,8 +103,8 @@ namespace UserManagement.Controllers
         public async Task<IActionResult> ChangePassword([FromBody]ChangePasswordModel changePasswordModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            ApplicationUser user= await userManager.FindByIdAsync(ClaimsPrincipal.Current.Identity.GetUserId());
-            IdentityResult result = await userManager.ChangePasswordAsync(
+            var user= await userManager.FindByIdAsync(ClaimsPrincipal.Current.Identity.GetUserId());
+            var result = await userManager.ChangePasswordAsync(
                                         user,
                                         changePasswordModel.OldPassword,
                                         changePasswordModel.NewPassword);

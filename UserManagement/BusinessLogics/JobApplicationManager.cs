@@ -21,26 +21,29 @@ namespace UserManagement.BusinessLogics
             this.context = context;
             this.userManager = userManager;
         }
-        public GenericActionResult<string> SaveJobApplication(JobApplicationModel jobApplicationModel)
+        public GenericActionResult<JobApplication> SaveJobApplication(JobApplicationModel jobApplicationModel)
         {
             try
             {
-                context.JobApplications.Add(new JobApplication{
-                            UserId = jobApplicationModel.UserId,
-                            DateCreated = DateTime.Now,
-                            IsDeleted = false,
-                            JobId = jobApplicationModel.JobId
-                        });
+                var application = new JobApplication
+                                      {
+                                          UserId = jobApplicationModel.UserId,
+                                          DateCreated = DateTime.Now,
+                                          IsDeleted = false,
+                                          JobId = jobApplicationModel.JobId,
+                                          IsViewed = false
+                                      };
+                context.JobApplications.Add(application);
                 context.SaveChanges();
-                return new GenericActionResult<string>(true, "Job application saved successfully.");
+                return new GenericActionResult<JobApplication>(true, "Job application saved successfully.", application);
             }
             catch (Exception)
             {
-                return new GenericActionResult<string>("Failed to save job application, please try again or contact the administrator.");
+                return new GenericActionResult<JobApplication>("Failed to save job application, please try again or contact the administrator.");
             }
         }
 
-        public GenericActionResult<string> UpdateJobApplication(JobApplicationModel jobApplicationModel)
+        public GenericActionResult<JobApplication> UpdateJobApplication(JobApplicationModel jobApplicationModel)
         {
             try
             {
@@ -48,26 +51,53 @@ namespace UserManagement.BusinessLogics
                 jobApplication.IsDeleted = jobApplicationModel.IsDeleted;
                 jobApplication.JobId = jobApplicationModel.JobId;
                 context.SaveChanges();
-                return new GenericActionResult<string>(true, "Job application updated successfully.");
+                return new GenericActionResult<JobApplication>(true, "Job application updated successfully.", jobApplication);
             }
             catch (Exception)
             {
-                return new GenericActionResult<string>("Failed to updated job application, please try again or contact the administrator.");
+                return new GenericActionResult<JobApplication>("Failed to updated job application, please try again or contact the administrator.");
             }
         }
 
-        public GenericActionResult<string> DeleteJobApplication(int id)
+        public GenericActionResult<JobApplication> DeleteJobApplication(int id)
         {
             try
             {
                 var jobApplication = context.JobApplications.Find(id);
                 jobApplication.IsDeleted = true;
                 context.SaveChanges();
-                return new GenericActionResult<string>(true, "Job application delete successfully.");
+                return new GenericActionResult<JobApplication>(true, "Job application delete successfully.", jobApplication);
             }
             catch (Exception)
             {
-                return new GenericActionResult<string>("Failed to delete job application, please try again or contact the administrator.");
+                return new GenericActionResult<JobApplication>("Failed to delete job application, please try again or contact the administrator.");
+            }
+        }
+
+        public GenericActionResult<JobApplication> ViewJobApplication(int id)
+        {
+            try
+            {
+                var jobApplication = context.JobApplications.Find(id);
+                jobApplication.IsViewed = true;
+                context.SaveChanges();
+                return new GenericActionResult<JobApplication>(true, "Job application viewed successfully.", jobApplication);
+            }
+            catch (Exception)
+            {
+                return new GenericActionResult<JobApplication>("Failed to viewed job application, please try again or contact the administrator.");
+            }
+        }
+
+        public GenericActionResult<JobApplicationResponseModel> GetJobApplications(string webRootPath, int id)
+        {
+            try
+            {
+                return new GenericActionResult<JobApplicationResponseModel>(true, "", context.JobApplications.Where(a => !a.IsDeleted && a.Id == id).Select(a => new ObjectConverterManager(context, userManager).ToJobApplicationResponseModel(a, webRootPath)).FirstOrDefault());
+            }
+            catch (Exception)
+            {
+                return new GenericActionResult<JobApplicationResponseModel>("Failed to get job application, please try again or contact the administrator.");
             }
         }
 
@@ -76,7 +106,7 @@ namespace UserManagement.BusinessLogics
             try
             {
                 var applications = context.JobApplications.Where(a => !a.IsDeleted).Skip(from).Take(count).ToList();
-                return new GenericActionResult<List<JobApplicationResponseModel>>(true,"", applications.Select(a=>new ObjectConverter(context, userManager).ToJobApplicationResponseModel(a,webRootPath)).ToList());
+                return new GenericActionResult<List<JobApplicationResponseModel>>(true,"", applications.Select(a=>new ObjectConverterManager(context, userManager).ToJobApplicationResponseModel(a,webRootPath)).ToList());
             }
             catch (Exception)
             {
@@ -84,15 +114,16 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobApplication>> GetJobApplicationByUserId(string userId)
+        public GenericActionResult<List<JobApplicationResponseModel>> GetJobApplicationByUserId(string userId, string webRootPath, int from, int count)
         {
             try
             {
-                return new GenericActionResult<List<JobApplication>>(true, "", context.JobApplications.Where(a => !a.IsDeleted && a.UserId.Equals(userId)).ToList());
+                var applications = context.JobApplications.Where(a => !a.IsDeleted && a.UserId.Equals(userId)).Skip(from).Take(count).ToList();
+                return new GenericActionResult<List<JobApplicationResponseModel>>(true, "", applications.Select(a => new ObjectConverterManager(context, userManager).ToJobApplicationResponseModel(a, webRootPath)).ToList());
             }
             catch (Exception)
             {
-                return new GenericActionResult<List<JobApplication>>("Failed to get job application, please try again or contact the administrator.");
+                return new GenericActionResult<List<JobApplicationResponseModel>>("Failed to get job application, please try again or contact the administrator.");
             }
         }
     }

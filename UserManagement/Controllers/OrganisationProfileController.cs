@@ -1,9 +1,7 @@
 ﻿
 namespace UserManagement.Controllers
 {
-    using System.Collections.Generic;
     using System.Security.Claims;
-    using System.Threading.Tasks;
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNetCore.Hosting;
@@ -11,7 +9,6 @@ namespace UserManagement.Controllers
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
-    using UserManagement.LocalObjects;
     using UserManagement.Models;
     using UserManagement.Models.OrganisationProfileModels;
 
@@ -34,16 +31,16 @@ namespace UserManagement.Controllers
         public IActionResult AddOrganisationDetails(OrganisationProfileModel organisationDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            Task<GenericActionResult<string>> result = new OrganisationProfileManager(context, userManager).SaveOrganisationProfile(organisationDetailsModel, hostingEnvironment.WebRootPath);
-            return Ok(new { success = result.Result.Success, message = result.Result.Message });
+            var result = new OrganisationProfileManager(context, userManager).SaveOrganisationProfile(organisationDetailsModel, hostingEnvironment.WebRootPath).Result;
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpPut("{id}")]
         public IActionResult UpdateOrganisationDetails([FromRoute]int id,OrganisationProfileModel organisationProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            Task<GenericActionResult<string>> result = new OrganisationProfileManager(context, userManager).UpdateOrganisationProfile(organisationProfileModel, hostingEnvironment.WebRootPath);
-            return Ok(new { success = result.Result.Success, message = result.Result.Message });
+            var result = new OrganisationProfileManager(context, userManager).UpdateOrganisationProfile(organisationProfileModel, hostingEnvironment.WebRootPath).Result;
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpGet]
@@ -53,15 +50,17 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet("{from}/{count}")]
-        public IActionResult GetAllOrganisationDetails(int from, int count)
+        public IActionResult GetAllOrganisationDetails([FromRoute]int from, [FromRoute]int count)
         {
-            GenericActionResult<List<OrganisationProfileResponseModel>> result = new OrganisationProfileManager(context, userManager).GetOrganisationProfiles(hostingEnvironment.WebRootPath, from, count);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfiles(hostingEnvironment.WebRootPath, from, count);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpGet("{userId}")]
-        public IActionResult GetOrganisationDetails(string userId)
+        public IActionResult GetOrganisationDetails([FromRoute]string userId)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfileById(userId, hostingEnvironment.WebRootPath);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
 

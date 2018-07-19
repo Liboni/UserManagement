@@ -2,13 +2,11 @@
 namespace UserManagement.Controllers
 {
     using System.Collections.Generic;
-    using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
-    using UserManagement.LocalObjects;
     using UserManagement.Models.BusinessTypeModels;
 
     [Produces("application/json")]
@@ -33,7 +31,7 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            Task<GenericActionResult<BusinessType>> businessTypeModel =new BusinessTypeManager(context).GetBusinessType(id);
+            var businessTypeModel =new BusinessTypeManager(context).GetBusinessType(id);
             if (businessTypeModel.Result.Data == null)
                 return NotFound();
             if (!businessTypeModel.Result.Success) return NoContent();
@@ -47,7 +45,7 @@ namespace UserManagement.Controllers
                 return BadRequest(ModelState);
             if (id != businessTypeModel.Id)
                 return BadRequest();
-            Task<GenericActionResult<BusinessType>> result = new BusinessTypeManager(context).UpdateBusinessType(ObjectConverter.ToBusinessType(businessTypeModel));
+            var result = new BusinessTypeManager(context).UpdateBusinessType(ObjectConverterManager.ToBusinessType(businessTypeModel));
             return Ok(new { success = result.Result.Success, message = result.Result.Message, data = result.Result.Data });
         }
 
@@ -56,7 +54,7 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-           Task<GenericActionResult<BusinessType>> result = new BusinessTypeManager(context).AddBusinessTypeModel(ObjectConverter.ToBusinessType(businessTypeModel));
+            var result = new BusinessTypeManager(context).AddBusinessTypeModel(ObjectConverterManager.ToBusinessType(businessTypeModel));
             return Ok(new { success = result.Result.Success, message = result.Result.Message, data = result.Result.Data });
         }
 
@@ -65,7 +63,7 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-           var result = new BusinessTypeManager(context).DeleteBusinessTypeModel(id);
+            var result = new BusinessTypeManager(context).DeleteBusinessTypeModel(id);
             return Ok(new { success = result.Result.Success, message = result.Result.Message, data = result.Result.Data });
         }
 

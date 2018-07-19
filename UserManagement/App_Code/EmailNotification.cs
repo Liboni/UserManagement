@@ -49,5 +49,15 @@ namespace UserManagement
             IdentityMessage message = new IdentityMessage { Body = requestUrl, Destination = user.Email, Subject = "Forgot Password" };
             new EmailService().SendEmailAsync(message);
         }
+
+        public void SendJobApplicationEmail(JobApplication jobApplication, Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager,string webRootPath)
+        {
+            var getJob = new JobManager(context, userManager).GetJob(webRootPath, jobApplication.JobId);
+            var user = userManager.FindByIdAsync(getJob.Data.Organisation.UserId);
+            var userDetails = new UserProfileManager(context, userManager).GetUserDetailsByUserId(jobApplication.UserId,webRootPath);
+            string body = userDetails.Data.FirstName+" " +userDetails.Data.LastName+" has shown interest in the job for " + getJob.Data.Name+ " you advertised on JobSearch. to view more details on the application click this link."+ Configuration["FrontEndUrl:BaseUrl"] + Configuration["FrontEndUrl:ForgotPasswordUrlPreffix"] + jobApplication.Id;
+            IdentityMessage message = new IdentityMessage { Body = body, Destination = user.Result.Email, Subject = "Job Application" };
+            new EmailService().SendEmailAsync(message);
+        }
     }
 }

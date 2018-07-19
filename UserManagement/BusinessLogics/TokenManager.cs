@@ -18,8 +18,7 @@ namespace UserManagement.BusinessLogics
         public string SaveToken(Token token)
         {
             string id = Guid.NewGuid().ToString();
-            context.Tokens.Add(new Token
-                    {
+            context.Tokens.Add(new Token{
                         ExpiryDate = token.ExpiryDate,
                         Id = id,
                         UserToken = token.UserToken,
@@ -32,19 +31,15 @@ namespace UserManagement.BusinessLogics
 
         public Token GetTokenById(string id)
         {
-            return String.IsNullOrEmpty(id)
-                       ? new Token()
+            return String.IsNullOrEmpty(id) ? new Token()
                        : context.Tokens.Where(a => a.Id.Equals(id))
-                           .Select(
-                               a => new Token
-                                        {
+                           .Select(a => new Token{
                                             User = a.User,
                                             UserToken = a.UserToken,
                                             ExpiryDate = a.ExpiryDate,
                                             Id = a.Id,
                                             UserId = a.UserId
-                                        })
-                           .FirstOrDefault();
+                                        }).FirstOrDefault();
         }
     }
 }

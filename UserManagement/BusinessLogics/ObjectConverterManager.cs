@@ -1,13 +1,13 @@
 ﻿
-namespace UserManagement
+namespace UserManagement.BusinessLogics
 {
     using System;
     using System.IO;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Identity;
 
-    using UserManagement.BusinessLogics;
     using UserManagement.Data;
     using UserManagement.Enums;
     using UserManagement.Models;
@@ -15,14 +15,15 @@ namespace UserManagement
     using UserManagement.Models.JobApplicationModels;
     using UserManagement.Models.JobModels;
     using UserManagement.Models.OrganisationProfileModels;
+    using UserManagement.Models.UserCreditModels;
     using UserManagement.Models.UserProfileModels;
     using UserManagement.Models.ValuesModels;
 
-    public class ObjectConverter
+    public class ObjectConverterManager
     {
         private readonly ApplicationDbContext context;
         private readonly UserManager<ApplicationUser> userManager;
-        public ObjectConverter(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public ObjectConverterManager(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             this.context = context;
             this.userManager = userManager;
@@ -105,6 +106,24 @@ namespace UserManagement
                        {
                            Id = businessTypeModel.Id,
                            Name = businessTypeModel.Name
+                       };
+        }
+
+        public async Task<UserCreditResponseModel> ToUserCreditResponseModel(UserCredit userCredit)
+        {
+            ApplicationUser user = await userManager.FindByIdAsync(userCredit.UserId);
+            return new UserCreditResponseModel
+                       {
+                           Talent = context.Talents.Find(userCredit.TalentId),
+                           UserId = userCredit.UserId,
+                           Production = userCredit.Production,
+                           Email = user.Email,
+                           PhoneNumber = user.PhoneNumber,
+                           UserName = user.UserName,
+                           Id = userCredit.Id,
+                           UserProfile = context.UserProfiles.FirstOrDefault(a=>a.UserId.Equals(userCredit.UserId)),
+                           IsDeleted = userCredit.IsDeleted,
+                           DateCreated = userCredit.DateCreated
                        };
         }
     }

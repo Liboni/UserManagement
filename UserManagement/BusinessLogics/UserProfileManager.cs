@@ -23,32 +23,34 @@ namespace UserManagement.BusinessLogics
             this.userManager = userManager;
         }
 
-        public async Task<GenericActionResult<string>> SaveUserDetails(UserProfileModel userProfileModel, string webRootPath)
+        public async Task<GenericActionResult<UserProfile>> SaveUserDetails(UserProfileModel userProfileModel, string webRootPath)
         {
             try
             {
                 if(context.UserProfiles.FirstOrDefault(a => a.UserId.Equals(userProfileModel.UserId))!=null)
                     return await UpdateUserDetails(userProfileModel, webRootPath);
-                context.UserProfiles.Add(new UserProfile{
-                            CountryId = userProfileModel.CountryId,
-                            DateOfBirth = userProfileModel.DateOfBirth,
-                            FirstName = userProfileModel.FirstName,
-                            Gender = (byte)userProfileModel.Gender,
-                            LastName = userProfileModel.LastName,
-                            UserId = userProfileModel.UserId,
-                            DateCreated = DateTime.Now,
-                            ProfileImageName = await UploadFile.SaveFileInWebRoot(userProfileModel.ProfileImage, webRootPath)
-                });
+                var userProfile = new UserProfile
+                            {
+                                CountryId = userProfileModel.CountryId,
+                                DateOfBirth = userProfileModel.DateOfBirth,
+                                FirstName = userProfileModel.FirstName,
+                                Gender = (byte)userProfileModel.Gender,
+                                LastName = userProfileModel.LastName,
+                                UserId = userProfileModel.UserId,
+                                DateCreated = DateTime.Now,
+                                ProfileImageName =await UploadFile.SaveFileInWebRoot(userProfileModel.ProfileImage,webRootPath)
+                            };
+                context.UserProfiles.Add(userProfile);
                 context.SaveChanges();
-                return new GenericActionResult<string>(true,"");
+                return new GenericActionResult<UserProfile>(true,"User details saved successfully.",userProfile);
             }
             catch (Exception exception)
             {
-                return new GenericActionResult<string>(exception.Message);
+                return new GenericActionResult<UserProfile>(exception.Message);
             }
         }
 
-        public async Task<GenericActionResult<string>> UpdateUserDetails(UserProfileModel userProfileModel, string webRootPath)
+        public async Task<GenericActionResult<UserProfile>> UpdateUserDetails(UserProfileModel userProfileModel, string webRootPath)
         {
             try
             {
@@ -62,11 +64,11 @@ namespace UserManagement.BusinessLogics
                     userProfile.ProfileImageName = await UploadFile.SaveFileInWebRoot(userProfileModel.ProfileImage, webRootPath);
                 }
                 context.SaveChanges();
-                return new GenericActionResult<string>(true, "User details updated successfully");
+                return new GenericActionResult<UserProfile>(true, "User details updated successfully.",userProfile);
             }
             catch (Exception exception)
             {
-                return new GenericActionResult<string>(exception.Message);
+                return new GenericActionResult<UserProfile>(exception.Message);
             }
         }
 
@@ -74,7 +76,7 @@ namespace UserManagement.BusinessLogics
         {
             try
             {
-                return new GenericActionResult<UserProfileResponseModel>(true,"", context.UserProfiles.Where(a => a.UserId.Equals(userId)).Select(a => new ObjectConverter(context, userManager).ToUserProfileResponseModel(a, webRootPath).Result).FirstOrDefault()); 
+                return new GenericActionResult<UserProfileResponseModel>(true,"", context.UserProfiles.Where(a => a.UserId.Equals(userId)).Select(a => new ObjectConverterManager(context, userManager).ToUserProfileResponseModel(a, webRootPath).Result).FirstOrDefault()); 
  
             }
             catch (Exception exception)
@@ -88,7 +90,7 @@ namespace UserManagement.BusinessLogics
             try
             {
                List<UserProfile> profiles = context.UserProfiles.Skip(from).Take(count).ToList();
-               return new GenericActionResult<List<UserProfileResponseModel>>(true, "", profiles.Select(userProfile => new ObjectConverter(context, userManager).ToUserProfileResponseModel(userProfile, webRootPath).Result).ToList());
+               return new GenericActionResult<List<UserProfileResponseModel>>(true, "", profiles.Select(userProfile => new ObjectConverterManager(context, userManager).ToUserProfileResponseModel(userProfile, webRootPath).Result).ToList());
             }
             catch (Exception exception)
             {

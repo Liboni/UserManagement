@@ -27,33 +27,35 @@ namespace UserManagement.BusinessLogics
             return context.Talents.Find(id);
         }
 
-        public GenericActionResult<string> AddTalent(string name)
+        public GenericActionResult<Talent> AddTalent(string name)
         {
             try
             {
-                context.Talents.Add(new Talent{Name = name});
+                var talent = new Talent { Name = name };
+                context.Talents.Add(talent);
                 context.SaveChanges();
-                return new GenericActionResult<string>(true,"Talent saved successfully.");
+                return new GenericActionResult<Talent>(true,"Talent saved successfully.", talent);
 
             }
             catch (Exception)
             {
-                return new GenericActionResult<string>("Failed to save talent, try again.");
+                return new GenericActionResult<Talent>("Failed to save talent, try again.");
             }
         }
 
-        public GenericActionResult<string> DeleteTalent(int talentId)
+        public GenericActionResult<Talent> DeleteTalent(int talentId)
         {
             try
             {
-                context.Talents.Remove(context.Talents.Find(talentId));
+                var talent = context.Talents.Find(talentId);
+                context.Talents.Remove(talent);
                 context.SaveChanges();
-                return new GenericActionResult<string>(true, "Talent deleted successfully.");
+                return new GenericActionResult<Talent>(true, "Talent deleted successfully.", talent);
 
             }
             catch (Exception exception)
             {
-                return new GenericActionResult<string>(exception.Message);
+                return new GenericActionResult<Talent>(exception.Message);
             }
         }
     }

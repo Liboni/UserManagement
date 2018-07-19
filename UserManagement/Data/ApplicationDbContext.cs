@@ -13,7 +13,6 @@ namespace UserManagement.Data
         public DbSet<Token> Tokens { get; set; }
         public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Country> Countries { get; set; }
-        public DbSet<ProfileImage> ProfileImages { get; set; }
         public DbSet<UserCredit> UserCredits { get; set; }
         public DbSet<Talent> Talents  { get; set; }
         public DbSet<OrganisationProfile> OrganisationProfiles { get; set; }

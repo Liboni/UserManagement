@@ -1,16 +1,14 @@
 ﻿
 namespace UserManagement.Controllers
 {
-    using System.Collections.Generic;
     using System.Security.Claims;
 
     using Microsoft.AspNet.Identity;
-    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
-    using UserManagement.LocalObjects;
+    using UserManagement.Models;
     using UserManagement.Models.UserCreditModels;
 
     [Produces("application/json")]
@@ -18,18 +16,19 @@ namespace UserManagement.Controllers
     public class UserCreditController : Controller
     {
         private readonly ApplicationDbContext context;
-
-        public UserCreditController(ApplicationDbContext context)
+        private readonly Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager;
+        public UserCreditController(ApplicationDbContext context, Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager)
         {
             this.context = context;
+            this.userManager = userManager;
         }
 
         [HttpPost]
         public IActionResult AddUserCredits([FromBody]UserCreditModel creditsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            GenericActionResult<string> result = new UserCreditsManager(context).SaveUserCredit(creditsModel);
-            return Ok(new { success = result.Success, message = result.Message });
+            var result = new UserCreditsManager(context, userManager).SaveUserCredit(creditsModel);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpPut("{id}")]
@@ -37,8 +36,8 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             if (id!=creditsModel.Id) return BadRequest();
-            GenericActionResult<string> result = new UserCreditsManager(context).UpdateUserCredit(creditsModel);
-            return Ok(new { success = result.Success, message = result.Message });
+            var result = new UserCreditsManager(context, userManager).UpdateUserCredit(creditsModel);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
         
         [HttpGet]
@@ -48,23 +47,25 @@ namespace UserManagement.Controllers
         }
         
         [HttpDelete("{id}")]
-        public IActionResult DeleteUserCredits(int id)
+        public IActionResult DeleteUserCredits([FromRoute]int id)
         {
-            GenericActionResult<string> result = new UserCreditsManager(context).DeleteUserCreditById(id);
-            return Ok(new { success = result.Success, message = result.Message });
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new UserCreditsManager(context, userManager).DeleteUserCreditById(id);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpGet("{userId}")]
-        public IActionResult GetUserCredits(string userId)
+        public IActionResult GetUserCredits([FromRoute]string userId)
         {
-            GenericActionResult<UserCreditModel> result = new UserCreditsManager(context).GetUserCreditByUserId(userId);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new UserCreditsManager(context, userManager).GetUserCreditByUserId(userId);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpGet]
         public IActionResult GetAllUserCredits()
         {
-            GenericActionResult<List<UserCreditModel>> result = new UserCreditsManager(context).GetAllUserCredits();
+            var result = new UserCreditsManager(context, userManager).GetAllUserCredits();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
     }

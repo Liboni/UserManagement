@@ -24,33 +24,34 @@ namespace UserManagement.BusinessLogics
             this.userManager = userManager;
         }
 
-        public async Task<GenericActionResult<string>> SaveOrganisationProfile(OrganisationProfileModel organisationProfileModel, string webRootPath)
+        public async Task<GenericActionResult<OrganisationProfile>> SaveOrganisationProfile(OrganisationProfileModel organisationProfileModel, string webRootPath)
         {
             try
             {
-                context.OrganisationProfiles.Add(new OrganisationProfile
-                                                     {
-                                                        CompanyAddress = organisationProfileModel.CompanyAddress,
-                                                        DateCreated = DateTime.Now,
-                                                        UserId = organisationProfileModel.UserId,
-                                                        BusinessTypeId = organisationProfileModel.CompanyBusinessType,
-                                                        CompanyName = organisationProfileModel.CompanyName,
-                                                        CompanyPhoneNumber = organisationProfileModel.CompanyPhoneNumber,
-                                                        CompanyRegistrationId = organisationProfileModel.CompanyRegistrationId,
-                                                        CountryId = organisationProfileModel.CountryId,
-                                                        DateOfCompanyRegistration = organisationProfileModel.DateOfCompanyRegistration,
-                                                        ProfileImageName= await UploadFile.SaveFileInWebRoot(organisationProfileModel.ProfileImage, webRootPath)
-                });
+                var profile = new OrganisationProfile
+                            {
+                                CompanyAddress = organisationProfileModel.CompanyAddress,
+                                DateCreated = DateTime.Now,
+                                UserId = organisationProfileModel.UserId,
+                                BusinessTypeId = organisationProfileModel.CompanyBusinessType,
+                                CompanyName = organisationProfileModel.CompanyName,
+                                CompanyPhoneNumber = organisationProfileModel.CompanyPhoneNumber,
+                                CompanyRegistrationId =organisationProfileModel.CompanyRegistrationId,
+                                CountryId = organisationProfileModel.CountryId,
+                                DateOfCompanyRegistration =organisationProfileModel.DateOfCompanyRegistration,
+                                ProfileImageName =await UploadFile.SaveFileInWebRoot(organisationProfileModel.ProfileImage,webRootPath)
+                            };
+                context.OrganisationProfiles.Add(profile);
                 context.SaveChanges();
-                return new GenericActionResult<string>(true,"");
+                return new GenericActionResult<OrganisationProfile>(true, "Organisation profile saved successfully.", profile);
             }
             catch (Exception exception)
             {
-                return new GenericActionResult<string>(exception.Message);
+                return new GenericActionResult<OrganisationProfile>(exception.Message);
             }
         }
 
-        public async Task<GenericActionResult<string>> UpdateOrganisationProfile(OrganisationProfileModel organisationProfileModel, string webRootPath)
+        public async Task<GenericActionResult<OrganisationProfile>> UpdateOrganisationProfile(OrganisationProfileModel organisationProfileModel, string webRootPath)
         {
             try
             {
@@ -64,11 +65,11 @@ namespace UserManagement.BusinessLogics
                 organisationProfile.DateOfCompanyRegistration = organisationProfileModel.DateOfCompanyRegistration;
                 organisationProfile.ProfileImageName =await UploadFile.SaveFileInWebRoot(organisationProfileModel.ProfileImage, webRootPath);
                 context.SaveChanges();
-                return new GenericActionResult<string>(true, "");
+                return new GenericActionResult<OrganisationProfile>(true, "Organisation profile updated successfully.", organisationProfile);
             }
             catch (Exception exception)
             {
-                return new GenericActionResult<string>(exception.Message);
+                return new GenericActionResult<OrganisationProfile>(exception.Message);
             }
         }
 
@@ -76,7 +77,7 @@ namespace UserManagement.BusinessLogics
         {
             try
             {
-                return new GenericActionResult<OrganisationProfileResponseModel>(true, "", context.OrganisationProfiles.Where(a=>a.UserId.Equals(userId)).Select(organisation=> new ObjectConverter(context,userManager).ToOrganisationProfileModel(organisation,webRootPath).Result).FirstOrDefault());
+                return new GenericActionResult<OrganisationProfileResponseModel>(true, "", context.OrganisationProfiles.Where(a=>a.UserId.Equals(userId)).Select(organisation=> new ObjectConverterManager(context,userManager).ToOrganisationProfileModel(organisation,webRootPath).Result).FirstOrDefault());
             }
             catch (Exception exception)
             {
@@ -89,7 +90,7 @@ namespace UserManagement.BusinessLogics
             try
             {
                 List<OrganisationProfile> profiles = context.OrganisationProfiles.Skip(from).Take(count).ToList();
-                return new GenericActionResult<List<OrganisationProfileResponseModel>>(true, "", profiles.Select(organisationProfile => new ObjectConverter(context, userManager).ToOrganisationProfileModel(organisationProfile, webRootPath).Result).ToList());
+                return new GenericActionResult<List<OrganisationProfileResponseModel>>(true, "", profiles.Select(organisationProfile => new ObjectConverterManager(context, userManager).ToOrganisationProfileModel(organisationProfile, webRootPath).Result).ToList());
             }
             catch (Exception exception)
             {

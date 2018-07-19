@@ -26,20 +26,23 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Talents(int id)
+        public IActionResult Talents([FromRoute]int id)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             return Ok(new { success = true, Data = new TalentsManager(context).GetTalentById(id) });
         }
 
         [HttpPost]
         public IActionResult AddTalents([FromBody]string name)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             return Ok(new { success = true, Data = new TalentsManager(context).AddTalent(name) });
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteTalents(int id)
+        public IActionResult DeleteTalents([FromRoute]int id)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             return Ok(new { success = true, Data = new TalentsManager(context).DeleteTalent(id) });
         }
     }

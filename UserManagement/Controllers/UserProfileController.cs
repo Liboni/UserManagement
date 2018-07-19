@@ -1,9 +1,7 @@
 ﻿
 namespace UserManagement.Controllers
 {
-    using System.Collections.Generic;
     using System.Security.Claims;
-    using System.Threading.Tasks;
 
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNetCore.Authorization;
@@ -12,7 +10,6 @@ namespace UserManagement.Controllers
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
-    using UserManagement.LocalObjects;
     using UserManagement.Models;
     using UserManagement.Models.UserProfileModels;
 
@@ -34,8 +31,8 @@ namespace UserManagement.Controllers
         public IActionResult AddUserProfileDetails(UserProfileModel userProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            Task<GenericActionResult<string>> result = new UserProfileManager(context, userManager).SaveUserDetails(userProfileModel, hostingEnvironment.WebRootPath);
-            return Ok(new { success = result.Result.Success, message = result.Result.Message });
+            var result = new UserProfileManager(context, userManager).SaveUserDetails(userProfileModel, hostingEnvironment.WebRootPath).Result;
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [Authorize]
@@ -44,8 +41,8 @@ namespace UserManagement.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             if (id!=userDetailsModel.Id) return BadRequest(ModelState);
-            Task<GenericActionResult<string>> result = new UserProfileManager(context, userManager).UpdateUserDetails(userDetailsModel, hostingEnvironment.WebRootPath);
-            return Ok(new { success = result.Result.Success, message = result.Result.Message });
+            var result = new UserProfileManager(context, userManager).UpdateUserDetails(userDetailsModel, hostingEnvironment.WebRootPath).Result;
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [Authorize]
@@ -57,18 +54,20 @@ namespace UserManagement.Controllers
 
         [Authorize]
         [HttpGet("{from}/{count}")]
-        public IActionResult GetAllUserProfileDetails(int from, int count)
+        public IActionResult GetAllUserProfileDetails([FromRoute]int from, [FromRoute]int count)
         {
-            GenericActionResult<List<UserProfileResponseModel>> result = new UserProfileManager(context, userManager).GetAllUserDetails(hostingEnvironment.WebRootPath, from, count);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new UserProfileManager(context, userManager).GetAllUserDetails(hostingEnvironment.WebRootPath, from, count);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [Authorize]
         [HttpGet("{userId}")]
-        public IActionResult GetUserProfileDetails(string userId)
+        public IActionResult GetUserProfileDetails([FromRoute]string userId)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
             if (string.IsNullOrEmpty(userId)) return BadRequest("User is required");
-            GenericActionResult<UserProfileResponseModel> result = new UserProfileManager(context, userManager).GetUserDetailsByUserId(userId, hostingEnvironment.WebRootPath);
+            var result = new UserProfileManager(context, userManager).GetUserDetailsByUserId(userId, hostingEnvironment.WebRootPath);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
         

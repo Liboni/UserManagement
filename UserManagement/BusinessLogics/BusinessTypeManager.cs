@@ -3,15 +3,12 @@ namespace UserManagement.BusinessLogics
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
 
-    using Microsoft.AspNetCore.Mvc;
     using Microsoft.EntityFrameworkCore;
 
     using UserManagement.Data;
     using UserManagement.LocalObjects;
-    using UserManagement.Models.BusinessTypeModels;
 
     public class BusinessTypeManager
     {
