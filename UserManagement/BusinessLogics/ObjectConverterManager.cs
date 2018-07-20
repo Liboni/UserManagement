@@ -105,23 +105,42 @@ namespace UserManagement.BusinessLogics
             return new BusinessType
                        {
                            Id = businessTypeModel.Id,
-                           Name = businessTypeModel.Name
+                           Name = businessTypeModel.Name,
+                           IsDeleted = false
+                       };
+        }
+        public static OrganisationProfileModel ToOrganisationProfileModel(AddOrganisationProfileModel organisationProfileModel, string userId)
+        {
+            return new OrganisationProfileModel
+            {
+                          CompanyAddress = organisationProfileModel.CompanyAddress,
+                          CompanyBusinessType = organisationProfileModel.CompanyBusinessType,
+                          CompanyName = organisationProfileModel.CompanyName,
+                          CompanyPhoneNumber = organisationProfileModel.CompanyPhoneNumber,
+                          CompanyRegistrationId = organisationProfileModel.CompanyRegistrationId,
+                          CountryId = organisationProfileModel.CountryId,
+                          DateOfCompanyRegistration = organisationProfileModel.DateOfCompanyRegistration,
+                          ProfileImage = organisationProfileModel.ProfileImage,
+                          UserId = userId
+                       };
+        }
+        public static BusinessTypeModel ToBusinessTypeModel(BusinessType businessType)
+        {
+            return new BusinessTypeModel
+            {
+                           Id = businessType.Id,
+                           Name = businessType.Name
                        };
         }
 
-        public async Task<UserCreditResponseModel> ToUserCreditResponseModel(UserCredit userCredit)
+        public  UserCreditResponseModel ToUserCreditResponseModel(UserCredit userCredit)
         {
-            ApplicationUser user = await userManager.FindByIdAsync(userCredit.UserId);
             return new UserCreditResponseModel
                        {
                            Talent = context.Talents.Find(userCredit.TalentId),
                            UserId = userCredit.UserId,
                            Production = userCredit.Production,
-                           Email = user.Email,
-                           PhoneNumber = user.PhoneNumber,
-                           UserName = user.UserName,
                            Id = userCredit.Id,
-                           UserProfile = context.UserProfiles.FirstOrDefault(a=>a.UserId.Equals(userCredit.UserId)),
                            IsDeleted = userCredit.IsDeleted,
                            DateCreated = userCredit.DateCreated
                        };

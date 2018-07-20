@@ -27,15 +27,17 @@ namespace UserManagement.Controllers
             this.userManager = userManager;
         }
 
-        [AllowAnonymous]
+        [Authorize(Roles = "User")]
         [HttpPost, DisableRequestSizeLimit]
         public IActionResult Post(UserProfileModel userProfileModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
+            userProfileModel.UserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var result = new UserProfileManager(context, userManager).SaveUserDetails(userProfileModel, hostingEnvironment.WebRootPath).Result;
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
+        [Authorize(Roles = "User")]
         [HttpPut, DisableRequestSizeLimit]
         public IActionResult Put([FromRoute]int id,UserProfileModel userDetailsModel)
         {

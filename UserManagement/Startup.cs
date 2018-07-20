@@ -3,7 +3,6 @@ namespace UserManagement
 {
     using System.Collections.Generic;
     using System.IO;
-    using System.Reflection;
     using System.Text;
 
     using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -14,7 +13,6 @@ namespace UserManagement
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
-    using Microsoft.Extensions.PlatformAbstractions;
     using Microsoft.IdentityModel.Tokens;
     
     using UserManagement.Models;
@@ -25,7 +23,7 @@ namespace UserManagement
     using Swashbuckle.AspNetCore.Swagger;
 
     using UserManagement.Data;
-
+    
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -88,7 +86,7 @@ namespace UserManagement
             loggerFactory.AddSerilog();
             ColumnOptions columnOptions = new ColumnOptions();
             columnOptions.Store.Add(StandardColumn.LogEvent);
-            Log.Logger = new LoggerConfiguration()
+            Serilog.Log.Logger = new LoggerConfiguration()
                 .WriteTo.MSSqlServer(connectionString:Configuration.GetConnectionString("DefaultConnection"),tableName: "Logs", columnOptions: columnOptions)
                 .WriteTo.RollingFile(Path.Combine(env.ContentRootPath + @"\wwwroot\Logs", "log-{Date}.txt"))
                 .CreateLogger();

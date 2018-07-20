@@ -6,6 +6,7 @@ namespace UserManagement.Controllers
 
     using UserManagement.BusinessLogics;
     using UserManagement.Data;
+    using UserManagement.Models.TalentModels;
 
     [Authorize]
     [Produces("application/json")]
@@ -22,28 +23,43 @@ namespace UserManagement.Controllers
         [HttpGet]
         public IActionResult Talents()
         {
-            return Ok(new { success = true, Data = new TalentsManager(context).GetAllTalents() });
+            var talents = new TalentsManager(context).GetAllTalents();
+            if (talents == null) return NoContent();
+            return Ok(new { success = true,message="", Data = talents });
         }
 
         [HttpGet("{id}")]
         public IActionResult Talents([FromRoute]int id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            return Ok(new { success = true, Data = new TalentsManager(context).GetTalentById(id) });
+            var talent = new TalentsManager(context).GetTalentById(id);
+            if (talent == null) return NotFound();
+            return Ok(new { success = true,message="", data = talent });
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Put([FromRoute]int id, TalentModel talent)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (id!=talent.Id) return BadRequest(ModelState);
+            var updateTalent = new TalentsManager(context).UpdateTalent(talent);
+            return Ok(new { success = updateTalent.Result.Success,message = updateTalent.Result.Message, data = updateTalent.Result.Data });
         }
 
         [HttpPost]
-        public IActionResult AddTalents([FromBody]string name)
+        public IActionResult Post([FromBody]TalentModel talentModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            return Ok(new { success = true, Data = new TalentsManager(context).AddTalent(name) });
+            var talent = new TalentsManager(context).AddTalent(talentModel.Name);
+            return Ok(new { success = talent.Success,message=talent.Message, data = talent.Data });
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteTalents([FromRoute]int id)
+        public IActionResult Delete([FromRoute]int id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            return Ok(new { success = true, Data = new TalentsManager(context).DeleteTalent(id) });
+            var talent = new TalentsManager(context).DeleteTalent(id);
+            return Ok(new { success = talent.Success,message= talent.Message, data = talent.Data });
         }
     }
 }

@@ -21,25 +21,25 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<BusinessType> GetBusinessTypeModel()
+        public IEnumerable<BusinessType> Get()
         {
             return new BusinessTypeManager(context).GetBusinessType();
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetBusinessTypeModel([FromRoute] int id)
+        public IActionResult Get([FromRoute] int id)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             var businessTypeModel =new BusinessTypeManager(context).GetBusinessType(id);
-            if (businessTypeModel.Result.Data == null)
+            if (businessTypeModel.Data == null)
                 return NotFound();
-            if (!businessTypeModel.Result.Success) return NoContent();
-            return Ok(new { success = businessTypeModel.Result.Success, message = businessTypeModel.Result.Message, data = businessTypeModel.Result.Data });
+            if (!businessTypeModel.Success) return NoContent();
+            return Ok(new { success = businessTypeModel.Success, message = businessTypeModel.Message, data = businessTypeModel.Data });
         }
 
         [HttpPut("{id}")]
-        public IActionResult PutBusinessTypeModel([FromRoute] int id, [FromBody] BusinessTypeModel businessTypeModel)
+        public IActionResult Put([FromRoute] int id, [FromBody] BusinessTypeModel businessTypeModel)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -50,7 +50,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostBusinessTypeModel([FromBody] BusinessTypeModel businessTypeModel)
+        public IActionResult Post([FromBody] BusinessTypeModel businessTypeModel)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -59,7 +59,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteBusinessTypeModel([FromRoute] int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

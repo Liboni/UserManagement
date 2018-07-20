@@ -14,7 +14,6 @@ namespace UserManagement.Models.UserProfileModels
 
         public IFormFile ProfileImage { get; set; }
 
-        [Required(ErrorMessage = "User Id is required.")]
         public string UserId { get; set; }
 
         [Required(ErrorMessage = "First name is required."), MinLength(2, ErrorMessage = "Enter a valid first name")]

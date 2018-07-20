@@ -15,6 +15,7 @@ namespace UserManagement.Data
         public byte Gender { get; set; }
         public DateTime DateOfBirth { get; set; }
         public int CountryId { get; set; }
+        public bool IsDeleted { get; set; }
         public DateTime DateCreated { get; set; }
         public virtual ApplicationUser User { get; set; }
         public virtual Country Country { get; set; }

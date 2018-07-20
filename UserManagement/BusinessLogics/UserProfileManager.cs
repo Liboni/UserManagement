@@ -56,11 +56,11 @@ namespace UserManagement.BusinessLogics
             {
                 UserProfile userProfile = context.UserProfiles.FirstOrDefault(a=>a.UserId.Equals(userProfileModel.UserId));
                 if (userProfile != null) {
-                    userProfile.CountryId = userProfile.CountryId;
-                    userProfile.DateOfBirth = userProfile.DateOfBirth;
-                    userProfile.FirstName = userProfile.FirstName;
-                    userProfile.Gender = userProfile.Gender;
-                    userProfile.LastName = userProfile.LastName;
+                    userProfile.CountryId = userProfileModel.CountryId;
+                    userProfile.DateOfBirth = userProfileModel.DateOfBirth;
+                    userProfile.FirstName = userProfileModel.FirstName;
+                    userProfile.Gender = (byte)userProfileModel.Gender;
+                    userProfile.LastName = userProfileModel.LastName;
                     userProfile.ProfileImageName = await UploadFile.SaveFileInWebRoot(userProfileModel.ProfileImage, webRootPath);
                 }
                 context.SaveChanges();

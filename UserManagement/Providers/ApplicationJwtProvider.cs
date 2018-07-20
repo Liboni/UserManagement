@@ -31,7 +31,8 @@ namespace UserManagement.Providers
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]));
             Claim[] claims = {
                     new Claim(JwtRegisteredClaimNames.Sub, user.Id),
-                    new Claim(ClaimTypes.Name, user.UserName), new Claim(ClaimTypes.Role, roles[0]),
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim(ClaimTypes.Role, roles[0]),
                     new Claim(JwtRegisteredClaimNames.Jti,Guid.NewGuid().ToString())
                 };
           

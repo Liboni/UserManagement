@@ -8,6 +8,7 @@ namespace UserManagement.Controllers
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
 
     using UserManagement.BusinessLogics;
@@ -24,8 +25,7 @@ namespace UserManagement.Controllers
         private readonly ApplicationDbContext context;
         private IConfiguration Configuration { get; }
 
-        public AccountController(
-            Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager, ApplicationDbContext context, 
+        public AccountController(Microsoft.AspNetCore.Identity.UserManager<ApplicationUser> userManager, ApplicationDbContext context, 
             IConfiguration configuration) 
         {
             this.userManager = userManager;
@@ -110,6 +110,15 @@ namespace UserManagement.Controllers
                                         changePasswordModel.OldPassword,
                                         changePasswordModel.NewPassword);
             return Ok(new { success = result.Succeeded, message = result.Errors });
+        }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult GetRegistered()
+        {
+            var result = new AccountManager(userManager).GetAllUser();
+            if (result.Data == null) return NoContent();
+            return Ok(new { success = result.Success, message = result.Message, data=result.Data });
         }
     }
 }

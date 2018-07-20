@@ -25,25 +25,23 @@ namespace UserManagement.BusinessLogics
             this.userManager = userManager;
         }
 
-        public async Task<GenericActionResult<Job>> SaveJob(JobModel jobModel, string webRootPath)
+        public async Task<GenericActionResult<Job>> SaveJob(AddJobModel jobModel, string webRootPath,string userId)
         {
             try
             {
-                var job = new Job
-                              {
+                var job = new Job{
                                   Compensation = jobModel.Compensation,
                                   DateCreated = DateTime.Now,
                                   Address = jobModel.Address,
                                   Description = jobModel.Description,
                                   TalentId = jobModel.TalentId,
-                                  UserId = jobModel.UserId,
+                                  UserId = userId,
                                   Name = jobModel.Name,
-                                  Disabled = jobModel.Disabled,
+                                  Disabled = false,
                                   DueDate = jobModel.DueDate,
                                   Gender = jobModel.Gender,
                                   CountryId = jobModel.CountryId,
-                                  ProfileImageName =
-                                      await UploadFile.SaveFileInWebRoot(jobModel.ProfileImage, webRootPath)
+                                  ProfileImageName = await UploadFile.SaveFileInWebRoot(jobModel.ProfileImage, webRootPath)
                               };
                 context.Jobs.Add(job);
                 context.SaveChanges();
@@ -100,9 +98,9 @@ namespace UserManagement.BusinessLogics
             {
                 return new GenericActionResult<JobResponseModel>(true, "", context.Jobs.Where(a=>a.Id==id).Select(jobModel => new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).FirstOrDefault());
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                return new GenericActionResult<JobResponseModel>(exception.Message);
+                return new GenericActionResult<JobResponseModel>("Failed to get job, please try again or contact the administrator.");
             }
         }
 
@@ -113,9 +111,9 @@ namespace UserManagement.BusinessLogics
                 List<Job> jobs = context.Jobs.Skip(from).Take(count).ToList();
                 return new GenericActionResult<List<JobResponseModel>>(true,"",jobs.Select(jobModel=> new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).ToList());
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                return new GenericActionResult<List<JobResponseModel>>(exception.Message);
+                return new GenericActionResult<List<JobResponseModel>>("Failed to get jobs, please try again or contact the administrator.");
             }
         }
 
@@ -126,9 +124,9 @@ namespace UserManagement.BusinessLogics
                 List<Job> jobs = context.Jobs.Where(a=>a.UserId.Equals(userId)).Skip(from).Take(count).ToList();
                 return new GenericActionResult<List<JobResponseModel>>(true, "", jobs.Select(jobModel => new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).ToList());
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                return new GenericActionResult<List<JobResponseModel>>(exception.Message);
+                return new GenericActionResult<List<JobResponseModel>>("Failed to delete jobs, please try again or contact the administrator.");
             }
         }
 
@@ -142,9 +140,9 @@ namespace UserManagement.BusinessLogics
                                                     .Skip(from).Take(count).ToList();
             return new GenericActionResult<List<JobResponseModel>>(true, "", jobs.Select(jobModel => new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).ToList());
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                return new GenericActionResult<List<JobResponseModel>>(exception.Message);
+                return new GenericActionResult<List<JobResponseModel>>("Failed to delete job, please try again or contact the administrator.");
             }
         }
     }

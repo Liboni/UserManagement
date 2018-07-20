@@ -13,6 +13,7 @@ namespace UserManagement.Controllers
     using UserManagement.Models;
     using UserManagement.Models.OrganisationProfileModels;
 
+    [Authorize]
     [Produces("application/json")]
     [Route("api/OrganisationProfile")]
     public class OrganisationProfileController : Controller
@@ -28,14 +29,16 @@ namespace UserManagement.Controllers
             this.hostingEnvironment = hostingEnvironment;
         }
 
+        [Authorize(Roles = "Organisation")]
         [HttpPost]
-        public IActionResult Post(OrganisationProfileModel organisationDetailsModel)
+        public IActionResult Post(AddOrganisationProfileModel organisationDetailsModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new OrganisationProfileManager(context, userManager).SaveOrganisationProfile(organisationDetailsModel, hostingEnvironment.WebRootPath).Result;
+            var result = new OrganisationProfileManager(context, userManager).SaveOrganisationProfile(organisationDetailsModel, hostingEnvironment.WebRootPath, User.FindFirst(ClaimTypes.NameIdentifier).Value).Result;
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
+        [Authorize(Roles = "Organisation")]
         [HttpPut("{id}")]
         public IActionResult Put([FromRoute]int id,OrganisationProfileModel organisationProfileModel)
         {
@@ -44,15 +47,22 @@ namespace UserManagement.Controllers
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [Authorize]
-        [HttpGet]
-        public IActionResult GetOrganisationDetails()
+        [HttpDelete("{id}")]
+        public IActionResult Delete([FromRoute]int id)
         {
-            return GetOrganisationDetails(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new OrganisationProfileManager(context, userManager).DeleteOrganisationProfile(id);
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Get(User.FindFirst(ClaimTypes.NameIdentifier).Value);
         }
 
         [HttpGet("{from}/{count}")]
-        public IActionResult GetAllOrganisationDetails([FromRoute]int from, [FromRoute]int count)
+        public IActionResult Get([FromRoute]int from, [FromRoute]int count)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfiles(hostingEnvironment.WebRootPath, from, count);
@@ -60,10 +70,11 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet("{userId}")]
-        public IActionResult GetOrganisationDetails([FromRoute]string userId)
+        public IActionResult Get([FromRoute]string userId)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfileById(userId, hostingEnvironment.WebRootPath);
+            if (result.Data == null) return NotFound();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
 
         }

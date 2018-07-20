@@ -3,13 +3,8 @@ namespace UserManagement.Models.UserCreditModels
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class UserCreditModel
+    public class AddUserCreditModel
     {
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "User id is required.")]
-        public string UserId { get; set; }
-
         [Required(ErrorMessage = "Production is required.")]
         public string Production { get; set; }
 

@@ -68,13 +68,14 @@ namespace UserManagement.BusinessLogics
 
         }
 
-        public GenericActionResult<UserCreditResponseModel> GetUserCreditByUserId(string userId)
+        public GenericActionResult<List<UserCreditResponseModel>> GetUserCreditByUserId(string userId)
         {
             try
             {
-               return GenericActionResult<UserCreditResponseModel>.FromObject(context.UserCredits.Where(a => a.UserId.Equals(userId)&& !a.IsDeleted).Select(a=>new ObjectConverterManager(context,userManager).ToUserCreditResponseModel(a).Result).FirstOrDefault());
+                var credits = context.UserCredits.Where(a => a.UserId.Equals(userId) && !a.IsDeleted).ToList();
+               return GenericActionResult<List<UserCreditResponseModel>>.FromObject(credits.Select(a=>new ObjectConverterManager(context,userManager).ToUserCreditResponseModel(a)).ToList());
             }
-            catch (Exception exception) { return new GenericActionResult<UserCreditResponseModel>(exception.Message); }
+            catch (Exception exception) { return new GenericActionResult<List<UserCreditResponseModel>>(exception.Message); }
         }
 
         public GenericActionResult<List<UserCreditResponseModel>> GetAllUserCredits()
@@ -83,7 +84,7 @@ namespace UserManagement.BusinessLogics
             {
                 var credits =context.UserCredits.Where(a => !a.IsDeleted).ToList();
                 return GenericActionResult<List<UserCreditResponseModel>>.FromObject(credits.Select(
-                    a => new ObjectConverterManager(context, userManager).ToUserCreditResponseModel(a).Result).ToList());
+                    a => new ObjectConverterManager(context, userManager).ToUserCreditResponseModel(a)).ToList());
             }
             catch (Exception exception) { return new GenericActionResult<List<UserCreditResponseModel>>(exception.Message); }
         }

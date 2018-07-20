@@ -1,0 +1,365 @@
+2018-07-20 08:20:40.739 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 08:20:41.414 +02:00 [Information] Request finished in 701.725ms 200 text/html
+2018-07-20 08:20:41.819 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 08:20:42.050 +02:00 [Information] Request finished in 230.7156ms 200 application/json;charset=utf-8
+2018-07-20 08:22:16.333 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 67
+2018-07-20 08:22:16.575 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-20 08:22:16.975 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 08:22:17.009 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 537.1321ms
+2018-07-20 08:22:17.015 +02:00 [Information] Request finished in 682.628ms 200 application/json; charset=utf-8
+2018-07-20 08:22:47.369 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 08:22:47.378 +02:00 [Information] Successfully validated the token.
+2018-07-20 08:22:47.382 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 08:22:47.395 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 08:22:47.440 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 08:26:20.359 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  0
+2018-07-20 08:26:20.527 +02:00 [Information] Successfully validated the token.
+2018-07-20 08:26:20.531 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 08:26:20.698 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 08:26:20.762 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 08:26:38.421 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 08:26:38.423 +02:00 [Information] Successfully validated the token.
+2018-07-20 08:26:38.425 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 08:26:38.428 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 08:26:38.445 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:12:16.798 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 09:12:16.973 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:12:16.976 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:12:17.144 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:12:17.214 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:12:49.197 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 09:12:49.370 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:12:49.374 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:12:49.534 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:12:49.599 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:46:03.612 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 09:46:03.612 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 09:46:03.986 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:46:03.993 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:46:04.159 +02:00 [Information] Request finished in 595.8315ms 200 text/html
+2018-07-20 09:46:04.258 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:46:04.369 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:48:12.212 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 09:48:12.607 +02:00 [Information] Request finished in 423.0319ms 200 text/html
+2018-07-20 09:48:13.046 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 09:48:13.312 +02:00 [Information] Request finished in 266.5989ms 200 application/json;charset=utf-8
+2018-07-20 09:48:18.571 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 09:48:18.583 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:48:18.588 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:48:18.659 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:48:18.705 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:48:18.979 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 09:48:19.004 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" in 346.9161ms
+2018-07-20 09:48:19.007 +02:00 [Information] Request finished in 436.7107ms 200 application/json; charset=utf-8
+2018-07-20 09:52:07.673 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/UserProfile?ProfileImage=%7B%7D&FirstName=Tendai&LastName=Sithole&Gender=Male&DateOfBirth=05-27-1992&CountryId=250 multipart/form-data; boundary=----WebKitFormBoundaryeZVcfAONoeEAxgy6 1821404
+2018-07-20 09:52:07.679 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:52:07.683 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:52:07.710 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:52:07.715 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:52:07.887 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.Post (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-20 09:52:08.232 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 09:52:08.242 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.Post (UserManagement)" in 532.9655ms
+2018-07-20 09:52:08.248 +02:00 [Information] Request finished in 575.8464ms 200 application/json; charset=utf-8
+2018-07-20 09:52:33.088 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account  
+2018-07-20 09:52:33.090 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:52:33.091 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:52:33.093 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:52:33.120 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:52:33.204 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 09:52:33.208 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.GetRegistered (UserManagement)" in 112.5056ms
+2018-07-20 09:52:33.213 +02:00 [Information] Request finished in 123.9024ms 200 application/json; charset=utf-8
+2018-07-20 09:52:46.778 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/UserProfile  
+2018-07-20 09:52:46.780 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:52:46.783 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:52:46.788 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:52:46.828 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetUserProfileDetails (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 09:52:46.989 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 09:52:47.080 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetUserProfileDetails (UserManagement)" in 292.8403ms
+2018-07-20 09:52:47.083 +02:00 [Information] Request finished in 304.8131ms 200 application/json; charset=utf-8
+2018-07-20 09:55:11.080 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/UserProfile?ProfileImage=%7B%7D&FirstName=Tendai&LastName=Sithole&Gender=Male&DateOfBirth=05-27-1992&CountryId=250 multipart/form-data; boundary=----WebKitFormBoundarywEGv6BICf9CB3geE 1821404
+2018-07-20 09:55:11.085 +02:00 [Information] Successfully validated the token.
+2018-07-20 09:55:11.088 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 09:55:11.093 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:55:11.096 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 09:55:11.192 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.Post (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-20 10:22:21.362 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 10:22:21.701 +02:00 [Information] Request finished in 364.6543ms 200 text/html
+2018-07-20 10:22:22.005 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 10:22:22.216 +02:00 [Information] Request finished in 211.5724ms 200 application/json;charset=utf-8
+2018-07-20 10:22:22.871 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/UserProfile?ProfileImage=%7B%7D&FirstName=Tendai&LastName=Sithole&Gender=Male&DateOfBirth=05-27-1992&CountryId=250 multipart/form-data; boundary=----WebKitFormBoundarykJ2HwVH64Nr6TLsX 1821404
+2018-07-20 10:22:22.889 +02:00 [Information] Successfully validated the token.
+2018-07-20 10:22:22.895 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 10:22:22.960 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 10:22:22.963 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 10:22:23.090 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.Post (UserManagement)" with arguments (["UserManagement.Models.UserProfileModels.UserProfileModel"]) - ModelState is Valid
+2018-07-20 10:22:26.701 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 10:22:26.729 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.Post (UserManagement)" in 3775.6563ms
+2018-07-20 10:22:26.734 +02:00 [Information] Request finished in 3863.7503ms 200 application/json; charset=utf-8
+2018-07-20 10:22:51.311 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/UserProfile/0/1  
+2018-07-20 10:22:51.316 +02:00 [Information] Successfully validated the token.
+2018-07-20 10:22:51.319 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 10:22:51.326 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 10:22:51.367 +02:00 [Information] Executing action method "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" with arguments (["0", "1"]) - ModelState is Valid
+2018-07-20 10:22:51.587 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 10:22:51.647 +02:00 [Information] Executed action "UserManagement.Controllers.UserProfileController.GetAllUserProfileDetails (UserManagement)" in 322.4387ms
+2018-07-20 10:22:51.649 +02:00 [Information] Request finished in 344.3276ms 200 application/json; charset=utf-8
+2018-07-20 14:20:20.919 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 67
+2018-07-20 14:20:21.199 +02:00 [Information] Failed to validate the token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Njk0ZjU4YS0wY2RlLTQxZTItODk2NC02ZWY4Mjg3OTI4NDkiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic2l0aG9sZWxpYm9uaUBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJVc2VyIiwianRpIjoiYWNmYjQ1ZGYtNTY2NC00MTQ1LWE4NWItZjcwYWIwMmFlNGM0IiwiZXhwIjoxNTMyMDgyMTM2LCJpc3MiOiJodHRwOi8vdXNlcm1hbmFnZXJtZW50LmNvbSIsImF1ZCI6Imh0dHA6Ly91c2VybWFuYWdlcm1lbnQuY29tIn0.ikHzQHi-xiKZbNN1ZK9_ZdgSOraEbaSLvyg2dosqT9U".
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/20/2018 10:22:16'
+Current time: '07/20/2018 12:20:20'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwt, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.<HandleAuthenticateAsync>d__6.MoveNext()
+2018-07-20 14:20:21.204 +02:00 [Information] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired.
+ValidTo: '07/20/2018 10:22:16'
+Current time: '07/20/2018 12:20:20'."
+2018-07-20 14:20:21.245 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-20 14:20:23.215 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:20:23.220 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 2000.0952ms
+2018-07-20 14:20:23.223 +02:00 [Information] Request finished in 2308.7652ms 200 application/json; charset=utf-8
+2018-07-20 14:30:37.701 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/OrganisationProfile?ProfileImage=%7B%7D&CompanyName=Lib%20Combs&CompanyRegistrationId=123456&CompanyBusinessType=1&DateOfCompanyRegistration=0001-01-01T00%3A00%3A00&CompanyAddress=qwerty%20&CompanyPhoneNumber=0775314089&CountryId=1 multipart/form-data; boundary=----WebKitFormBoundaryNm0tzyBVZ7jJ4tn2 113657
+2018-07-20 14:30:37.705 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:30:37.708 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:30:37.718 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:30:37.720 +02:00 [Information] Authorization failed for user: "sitholeliboni@gmail.com".
+2018-07-20 14:30:37.724 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-20 14:30:37.728 +02:00 [Information] Executing ForbidResult with authentication schemes ([]).
+2018-07-20 14:30:37.733 +02:00 [Information] AuthenticationScheme: "Bearer" was forbidden.
+2018-07-20 14:30:37.735 +02:00 [Information] Executed action "UserManagement.Controllers.OrganisationProfileController.Post (UserManagement)" in 17.9719ms
+2018-07-20 14:30:37.808 +02:00 [Information] Request finished in 84.656ms 403 
+2018-07-20 14:31:37.286 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/Talent  
+2018-07-20 14:31:37.289 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:31:37.293 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:31:37.298 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:31:37.319 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.Talents (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 14:31:37.397 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:31:37.404 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.Talents (UserManagement)" in 106.0638ms
+2018-07-20 14:31:37.407 +02:00 [Information] Request finished in 121.974ms 200 application/json; charset=utf-8
+2018-07-20 14:32:07.497 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/Talent application/json-patch+json 9
+2018-07-20 14:32:07.500 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:32:07.503 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:32:07.510 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:32:07.531 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" with arguments (["Dancing"]) - ModelState is Valid
+2018-07-20 14:32:07.662 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:32:07.668 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" in 159.8953ms
+2018-07-20 14:32:07.671 +02:00 [Information] Request finished in 174.4392ms 200 application/json; charset=utf-8
+2018-07-20 14:32:22.202 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/Talent application/json-patch+json 9
+2018-07-20 14:32:22.205 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:32:22.207 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:32:22.211 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:32:22.235 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" with arguments (["Singing"]) - ModelState is Valid
+2018-07-20 14:32:22.272 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:32:22.276 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" in 64.3911ms
+2018-07-20 14:32:22.280 +02:00 [Information] Request finished in 76.4042ms 200 application/json; charset=utf-8
+2018-07-20 14:32:48.258 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/Talent application/json-patch+json 16
+2018-07-20 14:32:48.260 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:32:48.262 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:32:48.265 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:32:48.290 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" with arguments (["Standup comedy"]) - ModelState is Valid
+2018-07-20 14:32:48.321 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:32:48.323 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" in 58.9722ms
+2018-07-20 14:32:48.326 +02:00 [Information] Request finished in 68.0734ms 200 application/json; charset=utf-8
+2018-07-20 14:33:15.269 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/Talent application/json-patch+json 5
+2018-07-20 14:33:15.272 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:33:15.275 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:33:15.279 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:33:15.300 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" with arguments (["new"]) - ModelState is Valid
+2018-07-20 14:33:15.327 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:33:15.330 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.AddTalents (UserManagement)" in 51.9977ms
+2018-07-20 14:33:15.333 +02:00 [Information] Request finished in 63.566ms 200 application/json; charset=utf-8
+2018-07-20 14:33:33.886 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/Talent  
+2018-07-20 14:33:33.889 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:33:33.892 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:33:33.895 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:33:33.916 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.Talents (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 14:33:33.942 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:33:33.945 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.Talents (UserManagement)" in 49.7814ms
+2018-07-20 14:33:33.947 +02:00 [Information] Request finished in 61.3086ms 200 application/json; charset=utf-8
+2018-07-20 14:33:49.443 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/Talent/4  
+2018-07-20 14:33:49.446 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:33:49.450 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:33:49.454 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:33:49.479 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.Talents (UserManagement)" with arguments (["4"]) - ModelState is Valid
+2018-07-20 14:33:49.524 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:33:49.531 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.Talents (UserManagement)" in 75.9376ms
+2018-07-20 14:33:49.535 +02:00 [Information] Request finished in 91.2381ms 200 application/json; charset=utf-8
+2018-07-20 14:54:19.208 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 14:54:19.756 +02:00 [Information] Request finished in 571.6918ms 200 text/html
+2018-07-20 14:54:20.930 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 14:54:21.182 +02:00 [Information] Request finished in 253.6129ms 200 application/json;charset=utf-8
+2018-07-20 14:54:34.485 +02:00 [Information] Request starting HTTP/1.1 DELETE http://localhost:52260/api/Talent/4  
+2018-07-20 14:54:34.627 +02:00 [Information] Authorization failed for user: null.
+2018-07-20 14:54:34.634 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-20 14:54:34.652 +02:00 [Information] Executing ChallengeResult with authentication schemes ([]).
+2018-07-20 14:54:34.658 +02:00 [Information] AuthenticationScheme: "Bearer" was challenged.
+2018-07-20 14:54:34.664 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.Delete (UserManagement)" in 40.4921ms
+2018-07-20 14:54:34.667 +02:00 [Information] Request finished in 182.5044ms 401 
+2018-07-20 14:54:49.578 +02:00 [Information] Request starting HTTP/1.1 DELETE http://localhost:52260/api/Talent/4  
+2018-07-20 14:54:49.591 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:54:49.597 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:54:49.600 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 14:54:49.661 +02:00 [Information] Executing action method "UserManagement.Controllers.TalentController.Delete (UserManagement)" with arguments (["4"]) - ModelState is Valid
+2018-07-20 14:54:50.007 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:54:50.027 +02:00 [Information] Executed action "UserManagement.Controllers.TalentController.Delete (UserManagement)" in 426.776ms
+2018-07-20 14:54:50.030 +02:00 [Information] Request finished in 458.6666ms 200 application/json; charset=utf-8
+2018-07-20 14:59:30.787 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/credit  
+2018-07-20 14:59:30.790 +02:00 [Information] Successfully validated the token.
+2018-07-20 14:59:30.793 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 14:59:30.817 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.GetAllUserCredits (UserManagement)" with arguments (null) - ModelState is Valid
+2018-07-20 14:59:30.864 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 14:59:30.871 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.GetAllUserCredits (UserManagement)" in 71.4386ms
+2018-07-20 14:59:30.874 +02:00 [Information] Request finished in 93.0403ms 200 application/json; charset=utf-8
+2018-07-20 15:06:56.392 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 15:06:56.496 +02:00 [Information] Request finished in 115.6758ms 200 text/html
+2018-07-20 15:06:56.929 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 15:06:57.105 +02:00 [Information] Request finished in 175.5065ms 200 application/json;charset=utf-8
+2018-07-20 15:09:13.532 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 15:09:13.859 +02:00 [Information] Request finished in 352.6509ms 200 text/html
+2018-07-20 15:09:14.921 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 15:09:15.109 +02:00 [Information] Request finished in 188.1737ms 200 application/json;charset=utf-8
+2018-07-20 15:09:52.803 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-20 15:09:52.937 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-20 15:09:53.247 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:09:53.267 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 398.245ms
+2018-07-20 15:09:53.271 +02:00 [Information] Request finished in 468.1498ms 200 application/json; charset=utf-8
+2018-07-20 15:22:39.461 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 15:22:39.780 +02:00 [Information] Request finished in 344.1244ms 200 text/html
+2018-07-20 15:22:40.921 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 15:22:41.117 +02:00 [Information] Request finished in 195.2771ms 200 application/json;charset=utf-8
+2018-07-20 15:24:39.792 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 67
+2018-07-20 15:24:40.011 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-20 15:24:40.316 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:24:40.340 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 399.1055ms
+2018-07-20 15:24:40.346 +02:00 [Information] Request finished in 553.1609ms 200 application/json; charset=utf-8
+2018-07-20 15:25:15.482 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/credit application/json-patch+json 47
+2018-07-20 15:25:15.489 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:25:15.493 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:25:15.505 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:25:15.508 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:25:15.580 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" with arguments (["UserManagement.Models.UserCreditModels.AddUserCreditModel"]) - ModelState is Valid
+2018-07-20 15:25:16.435 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:25:16.443 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" in 944.3056ms
+2018-07-20 15:25:16.446 +02:00 [Information] Request finished in 963.678ms 200 application/json; charset=utf-8
+2018-07-20 15:25:31.849 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/credit application/json-patch+json 47
+2018-07-20 15:25:31.853 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:25:31.857 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:25:31.861 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:25:31.865 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:25:31.884 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" with arguments (["UserManagement.Models.UserCreditModels.AddUserCreditModel"]) - ModelState is Valid
+2018-07-20 15:25:31.964 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:25:31.972 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" in 111.8947ms
+2018-07-20 15:25:31.975 +02:00 [Information] Request finished in 126.1658ms 200 application/json; charset=utf-8
+2018-07-20 15:25:54.621 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/credit application/json-patch+json 47
+2018-07-20 15:25:54.623 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:25:54.626 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:25:54.629 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:25:54.633 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:25:54.652 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" with arguments (["UserManagement.Models.UserCreditModels.AddUserCreditModel"]) - ModelState is Valid
+2018-07-20 15:25:54.682 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:25:54.684 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" in 55.7505ms
+2018-07-20 15:25:54.688 +02:00 [Information] Request finished in 66.2952ms 200 application/json; charset=utf-8
+2018-07-20 15:26:01.594 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/credit application/json-patch+json 47
+2018-07-20 15:26:01.597 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:26:01.600 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:26:01.603 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:26:01.605 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:26:01.626 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" with arguments (["UserManagement.Models.UserCreditModels.AddUserCreditModel"]) - ModelState is Valid
+2018-07-20 15:26:01.661 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:26:01.663 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.AddUserCredits (UserManagement)" in 60.8931ms
+2018-07-20 15:26:01.666 +02:00 [Information] Request finished in 71.7887ms 200 application/json; charset=utf-8
+2018-07-20 15:26:49.401 +02:00 [Information] Request starting HTTP/1.1 PUT http://localhost:52260/api/credit/4 application/json-patch+json 107
+2018-07-20 15:26:49.407 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:26:49.411 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:26:49.420 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:26:49.423 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:26:49.450 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.UpdateUserCredits (UserManagement)" with arguments (["4", "UserManagement.Models.UserCreditModels.UserCreditModel"]) - ModelState is Valid
+2018-07-20 15:26:49.532 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:26:49.534 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.UpdateUserCredits (UserManagement)" in 116.2497ms
+2018-07-20 15:26:49.537 +02:00 [Information] Request finished in 141.3831ms 200 application/json; charset=utf-8
+2018-07-20 15:27:05.070 +02:00 [Information] Request starting HTTP/1.1 DELETE http://localhost:52260/api/credit/1  
+2018-07-20 15:27:05.074 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:27:05.077 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:27:05.084 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:27:05.087 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:27:05.106 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.DeleteUserCredits (UserManagement)" with arguments (["1"]) - ModelState is Valid
+2018-07-20 15:27:05.226 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:27:05.229 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.DeleteUserCredits (UserManagement)" in 146.7113ms
+2018-07-20 15:27:05.233 +02:00 [Information] Request finished in 161.464ms 200 application/json; charset=utf-8
+2018-07-20 15:27:11.376 +02:00 [Information] Request starting HTTP/1.1 DELETE http://localhost:52260/api/credit/2  
+2018-07-20 15:27:11.379 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:27:11.382 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:27:11.385 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:27:11.388 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:27:11.407 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.DeleteUserCredits (UserManagement)" with arguments (["2"]) - ModelState is Valid
+2018-07-20 15:27:11.462 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:27:11.465 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.DeleteUserCredits (UserManagement)" in 80.4254ms
+2018-07-20 15:27:11.467 +02:00 [Information] Request finished in 90.891ms 200 application/json; charset=utf-8
+2018-07-20 15:27:26.018 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/credit/7694f58a-0cde-41e2-8964-6ef828792849  
+2018-07-20 15:27:26.021 +02:00 [Information] Successfully validated the token.
+2018-07-20 15:27:26.024 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-20 15:27:26.029 +02:00 [Information] Authorization was successful for user: "sitholeliboni@gmail.com".
+2018-07-20 15:27:26.050 +02:00 [Information] Executing action method "UserManagement.Controllers.UserCreditController.GetUserCredits (UserManagement)" with arguments (["7694f58a-0cde-41e2-8964-6ef828792849"]) - ModelState is Valid
+2018-07-20 15:27:26.279 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:27:26.297 +02:00 [Information] Executed action "UserManagement.Controllers.UserCreditController.GetUserCredits (UserManagement)" in 266.9423ms
+2018-07-20 15:27:26.299 +02:00 [Information] Request finished in 281.0046ms 200 application/json; charset=utf-8
+2018-07-20 15:46:01.554 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 15:46:01.846 +02:00 [Information] Request finished in 291.1135ms 200 text/html
+2018-07-20 15:46:02.044 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 15:46:02.326 +02:00 [Information] Request finished in 283.1616ms 200 application/json;charset=utf-8
+2018-07-20 15:46:26.544 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 47
+2018-07-20 15:46:26.699 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Invalid
+2018-07-20 15:46:26.725 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 15:46:26.753 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 145.1543ms
+2018-07-20 15:46:26.757 +02:00 [Information] Request finished in 214.3328ms 400 application/json; charset=utf-8
+2018-07-20 16:23:28.792 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 16:23:29.067 +02:00 [Information] Request finished in 299.7133ms 200 text/html
+2018-07-20 16:23:29.910 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 16:23:30.103 +02:00 [Information] Request finished in 194.0734ms 200 application/json;charset=utf-8
+2018-07-20 16:24:04.608 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/apply/1/0/4  
+2018-07-20 16:24:04.738 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["1", "0", "4"]) - ModelState is Valid
+2018-07-20 16:24:04.896 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 16:24:04.919 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 248.803ms
+2018-07-20 16:24:04.923 +02:00 [Information] Request finished in 314.6475ms 200 application/json; charset=utf-8
+2018-07-20 16:24:18.531 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/apply/1/0/4  
+2018-07-20 16:24:18.565 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["1", "0", "4"]) - ModelState is Valid
+2018-07-20 16:24:18.609 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 16:24:18.612 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 77.3843ms
+2018-07-20 16:24:18.617 +02:00 [Information] Request finished in 83.7567ms 200 application/json; charset=utf-8
+2018-07-20 16:24:34.481 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/apply/1/0/4  
+2018-07-20 16:24:34.505 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["1", "0", "4"]) - ModelState is Valid
+2018-07-20 16:24:34.535 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 16:24:34.537 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 53.5078ms
+2018-07-20 16:24:34.541 +02:00 [Information] Request finished in 66.7747ms 200 application/json; charset=utf-8
+2018-07-20 16:24:52.172 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 16:24:52.436 +02:00 [Information] Request finished in 292.1147ms 200 text/html
+2018-07-20 16:24:52.606 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 16:24:52.645 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/favicon-32x32.png  
+2018-07-20 16:24:52.677 +02:00 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2018-07-20 16:24:52.835 +02:00 [Information] Request finished in 190.1462ms 200 image/png
+2018-07-20 16:24:52.943 +02:00 [Information] Request finished in 338.4729ms 200 application/json;charset=utf-8
+2018-07-20 16:25:14.847 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/apply/12/0/3  
+2018-07-20 16:25:14.963 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["12", "0", "3"]) - ModelState is Valid
+2018-07-20 16:25:15.073 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 16:25:15.089 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 183.5269ms
+2018-07-20 16:25:15.092 +02:00 [Information] Request finished in 245.6249ms 200 application/json; charset=utf-8
+2018-07-20 16:25:16.245 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/apply/12/0/3  
+2018-07-20 16:25:16.267 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["12", "0", "3"]) - ModelState is Valid
+2018-07-20 16:25:16.297 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 16:25:16.300 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 51.6551ms
+2018-07-20 16:25:16.302 +02:00 [Information] Request finished in 57.6089ms 200 application/json; charset=utf-8
+2018-07-20 16:25:44.704 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 16:25:44.967 +02:00 [Information] Request finished in 283.283ms 200 text/html
+2018-07-20 16:25:45.203 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 16:25:45.456 +02:00 [Information] Request finished in 253.0366ms 200 application/json;charset=utf-8
+2018-07-20 16:34:40.263 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-20 16:34:40.555 +02:00 [Information] Request finished in 316.7ms 200 text/html
+2018-07-20 16:34:40.818 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-20 16:34:41.099 +02:00 [Information] Request finished in 280.7621ms 200 application/json;charset=utf-8
+2018-07-20 16:34:52.716 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/JobApplication/esf/3/3  
+2018-07-20 16:34:52.873 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["esf", "3", "3"]) - ModelState is Valid
+2018-07-20 16:34:53.048 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-20 16:34:53.082 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 299.9963ms
+2018-07-20 16:34:53.085 +02:00 [Information] Request finished in 370.2025ms 200 application/json; charset=utf-8

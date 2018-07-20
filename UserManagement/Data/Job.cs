@@ -3,7 +3,6 @@ namespace UserManagement.Data
 {
     using System;
 
-    using UserManagement.Enums;
     using UserManagement.Models;
 
     public class Job
@@ -20,6 +19,7 @@ namespace UserManagement.Data
         public byte Gender { get; set; }
         public string Address { get; set; }
         public int CountryId { get; set; }
+        public bool IsDeleted { get; set; }
         public DateTime DateCreated { get; set; }
         public virtual Talent Talent { get; set; }
         public virtual ApplicationUser User { get; set; }

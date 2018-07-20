@@ -1,7 +1,6 @@
 ﻿
 namespace UserManagement.Controllers
 {
-    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
@@ -12,9 +11,8 @@ namespace UserManagement.Controllers
     using UserManagement.Models;
     using UserManagement.Models.JobApplicationModels;
 
-    [Authorize]
     [Produces("application/json")]
-    [Route("api/apply")]
+    [Route("api/JobApplication")]
     public class JobApplicationController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -30,7 +28,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult ApplyJob([FromBody]JobApplicationModel jobApplicationModel)
+        public IActionResult Post([FromBody]AddJobApplicationModel jobApplicationModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobApplicationManager(context, userManager).SaveJobApplication(jobApplicationModel);
@@ -39,7 +37,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult PutJob([FromRoute]int id, [FromBody]JobApplicationModel jobApplicationModel)
+        public IActionResult Put([FromRoute]int id, [FromBody]JobApplicationModel jobApplicationModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             if (id!=jobApplicationModel.Id) return BadRequest();
@@ -48,7 +46,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteJobApplication([FromRoute]int id)
+        public IActionResult Delete([FromRoute]int id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobApplicationManager(context, userManager).DeleteJobApplication(id);
@@ -56,15 +54,16 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetJobApplication([FromRoute]int id)
+        public IActionResult Get([FromRoute]int id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobApplicationManager(context, userManager).GetJobApplications(hostingEnvironment.WebRootPath, id);
+            if (result.Data == null) return NotFound();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
         [HttpGet("view{id}")]
-        public IActionResult ViewJobApplication([FromRoute]int id)
+        public IActionResult View([FromRoute]int id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobApplicationManager(context, userManager).ViewJobApplication(id);
@@ -72,18 +71,29 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet("{from}/{count}")]
-        public IActionResult GetAllJobApplication([FromRoute]int from, [FromRoute]int count)
+        public IActionResult Get([FromRoute]int from, [FromRoute]int count)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var result = new JobApplicationManager(context, userManager).GetAllJobApplications(hostingEnvironment.WebRootPath, from, count);
+            if (result.Data == null) return NoContent();
             return Ok(new { success = result.Success, message = result.Message, data=result.Data });
         }
       
-        [HttpGet("{organisationUserId}/{from}/{count}")]
-        public IActionResult GetAllJobApplication([FromRoute]string organisationUserId, [FromRoute]int from, [FromRoute]int count)
+        [HttpGet("{applicantUserId}/{from}/{count}")]
+        public IActionResult GetApplicant([FromRoute]string applicantUserId, [FromRoute]int from, [FromRoute]int count)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new JobApplicationManager(context, userManager).GetJobApplicationByUserId(organisationUserId,hostingEnvironment.WebRootPath, from, count);
+            var result = new JobApplicationManager(context, userManager).GetJobApplicationByApplicantUserId(applicantUserId, hostingEnvironment.WebRootPath, from, count);
+            if (result.Data == null) return NoContent();
+            return Ok(new { success = result.Success, message = result.Message, data = result.Data });
+        }
+
+        [HttpGet("{organisationUserId}/{from}/{count}")]
+        public IActionResult GetOrganisation([FromRoute]string organisationUserId, [FromRoute]int from, [FromRoute]int count)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+            var result = new JobApplicationManager(context, userManager).GetJobApplicationByOrganisationUserId(organisationUserId, hostingEnvironment.WebRootPath, from, count);
+            if (result.Data==null) return NoContent();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 

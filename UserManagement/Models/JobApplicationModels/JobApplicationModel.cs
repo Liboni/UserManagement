@@ -1,15 +1,10 @@
 ﻿
 namespace UserManagement.Models.JobApplicationModels
 {
-    using System.ComponentModel.DataAnnotations;
 
-    public class JobApplicationModel
+    public class JobApplicationModel:AddJobApplicationModel
     {
         public int Id { get; set; }
-        [Required(ErrorMessage = "Job is required.")]
-        public int JobId { get; set; }
-        [Required(ErrorMessage = "User ID is required.")]
-        public string UserId { get; set; }
-        public bool IsDeleted { get; set; }
+
     }
 }
