@@ -39,7 +39,7 @@ namespace UserManagement.BusinessLogics
                 context.SaveChanges();
                 return new GenericActionResult<UserCredit>(true, "User credit saved successfully.", userCredit);
             }
-            catch (Exception exception) { return new GenericActionResult<UserCredit>(exception.Message); }
+            catch (Exception) { return new GenericActionResult<UserCredit>("Failed to save credit, please try again or contact the administrator."); }
         }
 
         public GenericActionResult<UserCredit> UpdateUserCredit(UserCreditModel userCreditModel)
@@ -52,7 +52,7 @@ namespace UserManagement.BusinessLogics
                 context.SaveChanges();
                 return new GenericActionResult<UserCredit>(true, "User credit updated successfully.", credit);
             }
-            catch (Exception exception) { return new GenericActionResult<UserCredit>(exception.Message); }
+            catch (Exception) { return new GenericActionResult<UserCredit>("Failed to update credit, please try again or contact the administrator."); }
         }
 
         public GenericActionResult<UserCredit> DeleteUserCreditById(int creditId)
@@ -64,7 +64,7 @@ namespace UserManagement.BusinessLogics
                 context.SaveChanges();
                 return new GenericActionResult<UserCredit>(true,"User credit deleted successfully", credit);
             }
-            catch (Exception exception) { return new GenericActionResult<UserCredit>(exception.Message); }
+            catch (Exception) { return new GenericActionResult<UserCredit>("Failed to delete credit, please try again or contact the administrator."); }
 
         }
 
@@ -75,7 +75,7 @@ namespace UserManagement.BusinessLogics
                 var credits = context.UserCredits.Where(a => a.UserId.Equals(userId) && !a.IsDeleted).ToList();
                return GenericActionResult<List<UserCreditResponseModel>>.FromObject(credits.Select(a=>new ObjectConverterManager(context,userManager).ToUserCreditResponseModel(a)).ToList());
             }
-            catch (Exception exception) { return new GenericActionResult<List<UserCreditResponseModel>>(exception.Message); }
+            catch (Exception) { return new GenericActionResult<List<UserCreditResponseModel>>("Failed to get credits, please try again or contact the administrator."); }
         }
 
         public GenericActionResult<List<UserCreditResponseModel>> GetAllUserCredits()
@@ -86,7 +86,7 @@ namespace UserManagement.BusinessLogics
                 return GenericActionResult<List<UserCreditResponseModel>>.FromObject(credits.Select(
                     a => new ObjectConverterManager(context, userManager).ToUserCreditResponseModel(a)).ToList());
             }
-            catch (Exception exception) { return new GenericActionResult<List<UserCreditResponseModel>>(exception.Message); }
+            catch (Exception) { return new GenericActionResult<List<UserCreditResponseModel>>("Failed to get credits, please try again or contact the administrator."); }
         }
     }
 }
