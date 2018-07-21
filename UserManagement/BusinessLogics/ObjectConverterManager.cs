@@ -3,7 +3,6 @@ namespace UserManagement.BusinessLogics
 {
     using System;
     using System.IO;
-    using System.Linq;
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Identity;
@@ -143,6 +142,20 @@ namespace UserManagement.BusinessLogics
                            Id = userCredit.Id,
                            IsDeleted = userCredit.IsDeleted,
                            DateCreated = userCredit.DateCreated
+                       };
+        }
+
+        public static UserProfileModel ToUserProfileModel(AddUserProfileModel userProfileModel, string userId)
+        {
+            return new UserProfileModel
+                       {
+                           CountryId = userProfileModel.CountryId,
+                           DateOfBirth = userProfileModel.DateOfBirth,
+                           FirstName = userProfileModel.FirstName,
+                           Gender = userProfileModel.Gender,
+                           LastName = userProfileModel.LastName,
+                           ProfileImage = userProfileModel.ProfileImage,
+                           UserId = userId
                        };
         }
     }

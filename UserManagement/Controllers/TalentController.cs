@@ -21,7 +21,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet]
-        public IActionResult Talents()
+        public IActionResult Get()
         {
             var talents = new TalentsManager(context).GetAllTalents();
             if (talents == null) return NoContent();
@@ -29,7 +29,7 @@ namespace UserManagement.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Talents([FromRoute]int id)
+        public IActionResult Get([FromRoute]int id)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             var talent = new TalentsManager(context).GetTalentById(id);

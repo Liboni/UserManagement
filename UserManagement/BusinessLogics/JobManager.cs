@@ -104,11 +104,11 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobResponseModel>> GetJobs(string webRootPath,int from, int count)
+        public GenericActionResult<List<JobResponseModel>> GetJobs(string webRootPath,int skip, int take)
         {
             try
             {
-                List<Job> jobs = context.Jobs.Skip(from).Take(count).ToList();
+                List<Job> jobs = context.Jobs.Skip(skip).Take(take).ToList();
                 return new GenericActionResult<List<JobResponseModel>>(true,"",jobs.Select(jobModel=> new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).ToList());
             }
             catch (Exception)
@@ -117,11 +117,11 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobResponseModel>> GetJobs(string webRootPath,string userId, int from, int count)
+        public GenericActionResult<List<JobResponseModel>> GetJobs(string webRootPath,string userId, int skip, int take)
         {
             try
             {
-                List<Job> jobs = context.Jobs.Where(a=>a.UserId.Equals(userId)).Skip(from).Take(count).ToList();
+                List<Job> jobs = context.Jobs.Where(a=>a.UserId.Equals(userId)).Skip(skip).Take(take).ToList();
                 return new GenericActionResult<List<JobResponseModel>>(true, "", jobs.Select(jobModel => new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).ToList());
             }
             catch (Exception)
@@ -130,14 +130,14 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobResponseModel>> GetJobs(string webRootPath,int countryId,int genderId, int talentId, int from, int count)
+        public GenericActionResult<List<JobResponseModel>> GetJobs(string webRootPath,int countryId,int genderId, int talentId, int skip, int take)
         {
             try
             {
                 List<Job> jobs = context.Jobs.Where(a => a.Gender == (genderId==0?a.Gender:genderId)
                                                     && a.TalentId == (talentId==0?a.TalentId:talentId) 
                                                     && a.CountryId == (countryId==0?a.CountryId:countryId))
-                                                    .Skip(from).Take(count).ToList();
+                                                    .Skip(skip).Take(take).ToList();
             return new GenericActionResult<List<JobResponseModel>>(true, "", jobs.Select(jobModel => new ObjectConverterManager(context, userManager).ToJobResponseModel(jobModel, webRootPath)).ToList());
             }
             catch (Exception)

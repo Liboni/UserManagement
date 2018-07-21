@@ -103,11 +103,11 @@ namespace UserManagement.BusinessLogics
         }
 
 
-        public GenericActionResult<List<OrganisationProfileResponseModel>> GetOrganisationProfiles(string webRootPath, int from, int count)
+        public GenericActionResult<List<OrganisationProfileResponseModel>> GetOrganisationProfiles(string webRootPath, int skip, int take)
         {
             try
             {
-                List<OrganisationProfile> profiles = context.OrganisationProfiles.Where(a=>!a.IsDeleted).Skip(from).Take(count).ToList();
+                List<OrganisationProfile> profiles = context.OrganisationProfiles.Where(a=>!a.IsDeleted).Skip(skip).Take(take).ToList();
                 return new GenericActionResult<List<OrganisationProfileResponseModel>>(true, "", profiles.Select(organisationProfile => new ObjectConverterManager(context, userManager).ToOrganisationProfileModel(organisationProfile, webRootPath).Result).ToList());
             }
             catch (Exception)

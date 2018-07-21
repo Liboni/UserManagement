@@ -1,0 +1,252 @@
+2018-07-21 13:05:43.743 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-21 13:05:44.106 +02:00 [Information] Request finished in 382.2729ms 200 text/html
+2018-07-21 13:05:44.149 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui.css  
+2018-07-21 13:05:44.152 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui-standalone-preset.js  
+2018-07-21 13:05:44.160 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/swagger-ui-bundle.js  
+2018-07-21 13:05:44.239 +02:00 [Information] The file "/swagger-ui-bundle.js" was not modified
+2018-07-21 13:05:44.240 +02:00 [Information] The file "/swagger-ui.css" was not modified
+2018-07-21 13:05:44.243 +02:00 [Information] The file "/swagger-ui-standalone-preset.js" was not modified
+2018-07-21 13:05:44.271 +02:00 [Information] Request finished in 121.6047ms 304 text/css
+2018-07-21 13:05:44.272 +02:00 [Information] Request finished in 121.6041ms 304 application/javascript
+2018-07-21 13:05:44.298 +02:00 [Information] Request finished in 96.6913ms 304 application/javascript
+2018-07-21 13:05:44.592 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-21 13:05:45.163 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NotSupportedException: HTTP method "GET" & path "api/OrganisationProfile" overloaded by actions - UserManagement.Controllers.OrganisationProfileController.Get (UserManagement),UserManagement.Controllers.OrganisationProfileController.Get (UserManagement). Actions require unique method/path combination for Swagger 2.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItem(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItems(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-21 13:05:45.268 +02:00 [Information] Request finished in 676.567ms 500 text/html; charset=utf-8
+2018-07-21 13:06:54.048 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-21 13:06:54.299 +02:00 [Information] Request finished in 287.8559ms 200 text/html
+2018-07-21 13:06:54.556 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-21 13:06:54.842 +02:00 [Information] Request finished in 285.8514ms 200 application/json;charset=utf-8
+2018-07-21 13:14:29.281 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-21 13:14:29.546 +02:00 [Information] Request finished in 294.5143ms 200 text/html
+2018-07-21 13:14:29.726 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-21 13:14:29.923 +02:00 [Information] Request finished in 197.3746ms 200 application/json;charset=utf-8
+2018-07-21 13:14:53.206 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 67
+2018-07-21 13:14:53.333 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-21 13:14:53.480 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-21 13:14:53.487 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 221.2139ms
+2018-07-21 13:14:53.492 +02:00 [Information] Request finished in 285.6207ms 401 
+2018-07-21 13:15:27.615 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 67
+2018-07-21 13:15:27.669 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-21 13:15:38.056 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-21 13:15:38.059 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 10440.5333ms
+2018-07-21 13:15:38.061 +02:00 [Information] Request finished in 10446.9249ms 401 
+2018-07-21 13:15:49.268 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json-patch+json 70
+2018-07-21 13:15:49.286 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-21 13:15:52.108 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-21 13:15:52.109 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 2839.3066ms
+2018-07-21 13:15:52.112 +02:00 [Information] Request finished in 2844.0113ms 401 
+2018-07-21 13:16:21.967 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 67
+2018-07-21 13:16:21.986 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-21 13:16:22.013 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 401
+2018-07-21 13:16:22.015 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 45.4039ms
+2018-07-21 13:16:22.016 +02:00 [Information] Request finished in 49.3995ms 401 
+2018-07-21 13:16:59.473 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword/sitholeliboni@gmail.com  
+2018-07-21 13:16:59.498 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" with arguments (["sitholeliboni@gmail.com"]) - ModelState is Valid
+2018-07-21 13:16:59.534 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-21 13:16:59.548 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" in 65.529ms
+2018-07-21 13:16:59.550 +02:00 [Information] Request finished in 77.7878ms 400 application/json; charset=utf-8
+2018-07-21 13:17:19.571 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/account/forgotPassword/sitholeliboni@gmail.com  
+2018-07-21 13:17:19.592 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" with arguments (["sitholeliboni@gmail.com"]) - ModelState is Valid
+2018-07-21 13:17:32.363 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-21 13:17:32.366 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.ForgotPassword (UserManagement)" in 12791.5199ms
+2018-07-21 13:17:32.369 +02:00 [Information] Request finished in 12799.096ms 400 application/json; charset=utf-8
+2018-07-21 13:18:20.029 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/account/login application/json 62
+2018-07-21 13:18:20.050 +02:00 [Information] Executing action method "UserManagement.Controllers.AccountController.Login (UserManagement)" with arguments (["UserManagement.Models.AccountModels.LoginModel"]) - ModelState is Valid
+2018-07-21 13:18:20.219 +02:00 [Information] Executing ObjectResult, writing value "Microsoft.AspNetCore.Mvc.ControllerContext".
+2018-07-21 13:18:20.224 +02:00 [Information] Executed action "UserManagement.Controllers.AccountController.Login (UserManagement)" in 191.5924ms
+2018-07-21 13:18:20.227 +02:00 [Information] Request finished in 197.9392ms 200 application/json; charset=utf-8
+2018-07-21 13:21:42.120 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:52260/api/OrganisationProfile?Skip=5&Take=1 application/json 69
+2018-07-21 13:21:42.167 +02:00 [Information] Successfully validated the token.
+2018-07-21 13:21:42.169 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-21 13:21:42.181 +02:00 [Information] Authorization was successful for user: "admin@admin.com".
+2018-07-21 13:21:42.184 +02:00 [Information] Authorization failed for user: "admin@admin.com".
+2018-07-21 13:21:42.187 +02:00 [Information] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'.
+2018-07-21 13:21:42.190 +02:00 [Information] Executing ForbidResult with authentication schemes ([]).
+2018-07-21 13:21:42.194 +02:00 [Information] AuthenticationScheme: "Bearer" was forbidden.
+2018-07-21 13:21:42.196 +02:00 [Information] Executed action "UserManagement.Controllers.OrganisationProfileController.Post (UserManagement)" in 20.3652ms
+2018-07-21 13:21:42.198 +02:00 [Information] Request finished in 78.1944ms 403 
+2018-07-21 13:21:59.029 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/OrganisationProfile?Skip=5&Take=1 application/json 
+2018-07-21 13:21:59.031 +02:00 [Information] Successfully validated the token.
+2018-07-21 13:21:59.034 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-21 13:21:59.038 +02:00 [Information] Authorization was successful for user: "admin@admin.com".
+2018-07-21 13:21:59.059 +02:00 [Information] Executing action method "UserManagement.Controllers.OrganisationProfileController.Get (UserManagement)" with arguments (["UserManagement.QueryParameters.PaginationParameters"]) - ModelState is Valid
+2018-07-21 13:22:10.395 +02:00 [Information] Executed action "UserManagement.Controllers.OrganisationProfileController.Get (UserManagement)" in 11356.5855ms
+2018-07-21 13:22:10.541 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.IActionResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-21 13:22:10.593 +02:00 [Information] Request finished in 11564.9366ms 500 text/html; charset=utf-8
+2018-07-21 13:22:15.424 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/OrganisationProfile?Skip=5 application/json 
+2018-07-21 13:22:15.427 +02:00 [Information] Successfully validated the token.
+2018-07-21 13:22:15.429 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-21 13:22:15.431 +02:00 [Information] Authorization was successful for user: "admin@admin.com".
+2018-07-21 13:22:15.451 +02:00 [Information] Executing action method "UserManagement.Controllers.OrganisationProfileController.Get (UserManagement)" with arguments (["UserManagement.QueryParameters.PaginationParameters"]) - ModelState is Invalid
+2018-07-21 13:22:25.895 +02:00 [Information] Executed action "UserManagement.Controllers.OrganisationProfileController.Get (UserManagement)" in 10463.4838ms
+2018-07-21 13:22:25.981 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.IActionResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-21 13:22:26.016 +02:00 [Information] Request finished in 10591.6198ms 500 text/html; charset=utf-8
+2018-07-21 13:22:31.282 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/OrganisationProfile application/json 
+2018-07-21 13:22:31.285 +02:00 [Information] Successfully validated the token.
+2018-07-21 13:22:31.287 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-21 13:22:31.290 +02:00 [Information] Authorization was successful for user: "admin@admin.com".
+2018-07-21 13:22:31.307 +02:00 [Information] Executing action method "UserManagement.Controllers.OrganisationProfileController.Get (UserManagement)" with arguments (["UserManagement.QueryParameters.PaginationParameters"]) - ModelState is Invalid
+2018-07-21 13:29:00.206 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-21 13:29:00.439 +02:00 [Information] Request finished in 259.7415ms 200 text/html
+2018-07-21 13:29:01.273 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-21 13:29:01.455 +02:00 [Information] Request finished in 182.4578ms 200 application/json;charset=utf-8
+2018-07-21 13:29:49.963 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/api/JobApplication/qwee?Skip=4 application/json 
+2018-07-21 13:29:49.974 +02:00 [Information] Successfully validated the token.
+2018-07-21 13:29:49.978 +02:00 [Information] AuthenticationScheme: "Bearer" was successfully authenticated.
+2018-07-21 13:29:50.100 +02:00 [Information] Executing action method "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" with arguments (["qwee", "UserManagement.QueryParameters.PaginationParameters"]) - ModelState is Invalid
+2018-07-21 13:30:07.028 +02:00 [Information] Executed action "UserManagement.Controllers.JobApplicationController.GetApplicant (UserManagement)" in 16993.4413ms
+2018-07-21 13:30:07.160 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.InvalidOperationException: Cannot return null from an action method with a return type of 'Microsoft.AspNetCore.Mvc.IActionResult'.
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeActionMethodAsync>d__12.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeNextActionFilterAsync>d__10.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.<InvokeInnerFilterAsync>d__14.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeNextResourceFilter>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeFilterPipelineAsync>d__17.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.<InvokeAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-21 13:30:07.224 +02:00 [Information] Request finished in 17262.6065ms 500 text/html; charset=utf-8
+2018-07-21 13:34:52.388 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-21 13:34:52.615 +02:00 [Information] Request finished in 253.8692ms 200 text/html
+2018-07-21 13:34:53.228 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-21 13:34:53.512 +02:00 [Error] An unhandled exception has occurred while executing the request
+System.NotSupportedException: HTTP method "GET" & path "api/UserCredit" overloaded by actions - UserManagement.Controllers.UserCreditController.Get (UserManagement),UserManagement.Controllers.UserCreditController.Get (UserManagement). Actions require unique method/path combination for Swagger 2.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItem(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.CreatePathItems(IEnumerable`1 apiDescriptions, ISchemaRegistry schemaRegistry)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath, String[] schemes)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.<Invoke>d__4.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.<Invoke>d__6.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.<Invoke>d__7.MoveNext()
+2018-07-21 13:34:53.566 +02:00 [Information] Request finished in 337.9167ms 500 text/html; charset=utf-8
+2018-07-21 13:37:07.029 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/index.html  
+2018-07-21 13:37:07.310 +02:00 [Information] Request finished in 306.3575ms 200 text/html
+2018-07-21 13:37:07.532 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:52260/swagger/v1.0/swagger.json  
+2018-07-21 13:37:07.725 +02:00 [Information] Request finished in 192.4046ms 200 application/json;charset=utf-8

@@ -78,11 +78,20 @@ namespace UserManagement.BusinessLogics
             catch (Exception) { return new GenericActionResult<List<UserCreditResponseModel>>("Failed to get credits, please try again or contact the administrator."); }
         }
 
-        public GenericActionResult<List<UserCreditResponseModel>> GetAllUserCredits()
+        public GenericActionResult<UserCreditResponseModel> GetUserCreditById(int id)
         {
             try
             {
-                var credits =context.UserCredits.Where(a => !a.IsDeleted).ToList();
+                return GenericActionResult<UserCreditResponseModel>.FromObject(context.UserCredits.Where(a => a.Id == id && !a.IsDeleted).Select(a => new ObjectConverterManager(context, userManager).ToUserCreditResponseModel(a)).FirstOrDefault());
+            }
+            catch (Exception) { return new GenericActionResult<UserCreditResponseModel>("Failed to get credit, please try again or contact the administrator."); }
+        }
+
+        public GenericActionResult<List<UserCreditResponseModel>> GetAllUserCredits(int skip, int take)
+        {
+            try
+            {
+                var credits =context.UserCredits.Where(a => !a.IsDeleted).Skip(skip).Take(take).ToList();
                 return GenericActionResult<List<UserCreditResponseModel>>.FromObject(credits.Select(
                     a => new ObjectConverterManager(context, userManager).ToUserCreditResponseModel(a)).ToList());
             }

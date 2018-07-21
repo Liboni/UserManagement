@@ -100,11 +100,11 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobApplicationResponseModel>> GetAllJobApplications(string webRootPath, int from, int count)
+        public GenericActionResult<List<JobApplicationResponseModel>> GetAllJobApplications(string webRootPath, int skip, int take)
         {
             try
             {
-                var applications = context.JobApplications.Where(a => !a.IsDeleted).Skip(from).Take(count).ToList();
+                var applications = context.JobApplications.Where(a => !a.IsDeleted).Skip(skip).Take(take).ToList();
                 return new GenericActionResult<List<JobApplicationResponseModel>>(true,"", applications.Select(a=>new ObjectConverterManager(context, userManager).ToJobApplicationResponseModel(a,webRootPath)).ToList());
             }
             catch (Exception)
@@ -113,11 +113,11 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobApplicationResponseModel>> GetJobApplicationByApplicantUserId(string userId, string webRootPath, int from, int count)
+        public GenericActionResult<List<JobApplicationResponseModel>> GetJobApplicationByApplicantUserId(string userId, string webRootPath, int skip, int take)
         {
             try
             {
-                var applications = context.JobApplications.Where(a => !a.IsDeleted && a.UserId.Equals(userId)).Skip(from).Take(count).ToList();
+                var applications = context.JobApplications.Where(a => !a.IsDeleted && a.UserId.Equals(userId)).Skip(skip).Take(take).ToList();
                 return new GenericActionResult<List<JobApplicationResponseModel>>(true, "", applications.Select(a => new ObjectConverterManager(context, userManager).ToJobApplicationResponseModel(a, webRootPath)).ToList());
             }
             catch (Exception)
@@ -126,11 +126,11 @@ namespace UserManagement.BusinessLogics
             }
         }
 
-        public GenericActionResult<List<JobApplicationResponseModel>> GetJobApplicationByOrganisationUserId(string userId, string webRootPath, int from, int count)
+        public GenericActionResult<List<JobApplicationResponseModel>> GetJobApplicationByOrganisationUserId(string userId, string webRootPath, int skip, int take)
         {
             try
             {
-                var applications = context.JobApplications.Where(a => !a.IsDeleted && a.Job.UserId.Equals(userId)).Skip(from).Take(count).ToList();
+                var applications = context.JobApplications.Where(a => !a.IsDeleted && a.Job.UserId.Equals(userId)).Skip(skip).Take(take).ToList();
                 return new GenericActionResult<List<JobApplicationResponseModel>>(true, "", applications.Select(a => new ObjectConverterManager(context, userManager).ToJobApplicationResponseModel(a, webRootPath)).ToList());
             }
             catch (Exception)

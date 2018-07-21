@@ -12,7 +12,8 @@ namespace UserManagement.Controllers
     using UserManagement.Data;
     using UserManagement.Models;
     using UserManagement.Models.JobModels;
-   
+    using UserManagement.QueryParameters;
+
     [Produces("application/json")]
     [Route("api/Job")]
     public class JobController : Controller
@@ -28,7 +29,7 @@ namespace UserManagement.Controllers
         }
 
         [Authorize(Roles = "Organisation")]
-        [HttpPost]
+        [HttpPost, DisableRequestSizeLimit]
         public IActionResult Post(AddJobModel jobModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -37,7 +38,7 @@ namespace UserManagement.Controllers
         }
 
         [Authorize(Roles = "Organisation")]
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), DisableRequestSizeLimit]
         public IActionResult Put([FromRoute]int id,JobModel jobModel)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -63,29 +64,29 @@ namespace UserManagement.Controllers
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [HttpGet("{from}/{count}")]
-        public IActionResult Get([FromRoute]int from, [FromRoute]int count)
+        [HttpGet("all")]
+        public IActionResult Get([FromQuery]PaginationParameters paginationParameters)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new JobManager(context,userManager).GetJobs(hostingEnvironment.WebRootPath,from, count);
+            var result = new JobManager(context,userManager).GetJobs(hostingEnvironment.WebRootPath, paginationParameters.Skip, paginationParameters.Take);
             if (result.Data == null) return NoContent();
             return Ok(new { success = result.Success, message = result.Message, data= result.Data });
         }
 
-        [HttpGet("{userId}/{from}/{count}")]
-        public IActionResult Get([FromRoute]string userId,[FromRoute]int from, [FromRoute]int count)
+        [HttpGet("{userId}")]
+        public IActionResult Get([FromRoute]string userId, [FromQuery]PaginationParameters paginationParameters)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new JobManager(context, userManager).GetJobs(hostingEnvironment.WebRootPath, userId, from, count);
+            var result = new JobManager(context, userManager).GetJobs(hostingEnvironment.WebRootPath, userId, paginationParameters.Skip, paginationParameters.Take);
             if (result.Data == null) return NoContent();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [HttpGet("{countryId}/{genderId}/{talentId}/{from}/{count}")]
-        public IActionResult Search([FromRoute]int countryId, [FromRoute]int genderId,[FromRoute]int talentId,[FromRoute] int from,[FromRoute]int count )
+        [HttpGet("search")]
+        public IActionResult Search([FromQuery]JobSearchParameters jobSearchParameters , [FromQuery]PaginationParameters paginationParameters)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new JobManager(context, userManager).GetJobs(hostingEnvironment.WebRootPath,countryId,genderId,talentId, from, count);
+            var result = new JobManager(context, userManager).GetJobs(hostingEnvironment.WebRootPath, jobSearchParameters.CountryId, jobSearchParameters.GenderId, jobSearchParameters.TalentId, paginationParameters.Skip, paginationParameters.Take);
             if (result.Data == null) return NoContent();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }

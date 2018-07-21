@@ -3,7 +3,6 @@ namespace UserManagement.Controllers
 {
     using System.Security.Claims;
 
-    using Microsoft.AspNet.Identity;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
@@ -12,6 +11,7 @@ namespace UserManagement.Controllers
     using UserManagement.Data;
     using UserManagement.Models;
     using UserManagement.Models.OrganisationProfileModels;
+    using UserManagement.QueryParameters;
 
     [Authorize]
     [Produces("application/json")]
@@ -61,19 +61,19 @@ namespace UserManagement.Controllers
             return Get(User.FindFirst(ClaimTypes.NameIdentifier).Value);
         }
 
-        [HttpGet("{from}/{count}")]
-        public IActionResult Get([FromRoute]int from, [FromRoute]int count)
+        [HttpGet("all")]
+        public IActionResult Get([FromQuery]PaginationParameters paginationParameters)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfiles(hostingEnvironment.WebRootPath, from, count);
+            var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfiles(hostingEnvironment.WebRootPath, paginationParameters.Skip, paginationParameters.Take);
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
         }
 
-        [HttpGet("{userId}")]
-        public IActionResult Get([FromRoute]string userId)
+        [HttpGet("{organisationUserId}")]
+        public IActionResult Get([FromRoute]string organisationUserId)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
-            var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfileById(userId, hostingEnvironment.WebRootPath);
+            var result = new OrganisationProfileManager(context, userManager).GetOrganisationProfileById(organisationUserId, hostingEnvironment.WebRootPath);
             if (result.Data == null) return NotFound();
             return Ok(new { success = result.Success, message = result.Message, data = result.Data });
 
